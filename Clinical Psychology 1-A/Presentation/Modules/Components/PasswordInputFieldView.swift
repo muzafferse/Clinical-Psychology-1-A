@@ -1,0 +1,34 @@
+//
+//  PasswordInputFieldView.swift
+//  Clinical Psychology 1-A
+//
+//  Created by Muzaffer Sevili on 3.06.2024.
+//
+
+import SwiftUI
+
+struct PasswordInputFieldView: View {
+    var title: String
+    @Binding var text: String
+    @Binding var textFieldStyle: CustomTextFieldStyle
+    var toggleAction: () -> Void
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.custom(.roboto, style: .medium, size: 14))
+                .foregroundStyle(.colorWhite)
+            
+            PatientInfoTextFieldView(text: $text,
+                                     patientInfoTextFieldStyle: $textFieldStyle,
+                                     onRightButtonTap: toggleAction)
+        }
+    }
+}
+
+#Preview {
+    PasswordInputFieldView(title: "",
+                           text: .constant(""),
+                           textFieldStyle: .constant(PasswordTextFieldStyle()),
+                           toggleAction: {})
+}

@@ -1,0 +1,21 @@
+//
+//  AppNavigationDestination.swift
+//  Clinical Psychology 1-A
+//
+//  Created by Muzaffer Sevili on 17.04.2024.
+//
+
+import Foundation
+
+// Enum representing different navigation destinations within the home section.
+enum HomeNavDestination {
+    case dashboardHome
+    case cautionTest
+    case interpretationTest
+}
+
+// Enum representing different navigation destinations within the settings section.
+enum SettingsNavDestination {
+    case dashboardSettings
+    case contributors
+}

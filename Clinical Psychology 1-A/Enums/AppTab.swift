@@ -1,0 +1,14 @@
+//
+//  AppTab.swift
+//  Clinical Psychology 1-A
+//
+//  Created by Muzaffer Sevili on 17.04.2024.
+//
+
+import Foundation
+
+// Enum representing different tabs or sections in the app's user interface.
+enum AppTab: Int {
+    case home           // Tab for the Home page
+    case settings        // Tab for the settings page
+}
