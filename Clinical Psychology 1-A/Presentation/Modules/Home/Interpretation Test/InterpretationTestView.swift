@@ -10,6 +10,7 @@ import SwiftUI
 struct InterpretationTestView: View {
     
     @ObservedObject var viewModel = InterpretationTestViewModel()
+    let name: String = "Muzaffer"
     
     var body: some View {
         ZStack {
