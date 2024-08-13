@@ -18,18 +18,20 @@ struct HomeTabRootView: View {
             Color(.colorBackground)
                 .ignoresSafeArea()
             
-            VStack(spacing: 40) {
-                Text("Merhaba, \(appState.nickName)")
-                    .font(.custom(.roboto, style: .medium, size: 20))
-                    .foregroundStyle(.colorWhite)
+            VStack(spacing: 24) {
                 
-                Text(viewModel.warningMessage)
-                    .font(.custom(.roboto, style: .regular, size: 16))
-                    .multilineTextAlignment(.leading)
-                    .foregroundStyle(.colorWhite)
-                    .padding(.top, 48)
+                VStack(spacing: 36) {
+                    Text("Merhaba, \(appState.nickName)")
+                        .font(.custom(.roboto, style: .medium, size: 20))
+                        .foregroundStyle(.colorWhite)
+                    
+                    Text(viewModel.warningMessage)
+                        .font(.custom(.roboto, style: .regular, size: 14))
+                        .multilineTextAlignment(.leading)
+                        .foregroundStyle(.colorWhite)
+                }
                 
-                Spacer()
+                Spacer(minLength: 0)
                 
                 Button {
                     self.appState.homeNavigation.append(HomeNavDestination.cautionTest)

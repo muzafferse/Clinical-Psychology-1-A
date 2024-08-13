@@ -14,6 +14,7 @@
 		5B9220FD2BDE8F1B00F96222 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220FC2BDE8F1B00F96222 /* SettingsTabView.swift */; };
 		5B9221032BDEB13600F96222 /* CautionTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9221022BDEB13600F96222 /* CautionTestViewModel.swift */; };
 		5B9221052BDEB1FE00F96222 /* CautionTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9221042BDEB1FE00F96222 /* CautionTestView.swift */; };
+		5B96A8EF2C6BB6C20056E75C /* Clinical-Psychology-1-A-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC9AC12BD0311E00170B62 /* Clinical-Psychology-1-A-Info.plist */; };
 		5B9CB60A2BF53FDB00055481 /* InterpretationTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */; };
 		5B9CB60C2BF53FE700055481 /* InterpretationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB60B2BF53FE700055481 /* InterpretationTestView.swift */; };
 		5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */; };
@@ -33,7 +34,6 @@
 		5BBC9AE22BD033ED00170B62 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC9AD62BD033ED00170B62 /* Roboto-MediumItalic.ttf */; };
 		5BBC9AE32BD033ED00170B62 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC9AD72BD033ED00170B62 /* Roboto-Regular.ttf */; };
 		5BBC9AE52BD03BBB00170B62 /* AppCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AE42BD03BBB00170B62 /* AppCordinator.swift */; };
-		5BBC9AE72BD03C1B00170B62 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AE62BD03C1B00170B62 /* LaunchScreenView.swift */; };
 		5BBC9AE92BD03CB300170B62 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AE82BD03CB300170B62 /* AppState.swift */; };
 		5BBC9AEB2BD03D1600170B62 /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AEA2BD03D1600170B62 /* AppTab.swift */; };
 		5BBC9AED2BD03D4700170B62 /* AppNavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AEC2BD03D4700170B62 /* AppNavigationDestination.swift */; };
@@ -119,7 +119,6 @@
 		5BBC9AD62BD033ED00170B62 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		5BBC9AD72BD033ED00170B62 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		5BBC9AE42BD03BBB00170B62 /* AppCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCordinator.swift; sourceTree = "<group>"; };
-		5BBC9AE62BD03C1B00170B62 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		5BBC9AE82BD03CB300170B62 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		5BBC9AEA2BD03D1600170B62 /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
 		5BBC9AEC2BD03D4700170B62 /* AppNavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDestination.swift; sourceTree = "<group>"; };
@@ -245,7 +244,6 @@
 				5BBC9ACA2BD0333F00170B62 /* Resources */,
 				5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */,
 				5BBC9AE42BD03BBB00170B62 /* AppCordinator.swift */,
-				5BBC9AE62BD03C1B00170B62 /* LaunchScreenView.swift */,
 				5BBC9B442BD05B1900170B62 /* FirebaseGateway.swift */,
 			);
 			path = "Clinical Psychology 1-A";
@@ -513,6 +511,7 @@
 				5BBC9AE22BD033ED00170B62 /* Roboto-MediumItalic.ttf in Resources */,
 				5BBC9ADB2BD033ED00170B62 /* Roboto-Bold.ttf in Resources */,
 				5BBC9AE02BD033ED00170B62 /* Roboto-Light.ttf in Resources */,
+				5B96A8EF2C6BB6C20056E75C /* Clinical-Psychology-1-A-Info.plist in Resources */,
 				5BBC9ADC2BD033ED00170B62 /* Roboto-ThinItalic.ttf in Resources */,
 				5BBC9ADA2BD033ED00170B62 /* Roboto-LightItalic.ttf in Resources */,
 				5BBC9AB82BD0304700170B62 /* Assets.xcassets in Resources */,
@@ -568,7 +567,6 @@
 				5BFDB5282C0E417E00E7607B /* PatientRegisterViewModel.swift in Sources */,
 				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* PatientInfoViewModel.swift in Sources */,
-				5BBC9AE72BD03C1B00170B62 /* LaunchScreenView.swift in Sources */,
 				5BBC9B002BD0405500170B62 /* TabBarView.swift in Sources */,
 				5BBC9AEB2BD03D1600170B62 /* AppTab.swift in Sources */,
 				5B9220FB2BDE882500F96222 /* SettingsTabRootView.swift in Sources */,
@@ -632,7 +630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -689,7 +687,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -715,9 +713,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -752,9 +748,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,18 +9,15 @@ import SwiftUI
 
 struct AppView: View {
     @EnvironmentObject var appState: AppState
-    @State private var isLaunchScreenViewPresented = true
     
     // Use @StateObject to retain ViewModels.
     @StateObject private var homeTabViewModel = HomeTabRootViewModel()
     @StateObject private var settingsTabViewModel = SettingsTabRootViewModel()
     
     var body: some View {
-        if isLaunchScreenViewPresented {
-            LaunchScreenView(isPresented: $isLaunchScreenViewPresented)
-        } else {
+        ZStack {
             if appState.isUserLoggedIn {
-                VStack() {
+                VStack {
                     // Display different views based on the selected tab
                     switch self.appState.selectedTab {
                     case .home:
