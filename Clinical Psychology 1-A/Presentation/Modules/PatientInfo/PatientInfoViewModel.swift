@@ -5,7 +5,6 @@
 //  Created by Muzaffer Sevili on 17.04.2024.
 //
 
-import Firebase
 import Foundation
 
 class PatientInfoViewModel: ObservableObject {
@@ -30,19 +29,6 @@ class PatientInfoViewModel: ObservableObject {
     }
     
     func isLoginButtonActive() -> Bool {
-        return (!nickName.isEmpty && !password.isEmpty)
-    }
-    
-    func loginUser(completion: @escaping (Bool, String?) -> Void) {
-        Auth.auth().signIn(withEmail: nickName + "@gmail.com",
-                           password: password) { authResult, error in
-            if let error = error {
-                self.alertMessage = error.localizedDescription
-                self.showAlert = true
-                completion(false, nil)
-            } else if let authResult = authResult {
-                completion(true, authResult.user.uid)
-            }
-        }
+        return !nickName.isEmpty && !password.isEmpty
     }
 }

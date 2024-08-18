@@ -11,6 +11,7 @@ import SwiftUI
 // The main view for displaying the Settings dashboard
 struct SettingsTabRootView: View {
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var authManager: AuthManager
     @ObservedObject var viewModel: SettingsTabRootViewModel
     
     var body: some View {
@@ -42,8 +43,15 @@ struct SettingsTabRootView: View {
                 }
                 
                 Button(action: {
-                    appState.isUserLoggedIn = false
-                    appState.selectedTab = .home
+                    Task {
+                        do {
+                            try await authManager.signOut()
+                            authManager.authState = .signedOut
+                            appState.selectedTab = .home
+                        } catch {
+                            print("Error signing out: \(error)")
+                        }
+                    }
                 }) {
                     Text(viewModel.logoutButtonText)
                 }

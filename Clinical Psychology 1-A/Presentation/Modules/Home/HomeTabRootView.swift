@@ -11,6 +11,7 @@ import SwiftUI
 // The main view for displaying the Home dashboard
 struct HomeTabRootView: View {
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var authManager: AuthManager
     @ObservedObject var viewModel: HomeTabRootViewModel
     
     var body: some View {
@@ -19,9 +20,9 @@ struct HomeTabRootView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 24) {
-                
                 VStack(spacing: 36) {
-                    Text("Merhaba, \(appState.nickName)")
+                    let username = authManager.user?.email?.components(separatedBy: "@").first ?? "Misafir Kullanıcı"
+                    Text("Merhaba, \(username)")
                         .font(.custom(.roboto, style: .medium, size: 20))
                         .foregroundStyle(.colorWhite)
                     
@@ -40,26 +41,26 @@ struct HomeTabRootView: View {
                 }
                 .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
                 .padding(.bottom, 12)
-
-                /*
-                // Dikkat Yanlılığı Değişimleme
-                Button(action: {
-                    self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
-                },
-                       label: {
-                    Text(viewModel.cautionTestName)
-                })
-                .buttonStyle(.customButton(.constant(viewModel.cautionTestStyle)))
                 
-                // Yorumlama Yanlılığı Değişimleme
-                Button(action: {
-                    self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
-                },
-                       label: {
-                    Text(viewModel.interpretationTestName)
-                })
-                .buttonStyle(.customButton(.constant(viewModel.interpretationTestStyle)))
-                */
+                /*
+                 // Dikkat Yanlılığı Değişimleme
+                 Button(action: {
+                 self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
+                 },
+                 label: {
+                 Text(viewModel.cautionTestName)
+                 })
+                 .buttonStyle(.customButton(.constant(viewModel.cautionTestStyle)))
+                 
+                 // Yorumlama Yanlılığı Değişimleme
+                 Button(action: {
+                 self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
+                 },
+                 label: {
+                 Text(viewModel.interpretationTestName)
+                 })
+                 .buttonStyle(.customButton(.constant(viewModel.interpretationTestStyle)))
+                 */
             }
             .padding(.all, 24)
         }

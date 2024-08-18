@@ -5,7 +5,6 @@
 //  Created by Muzaffer Sevili on 3.06.2024.
 //
 
-import Firebase
 import Foundation
 import SwiftUI
 
@@ -28,7 +27,8 @@ class PatientRegisterViewModel: ObservableObject {
     @Published var showAlert = false
     @Published var alertMessage = ""
     
-    let passwordWarning = "Lütfen girdiğiniz şifrelerin aynı olduğundan emin olun."
+    let passwordMatchWarning = "Lütfen girdiğiniz şifrelerin aynı olduğundan emin olun."
+    let passwordLengthWarning = "Lütfen girdiğiniz şifrelerin 6 karakter veya daha uzun olduğuna emin olun."
     let popupTitle = "Hata"
     let popupButtonText = "Tamam"
     
@@ -40,38 +40,11 @@ class PatientRegisterViewModel: ObservableObject {
         return (!nickName.isEmpty && !password.isEmpty && !repassword.isEmpty)
     }
     
+    func isPasswordLengthEnough() -> Bool {
+        return password.count >= 6 && repassword.count >= 6
+    }
+    
     func isPasswordsMatch() -> Bool {
         return password == repassword
-    }
-    
-    func registerUser(completion: @escaping (Bool) -> Void) {
-        Auth.auth().createUser(withEmail: nickName + "@gmail.com",
-                               password: password) { authResult, error in
-            if let error = error {
-                self.alertMessage = error.localizedDescription
-                self.showAlert = true
-                completion(false)
-            } else if let authResult = authResult {
-                print("User created successfully")
-                self.saveUserDetails(uid: authResult.user.uid,
-                                     completion: completion)
-            }
-        }
-    }
-    
-    private func saveUserDetails(uid: String, completion: @escaping (Bool) -> Void) {
-        let db = Firestore.firestore()
-        db.collection("users").document(uid).setData([
-            "nickName": self.nickName,
-        ]) { error in
-            if let error = error {
-                self.alertMessage = error.localizedDescription
-                self.showAlert = true
-                completion(false)
-            } else {
-                print("User details saved successfully")
-                completion(true)
-            }
-        }
     }
 }

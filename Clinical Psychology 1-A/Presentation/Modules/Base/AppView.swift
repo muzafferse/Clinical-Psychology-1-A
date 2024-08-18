@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AppView: View {
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var authManager: AuthManager
     
     // Use @StateObject to retain ViewModels.
     @StateObject private var homeTabViewModel = HomeTabRootViewModel()
@@ -16,7 +17,7 @@ struct AppView: View {
     
     var body: some View {
         ZStack {
-            if appState.isUserLoggedIn {
+            if authManager.authState == .signedIn {
                 VStack {
                     // Display different views based on the selected tab
                     switch self.appState.selectedTab {

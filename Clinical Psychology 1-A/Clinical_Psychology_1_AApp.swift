@@ -9,14 +9,15 @@ import SwiftUI
 
 @main
 struct Clinical_Psychology_1_AApp: App {
-    
     @UIApplicationDelegateAdaptor(AppCoordinator.self) var appCoordinator
     @StateObject private var appState = AppState()
+    @StateObject private var authManager = AuthManager()
     
     var body: some Scene {
         WindowGroup {
             AppView()
                 .environmentObject(appState)
+                .environmentObject(authManager)
         }
     }
 }

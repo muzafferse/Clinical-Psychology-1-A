@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PatientRegisterView: View {
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var authManager: AuthManager
     @ObservedObject var viewModel = PatientRegisterViewModel()
     
     @Environment(\.dismiss) var dismiss
@@ -20,10 +21,8 @@ struct PatientRegisterView: View {
                     .ignoresSafeArea()
                 
                 ScrollView {
-                    VStack(spacing: 24) {
-                        VStack(spacing: 16) {
-                            
-                            Spacer()
+                    VStack(spacing: 32) {
+                        VStack(spacing: 24) {
                             
                             // Patient Nickname Textfield
                             InputFieldView(title: viewModel.patientNickName,
@@ -49,15 +48,22 @@ struct PatientRegisterView: View {
                         
                         // Register Button
                         Button(action: {
-                            if viewModel.isPasswordsMatch() {
-                                viewModel.registerUser { success in
+                            if !viewModel.isPasswordLengthEnough() {
+                                viewModel.alertMessage = viewModel.passwordLengthWarning
+                                viewModel.showAlert = true
+                            } else if !viewModel.isPasswordsMatch() {
+                                viewModel.alertMessage = viewModel.passwordMatchWarning
+                                viewModel.showAlert = true
+                            } else {
+                                authManager.register(withEmail: viewModel.nickName,
+                                                     password: viewModel.password) { success, errorMessage in
                                     if success {
                                         dismiss()
+                                    } else {
+                                        viewModel.alertMessage = errorMessage ?? "Unknown error"
+                                        viewModel.showAlert = true
                                     }
                                 }
-                            } else {
-                                viewModel.alertMessage = viewModel.passwordWarning
-                                viewModel.showAlert = true
                             }
                         },
                                label: {
@@ -68,8 +74,10 @@ struct PatientRegisterView: View {
                         
                     }
                     .padding(.horizontal, 24)
-                    .padding(.top, 16)
+                    .padding(.top, 60)
                 }
+                .clipped()
+                .scrollDisabled(true)
             }
             .navigationBarBackButtonHidden()
             .navigationTitle(viewModel.appName)
@@ -92,6 +100,9 @@ struct PatientRegisterView: View {
                 Alert(title: Text(viewModel.popupTitle),
                       message: Text(viewModel.alertMessage),
                       dismissButton: .default(Text(viewModel.popupButtonText)))
+            }
+            .onTapGesture {
+                hideKeyboard()
             }
         }
     }
