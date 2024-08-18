@@ -52,11 +52,12 @@ class AuthManager: ObservableObject {
         }
     }
     
-    func signIn(withEmail email: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+    func signIn(withEmail email: String, password: String, completion: @escaping (Bool, AuthError?) -> Void) {
         Auth.auth().signIn(withEmail: email + "@gmail.com",
                            password: password) { authResult, error in
-            if let error = error {
-                completion(false, error.localizedDescription)
+            if let error = error as NSError? {
+                let authError = AuthError(error: error)
+                completion(false, authError)
             } else {
                 self.updateState(user: authResult?.user)
                 completion(true, nil)
@@ -64,11 +65,12 @@ class AuthManager: ObservableObject {
         }
     }
     
-    func register(withEmail email: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+    func register(withEmail email: String, password: String, completion: @escaping (Bool, AuthError?) -> Void) {
         Auth.auth().createUser(withEmail: email + "@gmail.com",
                                password: password) { authResult, error in
-            if let error = error {
-                completion(false, error.localizedDescription)
+            if let error = error as NSError? {
+                let authError = AuthError(error: error)
+                completion(false, authError)
             } else if let authResult = authResult {
                 self.saveUserDetails(uid: authResult.user.uid) { success, errorMessage in
                     completion(success, errorMessage)
@@ -77,13 +79,14 @@ class AuthManager: ObservableObject {
         }
     }
     
-    private func saveUserDetails(uid: String, completion: @escaping (Bool, String?) -> Void) {
+    private func saveUserDetails(uid: String, completion: @escaping (Bool, AuthError?) -> Void) {
         let db = Firestore.firestore()
         db.collection("users").document(uid).setData([
             "nickName": self.user?.email ?? ""
         ]) { error in
-            if let error = error {
-                completion(false, error.localizedDescription)
+            if let error = error as NSError? {
+                let authError = AuthError(error: error)
+                completion(false, authError)
             } else {
                 print("User details saved successfully")
                 completion(true, nil)

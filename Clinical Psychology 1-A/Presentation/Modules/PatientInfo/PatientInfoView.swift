@@ -32,7 +32,8 @@ struct PatientInfoView: View {
                                                    text: $viewModel.password,
                                                    textFieldStyle: $viewModel.passwordTextFieldStyle,
                                                    toggleAction: { viewModel.passwordTextFieldStyle.isHidden.toggle()
-                            })
+                            },
+                                                   warningMessage: viewModel.isPasswordEnough() ? nil : viewModel.passwordLengthWarning)
                         }
                         
                         // Login Button
@@ -42,8 +43,8 @@ struct PatientInfoView: View {
                                 if success {
                                     authManager.authState = .signedIn
                                     appState.selectedTab = .home
-                                } else {
-                                    viewModel.alertMessage = error ?? "Unknown Error"
+                                } else if let error = error {
+                                    viewModel.alertMessage = error.localizedDescription
                                     viewModel.showAlert = true
                                 }
                             }

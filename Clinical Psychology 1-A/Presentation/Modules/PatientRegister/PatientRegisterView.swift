@@ -43,26 +43,19 @@ struct PatientRegisterView: View {
                                                    textFieldStyle: $viewModel.repasswordTextFieldStyle,
                                                    toggleAction: {
                                 viewModel.repasswordTextFieldStyle.isHidden.toggle()
-                            })
+                            }, 
+                                                   warningMessage: viewModel.isPasswordsMatch() ? nil : viewModel.passwordMatchWarning)
                         }
                         
                         // Register Button
                         Button(action: {
-                            if !viewModel.isPasswordLengthEnough() {
-                                viewModel.alertMessage = viewModel.passwordLengthWarning
-                                viewModel.showAlert = true
-                            } else if !viewModel.isPasswordsMatch() {
-                                viewModel.alertMessage = viewModel.passwordMatchWarning
-                                viewModel.showAlert = true
-                            } else {
-                                authManager.register(withEmail: viewModel.nickName,
-                                                     password: viewModel.password) { success, errorMessage in
-                                    if success {
-                                        dismiss()
-                                    } else {
-                                        viewModel.alertMessage = errorMessage ?? "Unknown error"
-                                        viewModel.showAlert = true
-                                    }
+                            authManager.register(withEmail: viewModel.nickName,
+                                                 password: viewModel.password) { success, error in
+                                if success {
+                                    dismiss()
+                                } else if let error = error {
+                                    viewModel.alertMessage = error.localizedDescription
+                                    viewModel.showAlert = true
                                 }
                             }
                         },

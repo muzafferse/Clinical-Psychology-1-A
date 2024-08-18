@@ -28,7 +28,6 @@ class PatientRegisterViewModel: ObservableObject {
     @Published var alertMessage = ""
     
     let passwordMatchWarning = "Lütfen girdiğiniz şifrelerin aynı olduğundan emin olun."
-    let passwordLengthWarning = "Lütfen girdiğiniz şifrelerin 6 karakter veya daha uzun olduğuna emin olun."
     let popupTitle = "Hata"
     let popupButtonText = "Tamam"
     
@@ -37,11 +36,7 @@ class PatientRegisterViewModel: ObservableObject {
     }
     
     func isRegisterButtonActive() -> Bool {
-        return (!nickName.isEmpty && !password.isEmpty && !repassword.isEmpty)
-    }
-    
-    func isPasswordLengthEnough() -> Bool {
-        return password.count >= 6 && repassword.count >= 6
+        return (!nickName.isEmpty && !password.isEmpty && !repassword.isEmpty && isPasswordsMatch())
     }
     
     func isPasswordsMatch() -> Bool {

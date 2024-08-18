@@ -12,6 +12,7 @@ struct PasswordInputFieldView: View {
     @Binding var text: String
     @Binding var textFieldStyle: CustomTextFieldStyle
     var toggleAction: () -> Void
+    var warningMessage: String?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -22,7 +23,14 @@ struct PasswordInputFieldView: View {
             PatientInfoTextFieldView(text: $text,
                                      patientInfoTextFieldStyle: $textFieldStyle,
                                      onRightButtonTap: toggleAction)
+            
+            if let warningMessage = warningMessage {
+                Text(warningMessage)
+                    .font(.custom(.roboto, style: .regular, size: 12))
+                    .foregroundColor(.red)
+            }
         }
+        .animation(.easeInOut, value: warningMessage)
     }
 }
 

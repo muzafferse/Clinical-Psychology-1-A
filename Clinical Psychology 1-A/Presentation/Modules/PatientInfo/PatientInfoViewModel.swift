@@ -21,6 +21,7 @@ class PatientInfoViewModel: ObservableObject {
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
     
+    let passwordLengthWarning = "Şifreniz 6 karakterden uzun olmalıdır."
     let popupTitle = "Hata!"
     let popupButtonText = "Tamam"
     
@@ -29,6 +30,10 @@ class PatientInfoViewModel: ObservableObject {
     }
     
     func isLoginButtonActive() -> Bool {
-        return !nickName.isEmpty && !password.isEmpty
+        return !nickName.isEmpty && isPasswordEnough()
+    }
+    
+    func isPasswordEnough() -> Bool {
+        return password.count >= 6
     }
 }

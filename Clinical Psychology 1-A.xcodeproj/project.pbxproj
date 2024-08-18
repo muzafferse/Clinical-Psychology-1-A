@@ -16,6 +16,7 @@
 		5B9221052BDEB1FE00F96222 /* CautionTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9221042BDEB1FE00F96222 /* CautionTestView.swift */; };
 		5B96A8EF2C6BB6C20056E75C /* Clinical-Psychology-1-A-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC9AC12BD0311E00170B62 /* Clinical-Psychology-1-A-Info.plist */; };
 		5B9A4F862C7249AE00F22E6F /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A4F852C7249AE00F22E6F /* AuthManager.swift */; };
+		5B9A4F882C726D4F00F22E6F /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A4F872C726D4F00F22E6F /* AuthError.swift */; };
 		5B9CB60A2BF53FDB00055481 /* InterpretationTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */; };
 		5B9CB60C2BF53FE700055481 /* InterpretationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB60B2BF53FE700055481 /* InterpretationTestView.swift */; };
 		5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */; };
@@ -101,6 +102,7 @@
 		5B9221022BDEB13600F96222 /* CautionTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CautionTestViewModel.swift; sourceTree = "<group>"; };
 		5B9221042BDEB1FE00F96222 /* CautionTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CautionTestView.swift; sourceTree = "<group>"; };
 		5B9A4F852C7249AE00F22E6F /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		5B9A4F872C726D4F00F22E6F /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestViewModel.swift; sourceTree = "<group>"; };
 		5B9CB60B2BF53FE700055481 /* InterpretationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestView.swift; sourceTree = "<group>"; };
 		5BBC9AB02BD0304200170B62 /* Clinical Psychology 1-A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clinical Psychology 1-A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,9 +337,10 @@
 			children = (
 				5BBC9AEA2BD03D1600170B62 /* AppTab.swift */,
 				5BBC9AEC2BD03D4700170B62 /* AppNavigationDestination.swift */,
+				5BE4D2062C709B9900C50419 /* AuthState.swift */,
 				5BBC9AEE2BD03D8B00170B62 /* CustomTextFieldStyle.swift */,
 				5BBC9AF02BD03DC400170B62 /* CustomButtonStyle.swift */,
-				5BE4D2062C709B9900C50419 /* AuthState.swift */,
+				5B9A4F872C726D4F00F22E6F /* AuthError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				5BFDB5282C0E417E00E7607B /* PatientRegisterViewModel.swift in Sources */,
 				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* PatientInfoViewModel.swift in Sources */,
+				5B9A4F882C726D4F00F22E6F /* AuthError.swift in Sources */,
 				5BBC9B002BD0405500170B62 /* TabBarView.swift in Sources */,
 				5BBC9AEB2BD03D1600170B62 /* AppTab.swift in Sources */,
 				5B9220FB2BDE882500F96222 /* SettingsTabRootView.swift in Sources */,
