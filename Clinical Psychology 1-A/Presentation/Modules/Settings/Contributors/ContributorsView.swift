@@ -35,16 +35,18 @@ struct ContributorsView: View {
                     
                     Spacer()
                     
-                    Link(destination: URL(string: "mailto:\(contributor.email)")!) {
-                        
-                        VStack(alignment: .center, spacing: 5) {
-                            viewModel.mailIcon
-                                .font(.custom(.roboto, style: .regular, size: 20))
-                                .foregroundStyle(.colorWhite)
-                            
-                            Text(viewModel.contactText)
-                                .font(.custom(.roboto, style: .regular, size: 12))
-                                .foregroundStyle(.colorWhite)
+                    if let encodedEmail = contributor.email.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                       let mailURL = URL(string: "mailto:\(encodedEmail)") {
+                        Link(destination: mailURL) {
+                            VStack(alignment: .center, spacing: 5) {
+                                viewModel.mailIcon
+                                    .font(.custom(.roboto, style: .regular, size: 20))
+                                    .foregroundStyle(.colorWhite)
+                                
+                                Text(viewModel.contactText)
+                                    .font(.custom(.roboto, style: .regular, size: 12))
+                                    .foregroundStyle(.colorWhite)
+                            }
                         }
                     }
                 }
