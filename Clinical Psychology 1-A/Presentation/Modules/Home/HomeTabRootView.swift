@@ -26,8 +26,8 @@ struct HomeTabRootView: View {
                         .font(.custom(.roboto, style: .medium, size: 20))
                         .foregroundStyle(.colorWhite)
                     
-                    Text(viewModel.warningMessage)
-                        .font(.custom(.roboto, style: .regular, size: 14))
+                    Text(viewModel.welcomeMessage)
+                        .font(.custom(.roboto, style: .regular, size: 16))
                         .multilineTextAlignment(.leading)
                         .foregroundStyle(.colorWhite)
                 }

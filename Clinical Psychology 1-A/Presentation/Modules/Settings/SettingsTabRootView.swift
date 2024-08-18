@@ -26,7 +26,7 @@ struct SettingsTabRootView: View {
                             self.appState.settingsNavigation.append(SettingsNavDestination.contributors)
                         }) {
                             Text(viewModel.contributorsButtonText)
-                                .font(.custom(.roboto, style: .regular, size: 18))
+                                .font(.custom(.roboto, style: .medium, size: 18))
                                 .foregroundStyle(.colorWhite)
                             
                             Spacer()

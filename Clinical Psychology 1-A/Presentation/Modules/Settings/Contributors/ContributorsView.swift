@@ -20,15 +20,15 @@ struct ContributorsView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("\(contributor.name) \(contributor.surname)")
-                            .font(.custom(.roboto, style: .medium, size: 17))
+                            .font(.custom(.roboto, style: .medium, size: 16))
                             .foregroundStyle(.colorWhite)
                         
                         Text(contributor.title)
-                            .font(.custom(.roboto, style: .regular, size: 15))
+                            .font(.custom(.roboto, style: .regular, size: 14))
                             .foregroundStyle(.colorWhite)
                         
                         Text(contributor.company)
-                            .font(.custom(.roboto, style: .regular, size: 15))
+                            .font(.custom(.roboto, style: .regular, size: 14))
                             .foregroundStyle(.colorWhite)
                     }
                     .padding(.vertical, 10)
@@ -40,11 +40,11 @@ struct ContributorsView: View {
                         Link(destination: mailURL) {
                             VStack(alignment: .center, spacing: 5) {
                                 viewModel.mailIcon
-                                    .font(.custom(.roboto, style: .regular, size: 20))
+                                    .font(.custom(.roboto, style: .regular, size: 32))
                                     .foregroundStyle(.colorWhite)
                                 
                                 Text(viewModel.contactText)
-                                    .font(.custom(.roboto, style: .regular, size: 12))
+                                    .font(.custom(.roboto, style: .regular, size: 14))
                                     .foregroundStyle(.colorWhite)
                             }
                         }
