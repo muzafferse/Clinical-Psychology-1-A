@@ -18,11 +18,11 @@ class AppCoordinator: NSObject, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Handle app entering background
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Handle app entering foreground
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         // Handle app termination
     }

@@ -13,7 +13,7 @@ import SwiftUI
 class SettingsTabRootViewModel: ObservableObject, Identifiable {
     @Published var contributorsButtonText: String = "Katkıda Bulunanları Gör"
     @Published var chevronRight = Image(systemName: "chevron.right")
-
+    
     @Published var logoutButtonText: String = "Çıkış Yap"
     @Published var title: String = "Ayarlar"
 }

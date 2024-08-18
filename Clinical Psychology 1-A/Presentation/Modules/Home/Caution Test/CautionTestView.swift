@@ -20,7 +20,7 @@ struct CautionTestView: View {
     @ObservedObject var viewModel = CautionTestViewModel()
     @State var selectedStep: CautionTestStep = .description
     @State var photoCoupleCount: Int = 0
-        
+    
     var body: some View {
         ZStack {
             Color(.colorBackground)
