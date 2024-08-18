@@ -6,6 +6,7 @@
 //
 
 import Firebase
+import FirebaseAuth
 
 @MainActor
 class AuthManager: ObservableObject {
