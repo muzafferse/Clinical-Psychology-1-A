@@ -27,7 +27,7 @@ struct TabBarView: View {
                                        minHeight: 24,
                                        maxHeight: 24)
                             Text("Ana Sayfa")
-                                .font(.custom(.roboto, style: .medium, size: 10))
+                                .robotoMediumFont(size: 10)
                                 .multilineTextAlignment(.center)
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .foregroundStyle(self.selectedTab == .home ? .colorWhite: .colorInactive)
@@ -50,7 +50,7 @@ struct TabBarView: View {
                                        minHeight: 24,
                                        maxHeight: 24)
                             Text("Ayarlar")
-                                .font(.custom(.roboto, style: .medium, size: 10))
+                                .robotoMediumFont(size: 10)
                                 .multilineTextAlignment(.center)
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .foregroundStyle(self.selectedTab == .settings ? .colorWhite: .colorInactive)

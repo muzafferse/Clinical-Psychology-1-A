@@ -68,3 +68,14 @@ extension View {
         return self
     }
 }
+
+// MARK: - Font Modifiers
+extension View {
+    func robotoMediumFont(size: CGFloat) -> some View {
+        self.font(.custom(.roboto, style: .medium, size: size))
+    }
+    
+    func robotoRegularFont(size: CGFloat) -> some View {
+        self.font(.custom(.roboto, style: .regular, size: size))
+    }
+}

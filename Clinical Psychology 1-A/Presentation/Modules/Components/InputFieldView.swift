@@ -15,7 +15,7 @@ struct InputFieldView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .font(.custom(.roboto, style: .medium, size: 14))
+                .robotoMediumFont(size: 14)
                 .foregroundStyle(.colorWhite)
             
             PatientInfoTextFieldView(text: $text,

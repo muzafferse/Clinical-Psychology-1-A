@@ -14,7 +14,7 @@ struct SelectionView: View {
     var body: some View {
         VStack(spacing: 30) {
             viewModel.rightArrowIcon
-                .font(.custom(.roboto, style: .regular, size: 32))
+                .robotoRegularFont(size: 32)
                 .foregroundStyle(.colorWhite)
             
             HStack(spacing: 20) {

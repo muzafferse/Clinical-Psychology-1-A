@@ -16,6 +16,8 @@ class AuthManager: ObservableObject {
     private var authStateHandle: AuthStateDidChangeListenerHandle!
     
     init() {
+        self.user = Auth.auth().currentUser
+        self.authState = self.user != nil ? .signedIn : .signedOut
         self.configureAuthStateChanges()
     }
     

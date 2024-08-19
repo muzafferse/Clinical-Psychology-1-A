@@ -16,7 +16,7 @@ struct DescriptionView: View {
             Spacer()
             
             Text(viewModel.startDescription)
-                .font(.custom(.roboto, style: .regular, size: 16))
+                .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
             

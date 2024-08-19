@@ -17,7 +17,7 @@ struct PasswordInputFieldView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .font(.custom(.roboto, style: .medium, size: 14))
+                .robotoMediumFont(size: 14)
                 .foregroundStyle(.colorWhite)
             
             PatientInfoTextFieldView(text: $text,
@@ -26,7 +26,7 @@ struct PasswordInputFieldView: View {
             
             if let warningMessage = warningMessage {
                 Text(warningMessage)
-                    .font(.custom(.roboto, style: .regular, size: 12))
+                    .robotoRegularFont(size: 12)
                     .foregroundColor(.red)
             }
         }

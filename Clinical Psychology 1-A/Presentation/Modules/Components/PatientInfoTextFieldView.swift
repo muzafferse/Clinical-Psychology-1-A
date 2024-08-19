@@ -24,13 +24,13 @@ struct PatientInfoTextFieldView: View {
                 }
                 if patientInfoTextFieldStyle.isHidden {
                     SecureField("", text: $text)
-                        .font(.custom(.roboto, style: .medium, size: 13))
+                        .robotoMediumFont(size: 13)
                         .foregroundStyle(.colorPrimary)
                         .autocorrectionDisabled()
                         .focused($isFocused)
                 } else {
                     TextField("", text: $text)
-                        .font(.custom(.roboto, style: .medium, size: 13))
+                        .robotoMediumFont(size: 13)
                         .foregroundStyle(.colorPrimary)
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.never)

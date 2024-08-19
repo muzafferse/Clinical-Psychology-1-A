@@ -12,7 +12,7 @@ struct PlusSignView: View {
     
     var body: some View {
         viewModel.plusIcon
-            .font(.custom(.roboto, style: .regular, size: 32))
+            .robotoRegularFont(size: 32)
             .foregroundStyle(.colorWhite)
     }
 }

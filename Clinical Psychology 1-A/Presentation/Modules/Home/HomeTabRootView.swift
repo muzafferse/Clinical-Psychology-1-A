@@ -23,11 +23,11 @@ struct HomeTabRootView: View {
                 VStack(spacing: 36) {
                     let username = authManager.user?.email?.components(separatedBy: "@").first ?? "Misafir Kullanıcı"
                     Text("Merhaba, \(username)")
-                        .font(.custom(.roboto, style: .medium, size: 20))
+                        .robotoMediumFont(size: 20)
                         .foregroundStyle(.colorWhite)
                     
                     Text(viewModel.welcomeMessage)
-                        .font(.custom(.roboto, style: .regular, size: 16))
+                        .robotoRegularFont(size: 16)
                         .multilineTextAlignment(.leading)
                         .foregroundStyle(.colorWhite)
                 }

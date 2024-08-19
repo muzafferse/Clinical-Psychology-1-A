@@ -17,7 +17,7 @@ struct InterpretationTestView: View {
                 .ignoresSafeArea()
             
             Text("Hello, World!")
-                .font(.custom(.roboto, style: .regular, size: 16))
+                .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
         }
