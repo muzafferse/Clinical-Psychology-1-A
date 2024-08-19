@@ -21,7 +21,7 @@ struct PrimaryActiveButtonStyle: CustomButtonStyle {
     var backgroundColor: Color { .colorPrimary }
     var strokeColor: Color { .colorWhite }
     var cornerRadius: CGFloat { 5.0 }
-    var font: Font { .custom(.roboto, style: .medium, size: 13) }
+    var font: Font { .custom(.roboto, style: .medium, size: 14) }
     var hasUnderline: Bool { false }
 }
 
@@ -30,7 +30,7 @@ struct PrimaryInactiveButtonStyle: CustomButtonStyle {
     var backgroundColor: Color { .colorInactive }
     var strokeColor: Color { .colorWhite }
     var cornerRadius: CGFloat { 5.0 }
-    var font: Font { .custom(.roboto, style: .medium, size: 13) }
+    var font: Font { .custom(.roboto, style: .medium, size: 14) }
     var hasUnderline: Bool { false }
 }
 
@@ -39,6 +39,6 @@ struct TextButtonStyle: CustomButtonStyle {
     var backgroundColor: Color { .clear }
     var strokeColor: Color { .clear }
     var cornerRadius: CGFloat { 5.0 }
-    var font: Font { .custom(.roboto, style: .medium, size: 13) }
+    var font: Font { .custom(.roboto, style: .medium, size: 14) }
     var hasUnderline: Bool { true }
 }
