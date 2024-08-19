@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		5B2490862C0E5AF40052F8BB /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2490852C0E5AF40052F8BB /* InputFieldView.swift */; };
 		5B2490882C0E5BFD0052F8BB /* PasswordInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2490872C0E5BFD0052F8BB /* PasswordInputFieldView.swift */; };
+		5B8D79F32C73090200544E49 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79F22C73090200544E49 /* FirebaseAnalytics */; };
+		5B8D79F52C73090200544E49 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79F42C73090200544E49 /* FirebaseAuth */; };
+		5B8D79F72C73090200544E49 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79F62C73090200544E49 /* FirebaseCrashlytics */; };
+		5B8D79F92C73090200544E49 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79F82C73090200544E49 /* FirebaseDatabase */; };
+		5B8D79FB2C73090200544E49 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79FA2C73090200544E49 /* FirebaseFirestore */; };
+		5B8D79FD2C73090200544E49 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79FC2C73090200544E49 /* FirebaseRemoteConfig */; };
+		5B8D79FF2C73090200544E49 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79FE2C73090200544E49 /* FirebaseStorage */; };
 		5B9220F92BDE85E100F96222 /* SettingsTabRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220F82BDE85E100F96222 /* SettingsTabRootViewModel.swift */; };
 		5B9220FB2BDE882500F96222 /* SettingsTabRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220FA2BDE882500F96222 /* SettingsTabRootView.swift */; };
 		5B9220FD2BDE8F1B00F96222 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220FC2BDE8F1B00F96222 /* SettingsTabView.swift */; };
@@ -138,6 +145,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8D79F72C73090200544E49 /* FirebaseCrashlytics in Frameworks */,
+				5B8D79F32C73090200544E49 /* FirebaseAnalytics in Frameworks */,
+				5B8D79F92C73090200544E49 /* FirebaseDatabase in Frameworks */,
+				5B8D79FD2C73090200544E49 /* FirebaseRemoteConfig in Frameworks */,
+				5B8D79FF2C73090200544E49 /* FirebaseStorage in Frameworks */,
+				5B8D79FB2C73090200544E49 /* FirebaseFirestore in Frameworks */,
+				5B8D79F52C73090200544E49 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +418,13 @@
 			);
 			name = "Clinical Psychology 1-A";
 			packageProductDependencies = (
+				5B8D79F22C73090200544E49 /* FirebaseAnalytics */,
+				5B8D79F42C73090200544E49 /* FirebaseAuth */,
+				5B8D79F62C73090200544E49 /* FirebaseCrashlytics */,
+				5B8D79F82C73090200544E49 /* FirebaseDatabase */,
+				5B8D79FA2C73090200544E49 /* FirebaseFirestore */,
+				5B8D79FC2C73090200544E49 /* FirebaseRemoteConfig */,
+				5B8D79FE2C73090200544E49 /* FirebaseStorage */,
 			);
 			productName = "Clinical Psychology 1-A";
 			productReference = 5BBC9AB02BD0304200170B62 /* Clinical Psychology 1-A.app */;
@@ -434,6 +455,7 @@
 			);
 			mainGroup = 5BBC9AA72BD0304200170B62;
 			packageReferences = (
+				5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5BBC9AB12BD0304200170B62 /* Products */;
 			projectDirPath = "";
@@ -736,6 +758,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B8D79F22C73090200544E49 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5B8D79F42C73090200544E49 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5B8D79F62C73090200544E49 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		5B8D79F82C73090200544E49 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		5B8D79FA2C73090200544E49 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5B8D79FC2C73090200544E49 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		5B8D79FE2C73090200544E49 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B8D79F12C73090200544E49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5BBC9AA82BD0304200170B62 /* Project object */;
 }
