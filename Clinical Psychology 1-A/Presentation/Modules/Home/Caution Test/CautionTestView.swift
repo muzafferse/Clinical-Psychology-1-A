@@ -54,7 +54,6 @@ struct CautionTestView: View {
                 case .finish:
                     FinishView(viewModel: viewModel)
                 }
-                
             }
             .padding(.horizontal, 24)
         }
