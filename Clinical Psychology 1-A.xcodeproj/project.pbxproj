@@ -25,7 +25,6 @@
 		5B9220FD2BDE8F1B00F96222 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220FC2BDE8F1B00F96222 /* SettingsTabView.swift */; };
 		5B9221032BDEB13600F96222 /* CautionTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9221022BDEB13600F96222 /* CautionTestViewModel.swift */; };
 		5B9221052BDEB1FE00F96222 /* CautionTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9221042BDEB1FE00F96222 /* CautionTestView.swift */; };
-		5B96A8EF2C6BB6C20056E75C /* Clinical-Psychology-1-A-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC9AC12BD0311E00170B62 /* Clinical-Psychology-1-A-Info.plist */; };
 		5B9A4F862C7249AE00F22E6F /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A4F852C7249AE00F22E6F /* AuthManager.swift */; };
 		5B9A4F882C726D4F00F22E6F /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A4F872C726D4F00F22E6F /* AuthError.swift */; };
 		5B9CB60A2BF53FDB00055481 /* InterpretationTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */; };
@@ -489,7 +488,6 @@
 				5BBC9AE22BD033ED00170B62 /* Roboto-MediumItalic.ttf in Resources */,
 				5BBC9ADB2BD033ED00170B62 /* Roboto-Bold.ttf in Resources */,
 				5BBC9AE02BD033ED00170B62 /* Roboto-Light.ttf in Resources */,
-				5B96A8EF2C6BB6C20056E75C /* Clinical-Psychology-1-A-Info.plist in Resources */,
 				5BBC9ADC2BD033ED00170B62 /* Roboto-ThinItalic.ttf in Resources */,
 				5BBC9ADA2BD033ED00170B62 /* Roboto-LightItalic.ttf in Resources */,
 				5BBC9AB82BD0304700170B62 /* Assets.xcassets in Resources */,
