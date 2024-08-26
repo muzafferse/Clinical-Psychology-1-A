@@ -11,6 +11,8 @@ struct TabBarView: View {
     @Binding var selectedTab: AppTab
     @EnvironmentObject var appState: AppState
     
+    @State private var showAlert = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -72,13 +74,24 @@ struct TabBarView: View {
                     y: -2)
         }
         .background(.colorBackground)
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Uyarı"),
+                message: Text("Test esnasında sekmeler arasında geçiş yapamazsınız."),
+                dismissButton: .default(Text("Tamam"))
+            )
+        }
     }
     
     func select(tab: AppTab) {
-        if self.selectedTab == tab {
-            returnToRootController(of: tab)
+        if appState.testStatus != .none {
+            showAlert = true
+        } else {
+            if self.selectedTab == tab {
+                returnToRootController(of: tab)
+            }
+            self.selectedTab = tab
         }
-        self.selectedTab = tab
     }
     
     // Clear selected tab's navigation stack, to return to the root VC

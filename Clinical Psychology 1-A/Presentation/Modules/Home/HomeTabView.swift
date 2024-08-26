@@ -23,8 +23,21 @@ struct HomeTabView: View {
                         HomeTabRootView(viewModel: parentViewModel)
                     case .cautionTest:
                         CautionTestView()
+                            .onAppear(perform: {
+                                appState.testStatus = .cautionTest
+                            })
+                            .onDisappear(perform: {
+                                //Warning: It can be should changed
+                                appState.testStatus = .interpretationTest
+                            })
                     case .interpretationTest:
                         InterpretationTestView()
+                            .onAppear(perform: {
+                                appState.testStatus = .interpretationTest
+                            })
+                            .onDisappear(perform: {
+                                appState.testStatus = .none
+                            })
                     }
                 }
         }
