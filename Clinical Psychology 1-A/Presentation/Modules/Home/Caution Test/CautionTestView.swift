@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-enum CautionTestStep {
-    case description
-    case plusSign
-    case photos
-    case selection
-    case finish
-}
-
 struct CautionTestView: View {
     
     @ObservedObject var viewModel = CautionTestViewModel()
