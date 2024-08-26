@@ -12,12 +12,12 @@ struct SelectionView: View {
     let onSelection: () -> Void
     
     var body: some View {
-        VStack(spacing: 30) {
+        VStack(spacing: 32) {
             viewModel.rightArrowIcon
                 .robotoRegularFont(size: 32)
                 .foregroundStyle(.colorWhite)
             
-            HStack(spacing: 20) {
+            HStack(spacing: 24) {
                 Button(action: onSelection) {
                     viewModel.leftArrowIcon
                 }

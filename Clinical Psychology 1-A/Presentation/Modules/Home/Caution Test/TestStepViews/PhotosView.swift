@@ -12,7 +12,7 @@ struct PhotosView: View {
     let photoCoupleCount: Int
     
     var body: some View {
-        VStack(spacing: 30) {
+        VStack(spacing: 32) {
             viewModel.photos[photoCoupleCount]
                 .resizable()
                 .scaledToFit()

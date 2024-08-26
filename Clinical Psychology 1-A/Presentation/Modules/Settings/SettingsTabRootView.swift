@@ -35,12 +35,12 @@ struct SettingsTabRootView: View {
                                 .foregroundStyle(.colorWhite)
                         }
                     }
-                    .padding(.horizontal, 24)
                     
                     Divider()
-                        .padding(.horizontal, 24)
-                        .foregroundStyle(.colorInactive)
+                        .frame(height: 1)
+                        .background(.colorInactive)
                 }
+                .padding(.horizontal, 24)
                 
                 Button(action: {
                     Task {
@@ -56,7 +56,7 @@ struct SettingsTabRootView: View {
                     Text(viewModel.logoutButtonText)
                 }
                 .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
-                .padding(.top, 48)
+                .padding(.top, 24)
                 .padding(.horizontal, 24)
                 
                 Spacer()

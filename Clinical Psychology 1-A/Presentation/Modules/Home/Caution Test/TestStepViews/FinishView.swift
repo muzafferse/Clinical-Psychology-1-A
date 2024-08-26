@@ -13,8 +13,7 @@ struct FinishView: View {
     
     var body: some View {
         
-        
-        VStack(spacing: 36) {
+        VStack(spacing: 32) {
             Spacer()
             
             Text(viewModel.finishDescription)

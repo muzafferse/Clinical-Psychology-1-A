@@ -12,7 +12,7 @@ struct DescriptionView: View {
     let onNext: () -> Void
     
     var body: some View {
-        VStack(spacing: 36) {
+        VStack(spacing: 32) {
             Spacer()
             
             Text(viewModel.startDescription)

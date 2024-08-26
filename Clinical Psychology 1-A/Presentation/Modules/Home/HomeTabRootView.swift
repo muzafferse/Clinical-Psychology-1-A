@@ -20,7 +20,7 @@ struct HomeTabRootView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 24) {
-                VStack(spacing: 36) {
+                VStack(spacing: 32) {
                     let username = authManager.user?.email?.components(separatedBy: "@").first ?? "Misafir Kullanıcı"
                     Text("Merhaba, \(username)")
                         .robotoMediumFont(size: 20)
