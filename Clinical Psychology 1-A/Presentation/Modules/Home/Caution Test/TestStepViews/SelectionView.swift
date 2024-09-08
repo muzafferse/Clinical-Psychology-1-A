@@ -12,10 +12,22 @@ struct SelectionView: View {
     let onSelection: () -> Void
     
     var body: some View {
-        VStack(spacing: 32) {
-            viewModel.rightArrowIcon
-                .robotoRegularFont(size: 32)
-                .foregroundStyle(.colorWhite)
+        ZStack {
+            VStack(spacing: 32) {
+                Spacer()
+                    .frame(width: 256, height: 192)
+                
+                ZStack {
+                    Spacer()
+                        .frame(width: 256, height: 192)
+                    
+                    VStack {
+                        viewModel.rightArrowIcon
+                            .robotoRegularFont(size: 32)
+                            .foregroundStyle(.colorWhite)
+                    }
+                }
+            }
             
             HStack {
                 Button(action: onSelection) {
