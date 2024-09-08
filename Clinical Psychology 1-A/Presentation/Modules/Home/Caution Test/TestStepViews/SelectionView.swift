@@ -17,15 +17,19 @@ struct SelectionView: View {
                 .robotoRegularFont(size: 32)
                 .foregroundStyle(.colorWhite)
             
-            HStack(spacing: 24) {
+            HStack {
                 Button(action: onSelection) {
                     viewModel.leftArrowIcon
                 }
+                .frame(width: 64, height: 32)
                 .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
+                
+                Spacer()
                 
                 Button(action: onSelection) {
                     viewModel.rightArrowIcon
                 }
+                .frame(width: 64, height: 32)
                 .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
             }
         }
