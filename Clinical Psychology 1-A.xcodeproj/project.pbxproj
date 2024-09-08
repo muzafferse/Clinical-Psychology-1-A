@@ -12,6 +12,7 @@
 		5B3A373F2C7CD9BE0005FAE9 /* CautionTestStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */; };
 		5B3A37412C7CD9FA0005FAE9 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */; };
 		5B3A37432C7CDA4C0005FAE9 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */; };
+		5B83F02C2C8E3AA5001D52BA /* Task++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83F02B2C8E3AA5001D52BA /* Task++.swift */; };
 		5B8D79F32C73090200544E49 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79F22C73090200544E49 /* FirebaseAnalytics */; };
 		5B8D79F52C73090200544E49 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79F42C73090200544E49 /* FirebaseAuth */; };
 		5B8D79F72C73090200544E49 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79F62C73090200544E49 /* FirebaseCrashlytics */; };
@@ -85,6 +86,7 @@
 		5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CautionTestStep.swift; sourceTree = "<group>"; };
 		5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		5B83F02B2C8E3AA5001D52BA /* Task++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task++.swift"; sourceTree = "<group>"; };
 		5B8D7A002C73A69900544E49 /* TestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatus.swift; sourceTree = "<group>"; };
 		5B9220F82BDE85E100F96222 /* SettingsTabRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRootViewModel.swift; sourceTree = "<group>"; };
 		5B9220FA2BDE882500F96222 /* SettingsTabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRootView.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				5BBC9AF52BD03E6300170B62 /* Spacer+.swift */,
 				5BBC9AF32BD03E3900170B62 /* UIFont+.swift */,
 				5BBC9AF72BD03E9500170B62 /* View+.swift */,
+				5B83F02B2C8E3AA5001D52BA /* Task++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				5BFDB5282C0E417E00E7607B /* PatientRegisterViewModel.swift in Sources */,
 				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* PatientInfoViewModel.swift in Sources */,
+				5B83F02C2C8E3AA5001D52BA /* Task++.swift in Sources */,
 				5B9A4F882C726D4F00F22E6F /* AuthError.swift in Sources */,
 				5BBC9B002BD0405500170B62 /* TabBarView.swift in Sources */,
 				5BBC9AEB2BD03D1600170B62 /* AppTab.swift in Sources */,

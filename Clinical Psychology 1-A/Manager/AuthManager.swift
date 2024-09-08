@@ -11,7 +11,7 @@ import FirebaseAuth
 @MainActor
 class AuthManager: ObservableObject {
     @Published var user: User?
-    @Published var authState = AuthState.signedOut
+    @Published var authState = AuthState.signedIn
     
     private var authStateHandle: AuthStateDidChangeListenerHandle!
     

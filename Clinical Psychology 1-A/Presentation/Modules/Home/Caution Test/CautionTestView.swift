@@ -28,7 +28,8 @@ struct CautionTestView: View {
                 case .plusSign:
                     PlusSignView(viewModel: viewModel)
                         .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            Task {
+                                try await Task.sleep(for: 0.5)
                                 selectedStep = .photos
                             }
                         }
@@ -36,7 +37,8 @@ struct CautionTestView: View {
                 case .photos:
                     PhotosView(viewModel: viewModel, photoCoupleCount: photoCoupleCount)
                         .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            Task {
+                                try await Task.sleep(for: 0.5)
                                 selectedStep = .selection
                             }
                         }
