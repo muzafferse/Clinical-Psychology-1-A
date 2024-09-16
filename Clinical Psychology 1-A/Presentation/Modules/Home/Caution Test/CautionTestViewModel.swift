@@ -19,30 +19,32 @@ class CautionTestViewModel: ObservableObject {
     @Published var leftArrowIcon = Image(systemName: "arrow.left")
     @Published var rightArrowIcon = Image(systemName: "arrow.right")
     
-    @Published var photos = [
-        Image(.OCB_1),
-        Image(.neutral1),
-        Image(.OCB_2),
-        Image(.neutral2),
-        Image(.OCB_3),
-        Image(.neutral3),
-        Image(.OCB_4),
-        Image(.neutral4),
-        Image(.OCB_5),
-        Image(.neutral5),
-        Image(.OCB_6),
-        Image(.neutral6),
-        Image(.OCB_7),
-        Image(.neutral7),
-        Image(.OCB_8),
-        Image(.neutral8),
-        Image(.OCB_9),
-        Image(.neutral9),
-        Image(.OCB_10),
-        Image(.neutral10),
-        Image(.OCB_11),
-        Image(.neutral11),
-        Image(.OCB_12),
-        Image(.neutral12)
-    ]
+    @Published var currentTrialIndex = 0
+    @Published var totalTrials: [(Image, Image, ArrowDirection, Position)] = []
+    
+    init() {
+        for _ in 0..<3 {
+            let shuffledTrials = createTrials().shuffled()
+            totalTrials.append(contentsOf: shuffledTrials)
+        }
+    }
+    
+    func createTrials() -> [(Image, Image, ArrowDirection, Position)] {
+        let ocdPhotos = (1...12).map { Image("OCB-\($0)") }
+        let neutralPhotos = (1...12).map { Image("Neutral-\($0)") }
+        var trialPairs: [(Image, Image, ArrowDirection, Position)] = []
+        
+        for i in 0..<12 {
+            for position in Position.allCases {
+                for direction in ArrowDirection.allCases {
+                    trialPairs.append((ocdPhotos[i], neutralPhotos[i], direction, position))
+                }
+            }
+        }
+        return trialPairs
+    }
+    
+    var currentTrial: (Image, Image, ArrowDirection, Position) {
+        return totalTrials[currentTrialIndex]
+    }
 }

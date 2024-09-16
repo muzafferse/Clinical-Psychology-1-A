@@ -12,7 +12,6 @@ struct FinishView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        
         VStack(spacing: 32) {
             Spacer()
             
@@ -20,7 +19,6 @@ struct FinishView: View {
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
-            
             Spacer()
             
             Button(action: {

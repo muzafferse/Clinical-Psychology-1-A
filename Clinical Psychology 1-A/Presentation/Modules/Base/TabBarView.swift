@@ -77,7 +77,7 @@ struct TabBarView: View {
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Uyarı"),
-                message: Text("Test esnasında sekmeler arasında geçiş yapamazsınız."),
+                message: Text("Uygulama esnasında sekmeler arasında geçiş yapamazsınız."),
                 dismissButton: .default(Text("Tamam"))
             )
         }

@@ -11,7 +11,7 @@ struct CautionTestView: View {
     
     @ObservedObject var viewModel = CautionTestViewModel()
     @State var selectedStep: CautionTestStep = .description
-    @State var photoCoupleCount: Int = 0
+    @State var trialCount: Int = 0
     
     var body: some View {
         ZStack {
@@ -35,7 +35,7 @@ struct CautionTestView: View {
                         }
                     
                 case .photos:
-                    PhotosView(viewModel: viewModel, photoCoupleCount: photoCoupleCount)
+                    PhotosView(viewModel: viewModel)
                         .onAppear {
                             Task {
                                 try await Task.sleep(for: 0.5)
@@ -45,8 +45,8 @@ struct CautionTestView: View {
                     
                 case .selection:
                     SelectionView(viewModel: viewModel) {
-                        photoCoupleCount += 2
-                        if photoCoupleCount >= viewModel.photos.count {
+                        viewModel.currentTrialIndex += 1
+                        if viewModel.currentTrialIndex >= viewModel.totalTrials.count {
                             selectedStep = .finish
                         } else {
                             selectedStep = .plusSign

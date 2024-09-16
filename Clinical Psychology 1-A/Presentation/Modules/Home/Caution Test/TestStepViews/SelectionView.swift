@@ -12,19 +12,48 @@ struct SelectionView: View {
     let onSelection: () -> Void
     
     var body: some View {
+        let (_, _, direction, position) = viewModel.currentTrial
         ZStack {
             VStack(spacing: 32) {
-                Spacer()
-                    .frame(width: 256, height: 192)
-                
-                ZStack {
+                if position == .topNeutral {
+                    ZStack {
+                        Spacer()
+                            .frame(width: 256, height: 192)
+                        
+                        VStack {
+                            if direction == .right {
+                                viewModel.rightArrowIcon
+                                    .robotoRegularFont(size: 32)
+                                    .foregroundStyle(.colorWhite)
+                            } else {
+                                viewModel.leftArrowIcon
+                                    .robotoRegularFont(size: 32)
+                                    .foregroundStyle(.colorWhite)
+                            }
+                        }
+                    }
+                    
+                    Spacer()
+                        .frame(width: 256, height: 192)
+                } else {
                     Spacer()
                         .frame(width: 256, height: 192)
                     
-                    VStack {
-                        viewModel.rightArrowIcon
-                            .robotoRegularFont(size: 32)
-                            .foregroundStyle(.colorWhite)
+                    ZStack {
+                        Spacer()
+                            .frame(width: 256, height: 192)
+                        
+                        VStack {
+                            if direction == .right {
+                                viewModel.rightArrowIcon
+                                    .robotoRegularFont(size: 32)
+                                    .foregroundStyle(.colorWhite)
+                            } else {
+                                viewModel.leftArrowIcon
+                                    .robotoRegularFont(size: 32)
+                                    .foregroundStyle(.colorWhite)
+                            }
+                        }
                     }
                 }
             }

@@ -9,25 +9,36 @@ import SwiftUI
 
 struct PhotosView: View {
     let viewModel: CautionTestViewModel
-    let photoCoupleCount: Int
     
     var body: some View {
+        let (ocdPhoto, neutralPhoto, _, position) = viewModel.currentTrial
         VStack(spacing: 32) {
-            viewModel.photos[photoCoupleCount]
-                .resizable()
-                .scaledToFit()
-                .frame(width: 256, height: 192)
-                .border(.colorWhite)
-            
-            viewModel.photos[photoCoupleCount + 1]
-                .resizable()
-                .scaledToFit()
-                .frame(width: 256, height: 192)
-                .border(.colorWhite)
+            if position == .topNeutral {
+                neutralPhoto
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 256, height: 192)
+                
+                ocdPhoto
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 256, height: 192)
+                
+            } else {
+                ocdPhoto
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 256, height: 192)
+                
+                neutralPhoto
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 256, height: 192)
+            }
         }
     }
 }
 
 #Preview {
-    PhotosView(viewModel: CautionTestViewModel(), photoCoupleCount: 0)
+    PhotosView(viewModel: CautionTestViewModel())
 }

@@ -30,6 +30,8 @@
 		5B9A4F882C726D4F00F22E6F /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A4F872C726D4F00F22E6F /* AuthError.swift */; };
 		5B9CB60A2BF53FDB00055481 /* InterpretationTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */; };
 		5B9CB60C2BF53FE700055481 /* InterpretationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB60B2BF53FE700055481 /* InterpretationTestView.swift */; };
+		5BB433052C962B10001A1BB9 /* ArrowDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB433042C962B10001A1BB9 /* ArrowDirection.swift */; };
+		5BB433072C962B3F001A1BB9 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB433062C962B3F001A1BB9 /* Position.swift */; };
 		5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */; };
 		5BBC9AB62BD0304200170B62 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB52BD0304200170B62 /* AppView.swift */; };
 		5BBC9AB82BD0304700170B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB72BD0304700170B62 /* Assets.xcassets */; };
@@ -97,6 +99,8 @@
 		5B9A4F872C726D4F00F22E6F /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestViewModel.swift; sourceTree = "<group>"; };
 		5B9CB60B2BF53FE700055481 /* InterpretationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestView.swift; sourceTree = "<group>"; };
+		5BB433042C962B10001A1BB9 /* ArrowDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowDirection.swift; sourceTree = "<group>"; };
+		5BB433062C962B3F001A1BB9 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		5BBC9AB02BD0304200170B62 /* Clinical Psychology 1-A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clinical Psychology 1-A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinical_Psychology_1_AApp.swift; sourceTree = "<group>"; };
 		5BBC9AB52BD0304200170B62 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 			children = (
 				5BBC9AEA2BD03D1600170B62 /* AppTab.swift */,
 				5BBC9AEC2BD03D4700170B62 /* AppNavigationDestination.swift */,
+				5BB433042C962B10001A1BB9 /* ArrowDirection.swift */,
 				5B9A4F872C726D4F00F22E6F /* AuthError.swift */,
 				5BE4D2062C709B9900C50419 /* AuthState.swift */,
 				5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */,
@@ -319,6 +324,7 @@
 				5BBC9AF02BD03DC400170B62 /* CustomButtonStyle.swift */,
 				5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */,
 				5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */,
+				5BB433062C962B3F001A1BB9 /* Position.swift */,
 				5B8D7A002C73A69900544E49 /* TestStatus.swift */,
 			);
 			path = Enums;
@@ -533,6 +539,7 @@
 				5BBC9AEF2BD03D8B00170B62 /* CustomTextFieldStyle.swift in Sources */,
 				5BEEFA932C07286C00AF3445 /* DescriptionView.swift in Sources */,
 				5B3A373F2C7CD9BE0005FAE9 /* CautionTestStep.swift in Sources */,
+				5BB433052C962B10001A1BB9 /* ArrowDirection.swift in Sources */,
 				5B9A4F862C7249AE00F22E6F /* AuthManager.swift in Sources */,
 				5BEEFA972C0738A100AF3445 /* PlusSignView.swift in Sources */,
 				5B8D7A012C73A69900544E49 /* TestStatus.swift in Sources */,
@@ -550,6 +557,7 @@
 				5BBC9AB62BD0304200170B62 /* AppView.swift in Sources */,
 				5BFDB5282C0E417E00E7607B /* PatientRegisterViewModel.swift in Sources */,
 				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
+				5BB433072C962B3F001A1BB9 /* Position.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* PatientInfoViewModel.swift in Sources */,
 				5B83F02C2C8E3AA5001D52BA /* Task++.swift in Sources */,
 				5B9A4F882C726D4F00F22E6F /* AuthError.swift in Sources */,
