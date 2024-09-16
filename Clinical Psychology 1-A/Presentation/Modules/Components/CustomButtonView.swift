@@ -39,13 +39,13 @@ struct CustomButtonView: ButtonStyle {
             VStack(spacing: 32) {
                 Button(action: { },
                        label: {
-                    Text("Primary Button")
+                    Text(AppStrings.settings)
                 })
                 .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
                 
                 Button(action: { },
                        label: {
-                    Text("Primary Inactive Button")
+                    Text(AppStrings.home)
                 })
                 .buttonStyle(.customButton(.constant(PrimaryInactiveButtonStyle())))
                 .disabled(true)

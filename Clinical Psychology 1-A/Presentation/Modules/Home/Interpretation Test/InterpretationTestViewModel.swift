@@ -8,5 +8,5 @@
 import SwiftUI
 
 class InterpretationTestViewModel: ObservableObject {
-    @Published var description = "Deneme"
+    @Published var description = AppStrings.interpretationTestStartDescription
 }

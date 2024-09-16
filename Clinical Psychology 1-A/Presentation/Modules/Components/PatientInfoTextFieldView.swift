@@ -65,7 +65,7 @@ struct PatientInfoTextFieldView: View {
         Color(.colorBackground)
             .ignoresSafeArea()
         VStack(spacing: 8) {
-            PatientInfoTextFieldView(text: .constant("deneme"),
+            PatientInfoTextFieldView(text: .constant(AppStrings.nickName),
                                      patientInfoTextFieldStyle: .constant(UsernameTextFieldStyle()))
         }
         .padding(.horizontal, 8)

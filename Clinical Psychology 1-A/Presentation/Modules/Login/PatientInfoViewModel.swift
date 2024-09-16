@@ -12,18 +12,18 @@ class PatientInfoViewModel: ObservableObject {
     @Published var password = ""
     @Published var passwordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
     
-    @Published var appName = "Klinik Psikoloji Grup 1-A"
-    @Published var patientNickName = "Rumuz"
-    @Published var passwordInfo = "Şifre"
-    @Published var loginButtonText = "Giriş Yap"
-    @Published var registerButtonText = "Kayıt Ol"
+    @Published var appName = AppStrings.appName
+    @Published var patientNickName = AppStrings.nickName
+    @Published var passwordInfo = AppStrings.password
+    @Published var loginButtonText = AppStrings.loginButtonText
+    @Published var registerButtonText = AppStrings.registerButtonText
     
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
     
-    let passwordLengthWarning = "Şifreniz 6 karakterden uzun olmalıdır."
-    let popupTitle = "Hata!"
-    let popupButtonText = "Tamam"
+    let passwordLengthWarning = AppStrings.loginPasswordLengthWarning
+    let popupTitle = AppStrings.loginPopupTitle
+    let popupButtonText = AppStrings.loginPopupButtonText
     
     var loginButtonStyle: CustomButtonStyle {
         return isLoginButtonActive() ? PrimaryActiveButtonStyle() : PrimaryInactiveButtonStyle()

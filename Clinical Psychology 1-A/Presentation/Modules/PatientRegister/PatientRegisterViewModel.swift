@@ -15,21 +15,21 @@ class PatientRegisterViewModel: ObservableObject {
     @Published var repassword: String = ""
     @Published var repasswordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
     
-    @Published var appName = "Klinik Psikoloji Grup 1-A"
-    @Published var patientNickName = "Rumuz"
-    @Published var patientPassword = "Şifre"
-    @Published var patientRepassword = "Şifreyi Onayla"
-    @Published var registerButtonText = "Kayıt Ol"
+    @Published var appName = AppStrings.appName
+    @Published var patientNickName = AppStrings.nickName
+    @Published var patientPassword = AppStrings.password
+    @Published var patientRepassword = AppStrings.repeatPassword
+    @Published var registerButtonText = AppStrings.registerButtonText
     
     @Published var chevronLeft = Image(systemName: "chevron.left")
-    @Published var backButtonTitle = "Giriş Yap"
+    @Published var backButtonTitle = AppStrings.registerBackButtonText
     
     @Published var showAlert = false
     @Published var alertMessage = ""
     
-    let passwordMatchWarning = "Lütfen girdiğiniz şifrelerin aynı olduğundan emin olun."
-    let popupTitle = "Hata"
-    let popupButtonText = "Tamam"
+    let passwordMatchWarning = AppStrings.registerPasswordMatchWarning
+    let popupTitle = AppStrings.registerPopupTitle
+    let popupButtonText = AppStrings.registerPopupButtonText
     
     var registerButtonStyle: CustomButtonStyle {
         return isRegisterButtonActive() ? PrimaryActiveButtonStyle() : PrimaryInactiveButtonStyle()

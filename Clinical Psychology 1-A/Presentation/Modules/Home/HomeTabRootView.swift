@@ -21,12 +21,12 @@ struct HomeTabRootView: View {
             
             VStack(spacing: 24) {
                 VStack(spacing: 32) {
-                    let username = authManager.user?.email?.components(separatedBy: "@").first ?? "Misafir Kullanıcı"
+                    let username = authManager.user?.email?.components(separatedBy: "@").first ?? AppStrings.guestUser
                     Text("Merhaba, \(username)")
                         .robotoMediumFont(size: 20)
                         .foregroundStyle(.colorWhite)
                     
-                    Text(viewModel.welcomeMessage)
+                    Text(viewModel.welcomeDescription)
                         .robotoRegularFont(size: 16)
                         .multilineTextAlignment(.leading)
                         .foregroundStyle(.colorWhite)
@@ -41,26 +41,6 @@ struct HomeTabRootView: View {
                 }
                 .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
                 .padding(.bottom, 12)
-                
-                /*
-                 // Dikkat Yanlılığı Değişimleme
-                 Button(action: {
-                 self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
-                 },
-                 label: {
-                 Text(viewModel.cautionTestName)
-                 })
-                 .buttonStyle(.customButton(.constant(viewModel.cautionTestStyle)))
-                 
-                 // Yorumlama Yanlılığı Değişimleme
-                 Button(action: {
-                 self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
-                 },
-                 label: {
-                 Text(viewModel.interpretationTestName)
-                 })
-                 .buttonStyle(.customButton(.constant(viewModel.interpretationTestStyle)))
-                 */
             }
             .padding(.all, 24)
         }

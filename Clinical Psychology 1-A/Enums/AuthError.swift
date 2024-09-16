@@ -51,27 +51,27 @@ enum AuthError: Error, LocalizedError {
     var errorDescription: String? {
         switch self {
         case .invalidCredential:
-            return "Rumuz veya şifre yanlış. Lütfen şifrenizi ve rumuzunuzu doğru girdiğinizden emin olun."
+            return AppStrings.authErrorInvalidCredential
         case .emailAlreadyInUse:
-            return "Bu rumuz ile zaten bir kullanıcı kayıtlı."
+            return AppStrings.authErrorEmailAlreadyInUse
         case .invalidEmail:
-            return "Geçersiz bir rumuz girdiniz."
+            return AppStrings.authErrorInvalidEmail
         case .weakPassword:
-            return "Şifre 6 karakterden kısa. Lütfen daha uzun bir şifre seçin."
+            return AppStrings.authErrorWeakPassword
         case .wrongPassword:
-            return "Şifre yanlış. Lütfen tekrar deneyin."
+            return AppStrings.authErrorWrongPassword
         case .userNotFound:
-            return "Bu kullanıcı mevcut değil."
+            return AppStrings.authErrorUserNotFound
         case .userDisabled:
-            return "Bu kullanıcı devre dışı bırakılmış."
+            return AppStrings.authErrorUserDisabled
         case .tooManyRequests:
-            return "Çok fazla istek gönderildi. Lütfen daha sonra tekrar deneyin."
+            return AppStrings.authErrorTooManyRequests
         case .operationNotAllowed:
-            return "Bu işlem şu anda yapılamıyor."
+            return AppStrings.authErrorOperationNotAllowed
         case .networkError:
-            return "Ağ hatası. Lütfen daha sonra tekrar deneyin."
+            return AppStrings.authErrorNetworkError
         case .unknownError:
-            return "Bilinmeyen bir hata oluştu."
+            return AppStrings.authErrorUnknownError
         }
     }
 }

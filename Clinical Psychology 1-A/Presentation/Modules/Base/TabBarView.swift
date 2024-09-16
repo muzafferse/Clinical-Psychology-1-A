@@ -28,7 +28,7 @@ struct TabBarView: View {
                                 .frame(maxWidth: .infinity,
                                        minHeight: 24,
                                        maxHeight: 24)
-                            Text("Ana Sayfa")
+                            Text(AppStrings.home)
                                 .robotoMediumFont(size: 10)
                                 .multilineTextAlignment(.center)
                                 .frame(maxWidth: .infinity, alignment: .center)
@@ -51,7 +51,7 @@ struct TabBarView: View {
                                 .frame(maxWidth: .infinity,
                                        minHeight: 24,
                                        maxHeight: 24)
-                            Text("Ayarlar")
+                            Text(AppStrings.settings)
                                 .robotoMediumFont(size: 10)
                                 .multilineTextAlignment(.center)
                                 .frame(maxWidth: .infinity, alignment: .center)
@@ -76,9 +76,9 @@ struct TabBarView: View {
         .background(.colorBackground)
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text("Uyarı"),
-                message: Text("Uygulama esnasında sekmeler arasında geçiş yapamazsınız."),
-                dismissButton: .default(Text("Tamam"))
+                title: Text(AppStrings.tabBarAlertTitle),
+                message: Text(AppStrings.tabBarAlertDescription),
+                dismissButton: .default(Text(AppStrings.tabBarAlertButtonText))
             )
         }
     }

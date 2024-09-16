@@ -38,7 +38,7 @@ struct BackgroundView<Content: View>: View {
         Color(.colorBackground)
             .ignoresSafeArea()
         BackgroundView(content:  {
-            Text("deneme")
+            EmptyView()
         }, height: 42)
     }
 }

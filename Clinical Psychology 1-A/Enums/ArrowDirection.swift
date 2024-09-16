@@ -8,6 +8,5 @@
 import Foundation
 
 enum ArrowDirection: CaseIterable {
-    case left
-    case right
+    case left, right
 }

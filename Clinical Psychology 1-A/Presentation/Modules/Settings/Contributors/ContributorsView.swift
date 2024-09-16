@@ -19,7 +19,7 @@ struct ContributorsView: View {
             List(viewModel.contributorsData) { contributor in
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("\(contributor.name) \(contributor.surname)")
+                        Text(contributor.name)
                             .robotoMediumFont(size: 16)
                             .foregroundStyle(.colorWhite)
                         
@@ -43,7 +43,7 @@ struct ContributorsView: View {
                                     .robotoRegularFont(size: 32)
                                     .foregroundStyle(.colorWhite)
                                 
-                                Text(viewModel.contactText)
+                                Text(viewModel.contactButtonText)
                                     .robotoRegularFont(size: 14)
                                     .foregroundStyle(.colorWhite)
                             }

@@ -8,6 +8,5 @@
 import Foundation
 
 enum Position: CaseIterable {
-    case topNeutral
-    case bottomNeutral
+    case topNeutral, bottomNeutral
 }

@@ -35,8 +35,12 @@ struct PasswordInputFieldView: View {
 }
 
 #Preview {
-    PasswordInputFieldView(title: "",
-                           text: .constant(""),
-                           textFieldStyle: .constant(PasswordTextFieldStyle()),
-                           toggleAction: {})
+    ZStack {
+        Color(.colorBackground)
+            .ignoresSafeArea()
+        PasswordInputFieldView(title: AppStrings.password,
+                               text: .constant(AppStrings.password),
+                               textFieldStyle: .constant(PasswordTextFieldStyle()),
+                               toggleAction: {})
+    }
 }

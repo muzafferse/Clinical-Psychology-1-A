@@ -25,7 +25,12 @@ struct InputFieldView: View {
 }
 
 #Preview {
-    InputFieldView(title: "",
-                   text: .constant(""),
-                   textFieldStyle: UsernameTextFieldStyle())
+    ZStack {
+        Color(.colorBackground)
+            .ignoresSafeArea()
+        InputFieldView(title: AppStrings.nickName,
+                       text: .constant(AppStrings.nickName),
+                       textFieldStyle: UsernameTextFieldStyle())
+    }
+    
 }

@@ -16,7 +16,7 @@ struct InterpretationTestView: View {
             Color(.colorBackground)
                 .ignoresSafeArea()
             
-            Text("Hello, World!")
+            Text(viewModel.description)
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
