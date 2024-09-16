@@ -26,7 +26,7 @@ struct FinishView: View {
             }, label: {
                 Text(viewModel.finishButtonText)
             })
-            .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
+            .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
     }

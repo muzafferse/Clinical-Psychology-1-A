@@ -13,7 +13,7 @@ class LoginViewModel: ObservableObject {
     @Published var passwordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
     
     @Published var appName = AppStrings.appName
-    @Published var patientNickName = AppStrings.nickName
+    @Published var userNickName = AppStrings.nickName
     @Published var passwordInfo = AppStrings.password
     @Published var loginButtonText = AppStrings.loginButtonText
     @Published var registerButtonText = AppStrings.registerButtonText

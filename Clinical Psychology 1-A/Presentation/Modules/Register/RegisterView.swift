@@ -1,5 +1,5 @@
 //
-//  PatientRegisterView.swift
+//  RegisterView.swift
 //  Clinical Psychology 1-A
 //
 //  Created by Muzaffer Sevili on 3.06.2024.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct PatientRegisterView: View {
+struct RegisterView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var authManager: AuthManager
-    @ObservedObject var viewModel = PatientRegisterViewModel()
+    @ObservedObject var viewModel = RegisterViewModel()
     
     @Environment(\.dismiss) var dismiss
     
@@ -24,13 +24,13 @@ struct PatientRegisterView: View {
                     VStack(spacing: 32) {
                         VStack(spacing: 24) {
                             
-                            // Patient Nickname Textfield
-                            InputFieldView(title: viewModel.patientNickName,
+                            // User Nickname Textfield
+                            InputFieldView(title: viewModel.userNickName,
                                            text: $viewModel.nickName,
                                            textFieldStyle: UsernameTextFieldStyle())
                             
                             // Password Textfield
-                            PasswordInputFieldView(title: viewModel.patientPassword,
+                            PasswordInputFieldView(title: viewModel.userPassword,
                                                    text: $viewModel.password,
                                                    textFieldStyle: $viewModel.passwordTextFieldStyle,
                                                    toggleAction: {
@@ -38,7 +38,7 @@ struct PatientRegisterView: View {
                             })
                             
                             // Re-Password Textfield
-                            PasswordInputFieldView(title: viewModel.patientRepassword,
+                            PasswordInputFieldView(title: viewModel.userRepassword,
                                                    text: $viewModel.repassword,
                                                    textFieldStyle: $viewModel.repasswordTextFieldStyle,
                                                    toggleAction: {
@@ -105,6 +105,6 @@ struct PatientRegisterView: View {
     ZStack {
         Color(.colorBackground)
             .ignoresSafeArea()
-        PatientRegisterView()
+        RegisterView()
     }
 }

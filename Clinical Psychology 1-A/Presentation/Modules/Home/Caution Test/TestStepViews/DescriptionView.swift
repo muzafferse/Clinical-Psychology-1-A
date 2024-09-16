@@ -25,7 +25,7 @@ struct DescriptionView: View {
             Button(action: onNext) {
                 Text(viewModel.startButtonText)
             }
-            .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
+            .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
     }

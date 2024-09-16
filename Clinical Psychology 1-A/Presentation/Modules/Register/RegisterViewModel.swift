@@ -1,5 +1,5 @@
 //
-//  PatientRegisterViewModel.swift
+//  RegisterViewModel.swift
 //  Clinical Psychology 1-A
 //
 //  Created by Muzaffer Sevili on 3.06.2024.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class PatientRegisterViewModel: ObservableObject {
+class RegisterViewModel: ObservableObject {
     @Published var nickName: String = ""
     @Published var password: String = ""
     @Published var passwordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
@@ -16,9 +16,9 @@ class PatientRegisterViewModel: ObservableObject {
     @Published var repasswordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
     
     @Published var appName = AppStrings.appName
-    @Published var patientNickName = AppStrings.nickName
-    @Published var patientPassword = AppStrings.password
-    @Published var patientRepassword = AppStrings.repeatPassword
+    @Published var userNickName = AppStrings.nickName
+    @Published var userPassword = AppStrings.password
+    @Published var userRepassword = AppStrings.repeatPassword
     @Published var registerButtonText = AppStrings.registerButtonText
     
     @Published var chevronLeft = Image(systemName: "chevron.left")

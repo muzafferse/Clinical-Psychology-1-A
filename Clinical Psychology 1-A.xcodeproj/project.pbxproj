@@ -79,8 +79,8 @@
 		5BEEFA9E2C0739FB00AF3445 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEFA9D2C0739FA00AF3445 /* FinishView.swift */; };
 		5BEEFAA12C0745B200AF3445 /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEFAA02C0745B200AF3445 /* ContributorsView.swift */; };
 		5BEEFAA32C0745C000AF3445 /* ContributorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEFAA22C0745C000AF3445 /* ContributorsViewModel.swift */; };
-		5BFDB5262C0E416A00E7607B /* PatientRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFDB5252C0E416A00E7607B /* PatientRegisterView.swift */; };
-		5BFDB5282C0E417E00E7607B /* PatientRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFDB5272C0E417E00E7607B /* PatientRegisterViewModel.swift */; };
+		5BFDB5262C0E416A00E7607B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFDB5252C0E416A00E7607B /* RegisterView.swift */; };
+		5BFDB5282C0E417E00E7607B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFDB5272C0E417E00E7607B /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,8 +151,8 @@
 		5BEEFA9D2C0739FA00AF3445 /* FinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
 		5BEEFAA02C0745B200AF3445 /* ContributorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsView.swift; sourceTree = "<group>"; };
 		5BEEFAA22C0745C000AF3445 /* ContributorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsViewModel.swift; sourceTree = "<group>"; };
-		5BFDB5252C0E416A00E7607B /* PatientRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRegisterView.swift; sourceTree = "<group>"; };
-		5BFDB5272C0E417E00E7607B /* PatientRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRegisterViewModel.swift; sourceTree = "<group>"; };
+		5BFDB5252C0E416A00E7607B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		5BFDB5272C0E417E00E7607B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,8 +418,8 @@
 		5BFDB5242C0E402C00E7607B /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				5BFDB5252C0E416A00E7607B /* PatientRegisterView.swift */,
-				5BFDB5272C0E417E00E7607B /* PatientRegisterViewModel.swift */,
+				5BFDB5252C0E416A00E7607B /* RegisterView.swift */,
+				5BFDB5272C0E417E00E7607B /* RegisterViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -534,7 +534,7 @@
 				5B3A37412C7CD9FA0005FAE9 /* FontStyle.swift in Sources */,
 				5B9220F92BDE85E100F96222 /* SettingsTabRootViewModel.swift in Sources */,
 				5BE4D2072C709B9900C50419 /* AuthState.swift in Sources */,
-				5BFDB5262C0E416A00E7607B /* PatientRegisterView.swift in Sources */,
+				5BFDB5262C0E416A00E7607B /* RegisterView.swift in Sources */,
 				5BBC9AF82BD03E9500170B62 /* View+.swift in Sources */,
 				5B9CB60C2BF53FE700055481 /* InterpretationTestView.swift in Sources */,
 				5BBC9AE52BD03BBB00170B62 /* AppCordinator.swift in Sources */,
@@ -558,7 +558,7 @@
 				5B9220FD2BDE8F1B00F96222 /* SettingsTabView.swift in Sources */,
 				5B9221032BDEB13600F96222 /* CautionTestViewModel.swift in Sources */,
 				5BBC9AB62BD0304200170B62 /* AppView.swift in Sources */,
-				5BFDB5282C0E417E00E7607B /* PatientRegisterViewModel.swift in Sources */,
+				5BFDB5282C0E417E00E7607B /* RegisterViewModel.swift in Sources */,
 				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
 				5BB433072C962B3F001A1BB9 /* Position.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* LoginViewModel.swift in Sources */,

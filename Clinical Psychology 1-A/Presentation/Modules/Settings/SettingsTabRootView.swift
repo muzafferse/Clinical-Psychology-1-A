@@ -55,7 +55,7 @@ struct SettingsTabRootView: View {
                 }) {
                     Text(viewModel.logoutButtonText)
                 }
-                .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
+                .primaryActiveButtonStyle()
                 .padding(.top, 24)
                 .padding(.horizontal, 24)
                 

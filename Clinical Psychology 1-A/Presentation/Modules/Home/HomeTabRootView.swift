@@ -39,7 +39,7 @@ struct HomeTabRootView: View {
                 } label: {
                     Text(viewModel.generalTestButton)
                 }
-                .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
+                .primaryActiveButtonStyle()
                 .padding(.bottom, 12)
             }
             .padding(.all, 24)

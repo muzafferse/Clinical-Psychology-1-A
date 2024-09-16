@@ -41,13 +41,13 @@ struct CustomButtonView: ButtonStyle {
                        label: {
                     Text(AppStrings.settings)
                 })
-                .buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
+                .primaryActiveButtonStyle()
                 
                 Button(action: { },
                        label: {
                     Text(AppStrings.home)
                 })
-                .buttonStyle(.customButton(.constant(PrimaryInactiveButtonStyle())))
+                .primaryInactiveButtonStyle()
                 .disabled(true)
             }
         }

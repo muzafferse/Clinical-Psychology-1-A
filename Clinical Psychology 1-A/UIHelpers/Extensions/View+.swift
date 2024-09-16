@@ -79,3 +79,19 @@ extension View {
         self.font(.custom(.roboto, style: .regular, size: size))
     }
 }
+
+// MARK: - Button Modifiers
+extension View {
+    func primaryActiveButtonStyle() -> some View {
+        self.buttonStyle(.customButton(.constant(PrimaryActiveButtonStyle())))
+    }
+    
+    func primaryInactiveButtonStyle() -> some View {
+        self.buttonStyle(.customButton(.constant(PrimaryInactiveButtonStyle())))
+    }
+    
+    func textButtonStyle() -> some View {
+        self.buttonStyle(.customButton(.constant(TextButtonStyle())))
+    }
+        
+}

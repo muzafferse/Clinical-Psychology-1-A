@@ -22,8 +22,8 @@ struct LoginView: View {
                     VStack(spacing: 32) {
                         VStack(spacing: 24) {
                             
-                            // Patient Nickname Textfield
-                            InputFieldView(title: viewModel.patientNickName,
+                            // User Nickname Textfield
+                            InputFieldView(title: viewModel.userNickName,
                                            text: $viewModel.nickName,
                                            textFieldStyle: UsernameTextFieldStyle())
                             
@@ -56,10 +56,10 @@ struct LoginView: View {
                         .disabled(!viewModel.isLoginButtonActive())
                         
                         // Register Button
-                        NavigationLink(destination: PatientRegisterView()) {
+                        NavigationLink(destination: RegisterView()) {
                             Text(viewModel.registerButtonText)
                         }
-                        .buttonStyle(.customButton(.constant(TextButtonStyle())))
+                        .textButtonStyle()
                         
                     }
                     .padding(.horizontal, 24)
