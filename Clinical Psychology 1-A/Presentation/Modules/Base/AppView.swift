@@ -40,4 +40,5 @@ struct AppView: View {
 #Preview {
     AppView()
         .environmentObject(AppState()) // Provide an instance of AppState as an environment object
+        .environmentObject(AuthManager())
 }

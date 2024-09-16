@@ -51,4 +51,6 @@ struct HomeTabRootView: View {
 
 #Preview {
     HomeTabRootView(viewModel: HomeTabRootViewModel())
+        .environmentObject(AppState()) // Provide an instance of AppState as an environment object
+        .environmentObject(AuthManager())
 }
