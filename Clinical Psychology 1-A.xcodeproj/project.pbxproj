@@ -268,7 +268,7 @@
 				5BBC9AC42BD0329000170B62 /* Components */,
 				5BBC9B462BD05FE300170B62 /* Home */,
 				5BBC9AC52BD032A700170B62 /* Login */,
-				5BFDB5242C0E402C00E7607B /* PatientRegister */,
+				5BFDB5242C0E402C00E7607B /* Register */,
 				5B4625692BD94EEB009E3EEE /* Settings */,
 			);
 			path = Modules;
@@ -415,13 +415,13 @@
 			path = Contributors;
 			sourceTree = "<group>";
 		};
-		5BFDB5242C0E402C00E7607B /* PatientRegister */ = {
+		5BFDB5242C0E402C00E7607B /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				5BFDB5252C0E416A00E7607B /* PatientRegisterView.swift */,
 				5BFDB5272C0E417E00E7607B /* PatientRegisterViewModel.swift */,
 			);
-			path = PatientRegister;
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
