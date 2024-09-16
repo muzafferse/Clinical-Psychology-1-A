@@ -18,8 +18,8 @@ struct InputFieldView: View {
                 .robotoMediumFont(size: 14)
                 .foregroundStyle(.colorWhite)
             
-            PatientInfoTextFieldView(text: $text,
-                                     patientInfoTextFieldStyle: .constant(textFieldStyle))
+            LoginTextFieldView(text: $text,
+                                     loginTextFieldStyle: .constant(textFieldStyle))
         }
     }
 }

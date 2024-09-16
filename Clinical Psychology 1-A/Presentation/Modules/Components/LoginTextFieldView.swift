@@ -1,5 +1,5 @@
 //
-//  PatientInfoTextFieldView.swift
+//  LoginTextFieldView.swift
 //  Clinical Psychology 1-A
 //
 //  Created by Muzaffer Sevili on 17.04.2024.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct PatientInfoTextFieldView: View {
+struct LoginTextFieldView: View {
     @Binding var text: String
-    @Binding var patientInfoTextFieldStyle: CustomTextFieldStyle
+    @Binding var loginTextFieldStyle: CustomTextFieldStyle
     var onRightButtonTap: (() -> Void)?
     
     @FocusState private var isFocused: Bool
@@ -17,12 +17,12 @@ struct PatientInfoTextFieldView: View {
     var body: some View {
         BackgroundView(content: {
             HStack {
-                if let leftIcon = patientInfoTextFieldStyle.leftIcon,
-                   let leftEmptyIcon = patientInfoTextFieldStyle.leftEmptyIcon {
+                if let leftIcon = loginTextFieldStyle.leftIcon,
+                   let leftEmptyIcon = loginTextFieldStyle.leftEmptyIcon {
                     
                     text.isEmpty ? coloredIcon(icon: leftEmptyIcon) : coloredIcon(icon: leftIcon)
                 }
-                if patientInfoTextFieldStyle.isHidden {
+                if loginTextFieldStyle.isHidden {
                     SecureField("", text: $text)
                         .robotoMediumFont(size: 13)
                         .foregroundStyle(.colorPrimary)
@@ -37,12 +37,12 @@ struct PatientInfoTextFieldView: View {
                         .focused($isFocused)
                 }
                 
-                if let rightIcon = patientInfoTextFieldStyle.rightIcon,
-                   let rightTransparentIcon = patientInfoTextFieldStyle.rightTransparentIcon {
+                if let rightIcon = loginTextFieldStyle.rightIcon,
+                   let rightTransparentIcon = loginTextFieldStyle.rightTransparentIcon {
                     Button {
                         onRightButtonTap?()
                     } label: {
-                        patientInfoTextFieldStyle.isHidden ? coloredIcon(icon: rightTransparentIcon) : coloredIcon(icon: rightIcon)
+                        loginTextFieldStyle.isHidden ? coloredIcon(icon: rightTransparentIcon) : coloredIcon(icon: rightIcon)
                     }
                 }
             }
@@ -65,8 +65,8 @@ struct PatientInfoTextFieldView: View {
         Color(.colorBackground)
             .ignoresSafeArea()
         VStack(spacing: 8) {
-            PatientInfoTextFieldView(text: .constant(AppStrings.nickName),
-                                     patientInfoTextFieldStyle: .constant(UsernameTextFieldStyle()))
+            LoginTextFieldView(text: .constant(AppStrings.nickName),
+                                     loginTextFieldStyle: .constant(UsernameTextFieldStyle()))
         }
         .padding(.horizontal, 8)
     }

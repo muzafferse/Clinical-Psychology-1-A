@@ -31,7 +31,7 @@ struct AppView: View {
                 }
                 .ignoresSafeArea()
             } else {
-                PatientInfoView()
+                LoginView()
             }
         }
     }

@@ -1,5 +1,5 @@
 //
-//  PatientInfoView.swift
+//  LoginView.swift
 //  Clinical Psychology 1-A
 //
 //  Created by Muzaffer Sevili on 17.04.2024.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct PatientInfoView: View {
+struct LoginView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var authManager: AuthManager
-    @ObservedObject var viewModel = PatientInfoViewModel()
+    @ObservedObject var viewModel = LoginViewModel()
     
     var body: some View {
         NavigationStack {
@@ -87,6 +87,6 @@ struct PatientInfoView: View {
     ZStack {
         Color(.colorBackground)
             .ignoresSafeArea()
-        PatientInfoView()
+        LoginView()
     }
 }

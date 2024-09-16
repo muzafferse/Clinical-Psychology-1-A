@@ -20,8 +20,8 @@ struct PasswordInputFieldView: View {
                 .robotoMediumFont(size: 14)
                 .foregroundStyle(.colorWhite)
             
-            PatientInfoTextFieldView(text: $text,
-                                     patientInfoTextFieldStyle: $textFieldStyle,
+            LoginTextFieldView(text: $text,
+                                     loginTextFieldStyle: $textFieldStyle,
                                      onRightButtonTap: toggleAction)
             
             if let warningMessage = warningMessage {

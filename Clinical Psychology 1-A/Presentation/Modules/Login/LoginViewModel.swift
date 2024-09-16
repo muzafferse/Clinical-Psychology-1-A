@@ -1,5 +1,5 @@
 //
-//  PatientInfoViewModel.swift
+//  LoginViewModel.swift
 //  Clinical Psychology 1-A
 //
 //  Created by Muzaffer Sevili on 17.04.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PatientInfoViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
     @Published var nickName = ""
     @Published var password = ""
     @Published var passwordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
