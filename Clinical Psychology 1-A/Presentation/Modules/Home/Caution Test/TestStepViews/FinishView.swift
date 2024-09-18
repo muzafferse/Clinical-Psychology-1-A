@@ -33,5 +33,9 @@ struct FinishView: View {
 }
 
 #Preview {
-    FinishView(viewModel: CautionTestViewModel())
+    ZStack {
+        Color(.colorBackground)
+            .ignoresSafeArea()
+        FinishView(viewModel: CautionTestViewModel())
+    }
 }

@@ -85,8 +85,6 @@ struct LoginView: View {
 
 #Preview {
     ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
         LoginView()
     }
 }

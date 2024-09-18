@@ -69,5 +69,10 @@ struct SelectionView: View {
 }
 
 #Preview {
-    SelectionView(viewModel: CautionTestViewModel(), onSelection: {})
+    ZStack {
+        Color(.colorBackground)
+            .ignoresSafeArea()
+        SelectionView(viewModel: CautionTestViewModel(),
+                      onSelection: {})
+    }
 }

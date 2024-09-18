@@ -40,5 +40,9 @@ struct PhotosView: View {
 }
 
 #Preview {
-    PhotosView(viewModel: CautionTestViewModel())
+    ZStack {
+        Color(.colorBackground)
+            .ignoresSafeArea()
+        PhotosView(viewModel: CautionTestViewModel())
+    }
 }

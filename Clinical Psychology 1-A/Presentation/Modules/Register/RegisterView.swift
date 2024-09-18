@@ -103,8 +103,6 @@ struct RegisterView: View {
 
 #Preview {
     ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
         RegisterView()
     }
 }
