@@ -17,7 +17,9 @@ struct AppView: View {
     
     var body: some View {
         ZStack {
-            if authManager.authState == .signedIn {
+            if authManager.authState == .loading {
+                ProgressView("Loading...")
+            } else if authManager.authState == .signedIn {
                 VStack {
                     // Display different views based on the selected tab
                     switch self.appState.selectedTab {

@@ -8,6 +8,7 @@
 import Foundation
 
 enum AuthState {
-    case signedIn // Authenticated in Firebase using email.
+    case signedIn  // Authenticated in Firebase using email.
     case signedOut // Not authenticated in Firebase.
+    case loading   // Waiting for Firebase to retrieve authentication state.
 }

@@ -11,11 +11,12 @@ import FirebaseAuth
 @MainActor
 class AuthManager: ObservableObject {
     @Published var user: User?
-    @Published var authState = AuthState.signedIn
+    @Published var authState = AuthState.loading
     
     private var authStateHandle: AuthStateDidChangeListenerHandle!
     
     init() {
+        self.authState = .loading
         self.user = Auth.auth().currentUser
         self.authState = self.user != nil ? .signedIn : .signedOut
         self.configureAuthStateChanges()
