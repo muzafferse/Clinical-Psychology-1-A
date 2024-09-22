@@ -23,7 +23,7 @@ class CautionTestViewModel: ObservableObject {
     @Published var totalTrials: [(Image, Image, ArrowDirection, Position)] = []
     
     init() {
-        for _ in 0..<3 {
+        for _ in 0..<6 {
             let shuffledTrials = createTrials().shuffled()
             totalTrials.append(contentsOf: shuffledTrials)
         }
