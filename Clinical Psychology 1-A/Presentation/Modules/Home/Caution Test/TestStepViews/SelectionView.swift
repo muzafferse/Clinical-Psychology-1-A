@@ -11,6 +11,8 @@ struct SelectionView: View {
     let viewModel: CautionTestViewModel
     let onSelection: () -> Void
     
+    @State private var isButtonDisabled = false
+    
     var body: some View {
         let (_, _, direction, position) = viewModel.currentTrial
         ZStack {
@@ -51,19 +53,27 @@ struct SelectionView: View {
     
     private func selectionButtonsView(onSelection: @escaping () -> Void) -> some View {
         HStack {
-            Button(action: onSelection) {
+            Button(action: {
+                onSelection()
+                isButtonDisabled = true
+            }, label: {
                 viewModel.leftArrowIcon
-            }
+            })
             .frame(width: 64, height: 32)
             .primaryActiveButtonStyle()
+            .disabled(isButtonDisabled)
             
             Spacer()
             
-            Button(action: onSelection) {
+            Button(action: {
+                onSelection()
+                isButtonDisabled = true
+            }, label: {
                 viewModel.rightArrowIcon
-            }
+            })
             .frame(width: 64, height: 32)
             .primaryActiveButtonStyle()
+            .disabled(isButtonDisabled)
         }
     }
 }
