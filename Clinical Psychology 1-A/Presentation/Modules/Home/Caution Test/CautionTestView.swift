@@ -45,10 +45,10 @@ struct CautionTestView: View {
                     
                 case .selection:
                     SelectionView(viewModel: viewModel) {
-                        viewModel.currentTrialIndex += 1
-                        if viewModel.currentTrialIndex >= viewModel.totalTrials.count {
+                        if viewModel.currentTrialIndex >= viewModel.totalTrials.count - 1 {
                             selectedStep = .finish
                         } else {
+                            viewModel.currentTrialIndex += 1
                             selectedStep = .plusSign
                         }
                     }

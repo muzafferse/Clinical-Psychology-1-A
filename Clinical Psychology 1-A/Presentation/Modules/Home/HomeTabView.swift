@@ -27,7 +27,6 @@ struct HomeTabView: View {
                                 appState.testStatus = .cautionTest
                             })
                             .onDisappear(perform: {
-                                //Warning: It can be should changed
                                 appState.testStatus = .interpretationTest
                             })
                     case .interpretationTest:
