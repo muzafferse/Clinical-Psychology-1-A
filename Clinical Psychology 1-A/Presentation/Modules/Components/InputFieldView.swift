@@ -32,5 +32,4 @@ struct InputFieldView: View {
                        text: .constant(AppStrings.nickName),
                        textFieldStyle: UsernameTextFieldStyle())
     }
-    
 }

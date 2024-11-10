@@ -194,6 +194,38 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		5B91EC282CE1312400B4A8EA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5B9A4F872C726D4F00F22E6F /* AuthError.swift */,
+				5BE4D2062C709B9900C50419 /* AuthState.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5B91EC292CE1314100B4A8EA /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				5BB433042C962B10001A1BB9 /* ArrowDirection.swift */,
+				5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */,
+				5BD528772CA04EAC0091C88B /* InterpretationTestStep.swift */,
+				5BB433062C962B3F001A1BB9 /* Position.swift */,
+				5B8D7A002C73A69900544E49 /* TestStatus.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		5B91EC2A2CE1317400B4A8EA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC9AEE2BD03D8B00170B62 /* CustomTextFieldStyle.swift */,
+				5BBC9AF02BD03DC400170B62 /* CustomButtonStyle.swift */,
+				5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */,
+				5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		5B9220FE2BDEB0D800F96222 /* Caution Test */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,19 +361,11 @@
 		5BBC9AC82BD0331C00170B62 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				5B91EC282CE1312400B4A8EA /* Auth */,
+				5B91EC2A2CE1317400B4A8EA /* Style */,
+				5B91EC292CE1314100B4A8EA /* Test */,
 				5BBC9AEA2BD03D1600170B62 /* AppTab.swift */,
 				5BBC9AEC2BD03D4700170B62 /* AppNavigationDestination.swift */,
-				5BB433042C962B10001A1BB9 /* ArrowDirection.swift */,
-				5B9A4F872C726D4F00F22E6F /* AuthError.swift */,
-				5BE4D2062C709B9900C50419 /* AuthState.swift */,
-				5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */,
-				5BBC9AEE2BD03D8B00170B62 /* CustomTextFieldStyle.swift */,
-				5BBC9AF02BD03DC400170B62 /* CustomButtonStyle.swift */,
-				5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */,
-				5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */,
-				5BD528772CA04EAC0091C88B /* InterpretationTestStep.swift */,
-				5BB433062C962B3F001A1BB9 /* Position.swift */,
-				5B8D7A002C73A69900544E49 /* TestStatus.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
