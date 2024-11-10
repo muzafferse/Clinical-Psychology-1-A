@@ -65,11 +65,10 @@ struct ContributorsView: View {
                 }) {
                     HStack {
                         Image.chevronLeft
-                            .foregroundStyle(.colorWhite)
                         Text(AppStrings.contributorsBackButtonText)
-                            .foregroundStyle(.colorWhite)
                     }
                 }
+                .foregroundStyle(.colorWhite)
             }
         }
     }
