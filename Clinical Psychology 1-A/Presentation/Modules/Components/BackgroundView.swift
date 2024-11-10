@@ -28,8 +28,7 @@ struct BackgroundView<Content: View>: View {
                 HStack {
                     content
                 }
-                    .padding(.horizontal, 8)
-            )
+                    .padding(.horizontal, 8))
     }
 }
 

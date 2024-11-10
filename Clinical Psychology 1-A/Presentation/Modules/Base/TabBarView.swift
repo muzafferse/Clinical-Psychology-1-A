@@ -75,10 +75,9 @@ struct TabBarView: View {
         }
         .background(.colorBackground)
         .alert(isPresented: $showAlert) {
-            Alert(
-                title: Text(AppStrings.tabBarAlertTitle),
-                message: Text(AppStrings.tabBarAlertDescription),
-                dismissButton: .default(Text(AppStrings.tabBarAlertButtonText))
+            Alert(title: Text(AppStrings.tabBarAlertTitle),
+                  message: Text(AppStrings.tabBarAlertDescription),
+                  dismissButton: .default(Text(AppStrings.tabBarAlertButtonText))
             )
         }
     }

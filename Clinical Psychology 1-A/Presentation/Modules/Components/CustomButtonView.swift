@@ -22,11 +22,9 @@ struct CustomButtonView: ButtonStyle {
             .cornerRadius(buttonType.cornerRadius)
             .overlay(
                 RoundedRectangle(cornerRadius: buttonType.cornerRadius)
-                    .stroke(buttonType.strokeColor,
-                            lineWidth: 1))
+                    .stroke(buttonType.strokeColor, lineWidth: 1))
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeOut(duration: 0.5),
-                       value: configuration.isPressed)
+            .animation(.easeOut(duration: 0.5), value: configuration.isPressed)
     }
 }
 
