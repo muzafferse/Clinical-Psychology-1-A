@@ -27,30 +27,6 @@ extension View {
     }
 }
 
-// A private ViewModifier to add an invisible view capturing the height using GeometryReader.
-private struct ReadHeightModifier: ViewModifier {
-    private var sizeView: some View {
-        GeometryReader { geometry in
-            Color.clear.preference(key: HeightPreferenceKey.self, value: geometry.size.height)
-        }
-    }
-    
-    // Applying the modifier to the content view.
-    func body(content: Content) -> some View {
-        content.background(sizeView)
-    }
-}
-
-// A PreferenceKey to store and share the captured height information.
-struct HeightPreferenceKey: PreferenceKey {
-    static var defaultValue: CGFloat?
-    
-    static func reduce(value: inout CGFloat?, nextValue: () -> CGFloat?) {
-        guard let nextValue = nextValue() else { return }
-        value = nextValue
-    }
-}
-
 // MARK: - Hide keyboard
 extension View {
     func hideKeyboard() {
