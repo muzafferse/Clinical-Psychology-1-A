@@ -1,5 +1,5 @@
 //
-//  InterpretationTestTrainingWelcomeView.swift
+//  InterpretationTestWelcomeView.swift
 //  Clinical Psychology 1-A
 //
 //  Created by Muzaffer Sevili on 22.09.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InterpretationTestTrainingWelcomeView: View {
+struct InterpretationTestWelcomeView: View {
     let viewModel: InterpretationTestViewModel
     let onNext: () -> Void
     
@@ -15,7 +15,7 @@ struct InterpretationTestTrainingWelcomeView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(AppStrings.interpretationTestTrainingWelcomeMessage)
+            Text(AppStrings.interpretationTestWelcomeMessage)
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
@@ -23,7 +23,7 @@ struct InterpretationTestTrainingWelcomeView: View {
             Spacer()
             
             Button(action: onNext) {
-                Text(AppStrings.interpretationTestTrainingWelcomeButtonText)
+                Text(AppStrings.interpretationTestWelcomeButtonText)
             }
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
@@ -35,7 +35,7 @@ struct InterpretationTestTrainingWelcomeView: View {
     ZStack {
         Color(.colorBackground)
             .ignoresSafeArea()
-        InterpretationTestTrainingWelcomeView(viewModel: InterpretationTestViewModel(),
+        InterpretationTestWelcomeView(viewModel: InterpretationTestViewModel(),
                                               onNext: {})
     }
 }

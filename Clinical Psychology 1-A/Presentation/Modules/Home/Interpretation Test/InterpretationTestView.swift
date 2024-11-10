@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct InterpretationTestView: View {
-    
     @ObservedObject var viewModel = InterpretationTestViewModel()
-    @State var selectedStep: InterpretationTestStep = .trainingWelcomeMessage
+    @State var selectedStep: InterpretationTestStep = .welcomeMessage
     
     var body: some View {
         ZStack {
@@ -19,8 +18,8 @@ struct InterpretationTestView: View {
             
             VStack {
                 switch selectedStep {
-                case .trainingWelcomeMessage:
-                    InterpretationTestTrainingWelcomeView(viewModel: viewModel) {
+                case .welcomeMessage:
+                    InterpretationTestWelcomeView(viewModel: viewModel) {
                         selectedStep = .trainingDescription
                     }
                     

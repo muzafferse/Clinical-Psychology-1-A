@@ -8,6 +8,6 @@
 import Foundation
 
 enum InterpretationTestStep {
-    case trainingWelcomeMessage
+    case welcomeMessage
     case trainingDescription
 }

@@ -36,6 +36,6 @@ struct InterpretationTestTrainingDescriptionView: View {
         Color(.colorBackground)
             .ignoresSafeArea()
         InterpretationTestTrainingDescriptionView(viewModel: InterpretationTestViewModel(),
-                                      onNext: {})
+                                                  onNext: {})
     }
 }

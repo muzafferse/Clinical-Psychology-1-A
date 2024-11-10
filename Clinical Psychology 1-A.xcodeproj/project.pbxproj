@@ -73,7 +73,7 @@
 		5BBC9B482BD0601100170B62 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9B472BD0601100170B62 /* HomeTabView.swift */; };
 		5BBC9B4A2BD0604800170B62 /* HomeTabRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9B492BD0604800170B62 /* HomeTabRootView.swift */; };
 		5BBC9B4C2BD0608100170B62 /* HomeTabRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9B4B2BD0608100170B62 /* HomeTabRootViewModel.swift */; };
-		5BD528752CA04E4A0091C88B /* InterpretationTestTrainingWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528742CA04E4A0091C88B /* InterpretationTestTrainingWelcomeView.swift */; };
+		5BD528752CA04E4A0091C88B /* InterpretationTestWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528742CA04E4A0091C88B /* InterpretationTestWelcomeView.swift */; };
 		5BD528782CA04EAC0091C88B /* InterpretationTestStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528772CA04EAC0091C88B /* InterpretationTestStep.swift */; };
 		5BD5287A2CA053480091C88B /* InterpretationTestTrainingDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528792CA053480091C88B /* InterpretationTestTrainingDescriptionView.swift */; };
 		5BE4D2072C709B9900C50419 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4D2062C709B9900C50419 /* AuthState.swift */; };
@@ -150,7 +150,7 @@
 		5BBC9B472BD0601100170B62 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		5BBC9B492BD0604800170B62 /* HomeTabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabRootView.swift; sourceTree = "<group>"; };
 		5BBC9B4B2BD0608100170B62 /* HomeTabRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabRootViewModel.swift; sourceTree = "<group>"; };
-		5BD528742CA04E4A0091C88B /* InterpretationTestTrainingWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestTrainingWelcomeView.swift; sourceTree = "<group>"; };
+		5BD528742CA04E4A0091C88B /* InterpretationTestWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestWelcomeView.swift; sourceTree = "<group>"; };
 		5BD528772CA04EAC0091C88B /* InterpretationTestStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestStep.swift; sourceTree = "<group>"; };
 		5BD528792CA053480091C88B /* InterpretationTestTrainingDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestTrainingDescriptionView.swift; sourceTree = "<group>"; };
 		5BE4D2062C709B9900C50419 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
@@ -435,7 +435,7 @@
 		5BD528762CA04E4E0091C88B /* StepViews */ = {
 			isa = PBXGroup;
 			children = (
-				5BD528742CA04E4A0091C88B /* InterpretationTestTrainingWelcomeView.swift */,
+				5BD528742CA04E4A0091C88B /* InterpretationTestWelcomeView.swift */,
 				5BD528792CA053480091C88B /* InterpretationTestTrainingDescriptionView.swift */,
 			);
 			path = StepViews;
@@ -609,7 +609,7 @@
 				5B9221032BDEB13600F96222 /* CautionTestViewModel.swift in Sources */,
 				5BBC9AB62BD0304200170B62 /* AppView.swift in Sources */,
 				5BFDB5282C0E417E00E7607B /* RegisterViewModel.swift in Sources */,
-				5BD528752CA04E4A0091C88B /* InterpretationTestTrainingWelcomeView.swift in Sources */,
+				5BD528752CA04E4A0091C88B /* InterpretationTestWelcomeView.swift in Sources */,
 				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
 				5BB433072C962B3F001A1BB9 /* Position.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* LoginViewModel.swift in Sources */,
