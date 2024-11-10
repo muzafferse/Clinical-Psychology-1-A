@@ -15,21 +15,10 @@ class RegisterViewModel: ObservableObject {
     @Published var repassword: String = ""
     @Published var repasswordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
     
-    @Published var appName = AppStrings.appName
-    @Published var userNickName = AppStrings.nickName
-    @Published var userPassword = AppStrings.password
-    @Published var userRepassword = AppStrings.repeatPassword
-    @Published var registerButtonText = AppStrings.registerButtonText
-    
     @Published var chevronLeft = Image(systemName: "chevron.left")
-    @Published var backButtonTitle = AppStrings.registerBackButtonText
     
     @Published var showAlert = false
     @Published var alertMessage = ""
-    
-    let passwordMatchWarning = AppStrings.registerPasswordMatchWarning
-    let popupTitle = AppStrings.registerPopupTitle
-    let popupButtonText = AppStrings.registerPopupButtonText
     
     var registerButtonStyle: CustomButtonStyle {
         return isRegisterButtonActive() ? PrimaryActiveButtonStyle() : PrimaryInactiveButtonStyle()

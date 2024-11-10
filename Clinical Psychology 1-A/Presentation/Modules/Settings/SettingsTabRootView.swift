@@ -25,7 +25,7 @@ struct SettingsTabRootView: View {
                         Button(action: {
                             self.appState.settingsNavigation.append(SettingsNavDestination.contributors)
                         }) {
-                            Text(viewModel.contributorsButtonText)
+                            Text(AppStrings.contributorsButtonText)
                                 .robotoMediumFont(size: 20)
                                 .foregroundStyle(.colorWhite)
                             
@@ -53,7 +53,7 @@ struct SettingsTabRootView: View {
                         }
                     }
                 }) {
-                    Text(viewModel.logoutButtonText)
+                    Text(AppStrings.logoutButtonText)
                 }
                 .primaryActiveButtonStyle()
                 .padding(.top, 24)
@@ -63,7 +63,7 @@ struct SettingsTabRootView: View {
             }
             .padding(.vertical, 12)
         }
-        .navigationTitle(viewModel.title)
+        .navigationTitle(AppStrings.settingsTitle)
         .navigationBarTitleTextColor(.colorWhite)
     }
 }

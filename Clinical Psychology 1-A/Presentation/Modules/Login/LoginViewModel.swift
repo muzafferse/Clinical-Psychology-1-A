@@ -12,18 +12,8 @@ class LoginViewModel: ObservableObject {
     @Published var password = ""
     @Published var passwordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
     
-    @Published var appName = AppStrings.appName
-    @Published var userNickName = AppStrings.nickName
-    @Published var passwordInfo = AppStrings.password
-    @Published var loginButtonText = AppStrings.loginButtonText
-    @Published var registerButtonText = AppStrings.registerButtonText
-    
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
-    
-    let passwordLengthWarning = AppStrings.loginPasswordLengthWarning
-    let popupTitle = AppStrings.loginPopupTitle
-    let popupButtonText = AppStrings.loginPopupButtonText
     
     var loginButtonStyle: CustomButtonStyle {
         return isLoginButtonActive() ? PrimaryActiveButtonStyle() : PrimaryInactiveButtonStyle()

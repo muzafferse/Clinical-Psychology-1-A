@@ -39,9 +39,5 @@ class ContributorsViewModel: ObservableObject, Identifiable {
     ]
     
     @Published var mailIcon: Image = Image(systemName: "square.and.pencil")
-    @Published var contactButtonText: String = AppStrings.contactButtonText
-    @Published var title: String = AppStrings.contributorsTitle
-    
     @Published var chevronLeft = Image(systemName: "chevron.left")
-    @Published var backButtonTitle: String = AppStrings.contributorsBackButtonText
 }

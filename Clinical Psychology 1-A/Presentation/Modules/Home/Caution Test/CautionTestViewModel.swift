@@ -8,13 +8,6 @@
 import SwiftUI
 
 class CautionTestViewModel: ObservableObject {
-    
-    @Published var startDescription: String = AppStrings.cautionTestStartDescription
-    @Published var startButtonText: String = AppStrings.cautionTestStartButtonText
-    
-    @Published var finishDescription = AppStrings.cautionTestFinishDescription
-    @Published var finishButtonText = AppStrings.cautionTestFinishButtonText
-    
     @Published var plusIcon = Image(systemName: "plus")
     @Published var leftArrowIcon = Image(systemName: "arrow.left")
     @Published var rightArrowIcon = Image(systemName: "arrow.right")

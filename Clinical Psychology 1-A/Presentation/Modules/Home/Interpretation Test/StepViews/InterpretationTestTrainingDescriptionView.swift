@@ -15,7 +15,7 @@ struct InterpretationTestTrainingDescriptionView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(viewModel.trainingDescriptionMessage)
+            Text(AppStrings.interpretationTestTrainingDescription)
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
@@ -23,7 +23,7 @@ struct InterpretationTestTrainingDescriptionView: View {
             Spacer()
             
             Button(action: onNext) {
-                Text(viewModel.trainingDescriptionButtonText)
+                Text(AppStrings.interpretationTestTrainingButtonText)
             }
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)

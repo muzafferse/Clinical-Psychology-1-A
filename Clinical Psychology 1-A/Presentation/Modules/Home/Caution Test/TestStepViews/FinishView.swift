@@ -15,7 +15,7 @@ struct FinishView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(viewModel.finishDescription)
+            Text(AppStrings.cautionTestFinishDescription)
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
@@ -24,7 +24,7 @@ struct FinishView: View {
             Button(action: {
                 self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
             }, label: {
-                Text(viewModel.finishButtonText)
+                Text(AppStrings.cautionTestFinishButtonText)
             })
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)

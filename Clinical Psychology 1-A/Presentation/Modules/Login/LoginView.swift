@@ -23,17 +23,17 @@ struct LoginView: View {
                         VStack(spacing: 24) {
                             
                             // User Nickname Textfield
-                            InputFieldView(title: viewModel.userNickName,
+                            InputFieldView(title: AppStrings.nickName,
                                            text: $viewModel.nickName,
                                            textFieldStyle: UsernameTextFieldStyle())
                             
                             // Password Textfield
-                            PasswordInputFieldView(title: viewModel.passwordInfo,
+                            PasswordInputFieldView(title: AppStrings.password,
                                                    text: $viewModel.password,
                                                    textFieldStyle: $viewModel.passwordTextFieldStyle,
                                                    toggleAction: { viewModel.passwordTextFieldStyle.isHidden.toggle()
                             },
-                                                   warningMessage: viewModel.isPasswordEnough() ? nil : viewModel.passwordLengthWarning)
+                                                   warningMessage: viewModel.isPasswordEnough() ? nil : AppStrings.loginPasswordLengthWarning)
                         }
                         
                         // Login Button
@@ -50,14 +50,14 @@ struct LoginView: View {
                             }
                         },
                                label: {
-                            Text(viewModel.loginButtonText)
+                            Text(AppStrings.loginButtonText)
                         })
                         .buttonStyle(.customButton(.constant(viewModel.loginButtonStyle)))
                         .disabled(!viewModel.isLoginButtonActive())
                         
                         // Register Button
                         NavigationLink(destination: RegisterView()) {
-                            Text(viewModel.registerButtonText)
+                            Text(AppStrings.registerButtonText)
                         }
                         .textButtonStyle()
                         
@@ -67,14 +67,14 @@ struct LoginView: View {
                 }
                 .clipped()
                 .scrollDisabled(true)
-                .navigationTitle(viewModel.appName)
+                .navigationTitle(AppStrings.appName)
                 .navigationBarTitleTextColor(.colorWhite)
                 .navigationBarTitleDisplayMode(.large)
             }
             .alert(isPresented: $viewModel.showAlert) {
-                Alert(title: Text(viewModel.popupTitle),
+                Alert(title: Text(AppStrings.loginPopupTitle),
                       message: Text(viewModel.alertMessage),
-                      dismissButton: .default(Text(viewModel.popupButtonText)))
+                      dismissButton: .default(Text(AppStrings.loginPopupButtonText)))
             }
             .onTapGesture {
                 hideKeyboard()

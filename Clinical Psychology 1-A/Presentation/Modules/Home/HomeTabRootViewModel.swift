@@ -10,12 +10,6 @@ import Foundation
 //MARK: - View Model
 // ViewModel responsible for managing data related to the Home dashboard
 class HomeTabRootViewModel: ObservableObject, Identifiable {
-    
-    // MARK: - Properties
-    @Published var title: String = AppStrings.homeTitle
-    @Published var welcomeDescription: String = AppStrings.welcomeDescription
-    @Published var generalTestButton: String = AppStrings.startTestButtonText
-    
     var cautionTestStyle: CustomButtonStyle = PrimaryActiveButtonStyle()
     var interpretationTestStyle: CustomButtonStyle = PrimaryActiveButtonStyle()
 }

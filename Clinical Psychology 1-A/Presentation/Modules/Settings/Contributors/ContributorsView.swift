@@ -43,7 +43,7 @@ struct ContributorsView: View {
                                     .robotoRegularFont(size: 32)
                                     .foregroundStyle(.colorWhite)
                                 
-                                Text(viewModel.contactButtonText)
+                                Text(AppStrings.contactButtonText)
                                     .robotoRegularFont(size: 14)
                                     .foregroundStyle(.colorWhite)
                             }
@@ -55,7 +55,7 @@ struct ContributorsView: View {
             }
             .listStyle(.plain)
         }
-        .navigationTitle(viewModel.title)
+        .navigationTitle(AppStrings.contributorsTitle)
         .navigationBarTitleTextColor(.colorWhite)
         .navigationBarBackButtonHidden()
         .toolbar {
@@ -66,7 +66,7 @@ struct ContributorsView: View {
                     HStack {
                         viewModel.chevronLeft
                             .foregroundStyle(.colorWhite)
-                        Text(viewModel.backButtonTitle)
+                        Text(AppStrings.contributorsBackButtonText)
                             .foregroundStyle(.colorWhite)
                     }
                 }

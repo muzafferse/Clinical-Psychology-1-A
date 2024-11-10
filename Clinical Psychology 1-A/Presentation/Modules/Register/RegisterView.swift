@@ -25,12 +25,12 @@ struct RegisterView: View {
                         VStack(spacing: 24) {
                             
                             // User Nickname Textfield
-                            InputFieldView(title: viewModel.userNickName,
+                            InputFieldView(title: AppStrings.nickName,
                                            text: $viewModel.nickName,
                                            textFieldStyle: UsernameTextFieldStyle())
                             
                             // Password Textfield
-                            PasswordInputFieldView(title: viewModel.userPassword,
+                            PasswordInputFieldView(title: AppStrings.password,
                                                    text: $viewModel.password,
                                                    textFieldStyle: $viewModel.passwordTextFieldStyle,
                                                    toggleAction: {
@@ -38,13 +38,13 @@ struct RegisterView: View {
                             })
                             
                             // Re-Password Textfield
-                            PasswordInputFieldView(title: viewModel.userRepassword,
+                            PasswordInputFieldView(title: AppStrings.repeatPassword,
                                                    text: $viewModel.repassword,
                                                    textFieldStyle: $viewModel.repasswordTextFieldStyle,
                                                    toggleAction: {
                                 viewModel.repasswordTextFieldStyle.isHidden.toggle()
                             }, 
-                                                   warningMessage: viewModel.isPasswordsMatch() ? nil : viewModel.passwordMatchWarning)
+                                                   warningMessage: viewModel.isPasswordsMatch() ? nil : AppStrings.registerPasswordMatchWarning)
                         }
                         
                         // Register Button
@@ -60,7 +60,7 @@ struct RegisterView: View {
                             }
                         },
                                label: {
-                            Text(viewModel.registerButtonText)
+                            Text(AppStrings.registerButtonText)
                         })
                         .buttonStyle(.customButton(.constant(viewModel.registerButtonStyle)))
                         .disabled(!viewModel.isRegisterButtonActive())
@@ -73,7 +73,7 @@ struct RegisterView: View {
                 .scrollDisabled(true)
             }
             .navigationBarBackButtonHidden()
-            .navigationTitle(viewModel.appName)
+            .navigationTitle(AppStrings.appName)
             .navigationBarTitleTextColor(.colorWhite)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
@@ -83,16 +83,16 @@ struct RegisterView: View {
                     }) {
                         HStack {
                             viewModel.chevronLeft
-                            Text(viewModel.backButtonTitle)
+                            Text(AppStrings.registerBackButtonText)
                         }
                     }
                     .foregroundStyle(.colorWhite)
                 }
             }
             .alert(isPresented: $viewModel.showAlert) {
-                Alert(title: Text(viewModel.popupTitle),
+                Alert(title: Text(AppStrings.registerPopupTitle),
                       message: Text(viewModel.alertMessage),
-                      dismissButton: .default(Text(viewModel.popupButtonText)))
+                      dismissButton: .default(Text(AppStrings.registerPopupButtonText)))
             }
             .onTapGesture {
                 hideKeyboard()

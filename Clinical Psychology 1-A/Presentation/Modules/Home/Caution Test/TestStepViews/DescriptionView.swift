@@ -15,7 +15,7 @@ struct DescriptionView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(viewModel.startDescription)
+            Text(AppStrings.cautionTestStartDescription)
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
@@ -23,7 +23,7 @@ struct DescriptionView: View {
             Spacer()
             
             Button(action: onNext) {
-                Text(viewModel.startButtonText)
+                Text(AppStrings.cautionTestStartButtonText)
             }
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)

@@ -15,7 +15,7 @@ struct InterpretationTestTrainingWelcomeView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(viewModel.trainingWelcomeMessage)
+            Text(AppStrings.interpretationTestTrainingWelcomeMessage)
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
@@ -23,7 +23,7 @@ struct InterpretationTestTrainingWelcomeView: View {
             Spacer()
             
             Button(action: onNext) {
-                Text(viewModel.trainingWelcomeButtonText)
+                Text(AppStrings.interpretationTestTrainingWelcomeButtonText)
             }
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
@@ -36,6 +36,6 @@ struct InterpretationTestTrainingWelcomeView: View {
         Color(.colorBackground)
             .ignoresSafeArea()
         InterpretationTestTrainingWelcomeView(viewModel: InterpretationTestViewModel(),
-                                      onNext: {})
+                                              onNext: {})
     }
 }

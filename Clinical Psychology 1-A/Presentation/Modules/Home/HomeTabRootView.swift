@@ -26,7 +26,7 @@ struct HomeTabRootView: View {
                         .robotoMediumFont(size: 20)
                         .foregroundStyle(.colorWhite)
                     
-                    Text(viewModel.welcomeDescription)
+                    Text(AppStrings.welcomeDescription)
                         .robotoRegularFont(size: 16)
                         .multilineTextAlignment(.leading)
                         .foregroundStyle(.colorWhite)
@@ -37,14 +37,14 @@ struct HomeTabRootView: View {
                 Button {
                     self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
                 } label: {
-                    Text(viewModel.generalTestButton)
+                    Text(AppStrings.startTestButtonText)
                 }
                 .primaryActiveButtonStyle()
                 .padding(.bottom, 12)
             }
             .padding(.all, 24)
         }
-        .navigationTitle(viewModel.title)
+        .navigationTitle(AppStrings.homeTitle)
         .navigationBarTitleTextColor(.colorWhite)
     }
 }

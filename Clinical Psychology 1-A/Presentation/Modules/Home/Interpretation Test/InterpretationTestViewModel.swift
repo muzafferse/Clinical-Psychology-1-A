@@ -8,9 +8,5 @@
 import SwiftUI
 
 class InterpretationTestViewModel: ObservableObject {
-    @Published var trainingWelcomeMessage = AppStrings.interpretationTestTrainingWelcomeMessage
-    @Published var trainingWelcomeButtonText = AppStrings.interpretationTestTrainingWelcomeButtonText
     
-    @Published var trainingDescriptionMessage = AppStrings.interpretationTestTrainingDescription
-    @Published var trainingDescriptionButtonText = AppStrings.interpretationTestTrainingButtonText
 }
