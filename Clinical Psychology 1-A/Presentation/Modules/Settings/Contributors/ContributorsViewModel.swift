@@ -37,7 +37,4 @@ class ContributorsViewModel: ObservableObject, Identifiable {
             email: "siladerin@gmail.com",
             company: "Dokuz Eylül Üniversitesi")
     ]
-    
-    @Published var mailIcon: Image = Image(systemName: "square.and.pencil")
-    @Published var chevronLeft = Image(systemName: "chevron.left")
 }

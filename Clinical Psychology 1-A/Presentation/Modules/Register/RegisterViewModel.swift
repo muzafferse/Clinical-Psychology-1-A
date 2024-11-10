@@ -15,8 +15,6 @@ class RegisterViewModel: ObservableObject {
     @Published var repassword: String = ""
     @Published var repasswordTextFieldStyle: CustomTextFieldStyle = PasswordTextFieldStyle()
     
-    @Published var chevronLeft = Image(systemName: "chevron.left")
-    
     @Published var showAlert = false
     @Published var alertMessage = ""
     

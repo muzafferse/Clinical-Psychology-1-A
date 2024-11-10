@@ -11,7 +11,7 @@ struct PlusSignView: View {
     let viewModel: CautionTestViewModel
     
     var body: some View {
-        viewModel.plusIcon
+        Image.plusIcon
             .robotoRegularFont(size: 32)
             .foregroundStyle(.colorWhite)
     }

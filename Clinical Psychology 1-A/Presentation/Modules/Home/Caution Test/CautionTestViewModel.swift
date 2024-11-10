@@ -8,10 +8,6 @@
 import SwiftUI
 
 class CautionTestViewModel: ObservableObject {
-    @Published var plusIcon = Image(systemName: "plus")
-    @Published var leftArrowIcon = Image(systemName: "arrow.left")
-    @Published var rightArrowIcon = Image(systemName: "arrow.right")
-    
     @Published var currentTrialIndex = 0
     @Published var totalTrials: [(Image, Image, ArrowDirection, Position)] = []
     

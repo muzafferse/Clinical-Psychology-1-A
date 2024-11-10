@@ -11,5 +11,5 @@ import SwiftUI
 //MARK: - View Model
 // ViewModel responsible for managing data related to the Settings dashboard
 class SettingsTabRootViewModel: ObservableObject, Identifiable {
-    @Published var chevronRight = Image(systemName: "chevron.right")
+    
 }

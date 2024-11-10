@@ -39,11 +39,11 @@ struct SelectionView: View {
             Spacer().frame(width: 256, height: 192)
             VStack {
                 if direction == .right {
-                    viewModel.rightArrowIcon
+                    Image.rightArrowIcon
                         .robotoRegularFont(size: 32)
                         .foregroundStyle(.colorWhite)
                 } else {
-                    viewModel.leftArrowIcon
+                    Image.leftArrowIcon
                         .robotoRegularFont(size: 32)
                         .foregroundStyle(.colorWhite)
                 }
@@ -57,7 +57,7 @@ struct SelectionView: View {
                 onSelection()
                 isButtonDisabled = true
             }, label: {
-                viewModel.leftArrowIcon
+                Image.leftArrowIcon
             })
             .frame(width: 64, height: 32)
             .primaryActiveButtonStyle()
@@ -69,7 +69,7 @@ struct SelectionView: View {
                 onSelection()
                 isButtonDisabled = true
             }, label: {
-                viewModel.rightArrowIcon
+                Image.rightArrowIcon
             })
             .frame(width: 64, height: 32)
             .primaryActiveButtonStyle()

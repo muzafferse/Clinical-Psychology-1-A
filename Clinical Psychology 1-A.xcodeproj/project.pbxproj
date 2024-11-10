@@ -21,6 +21,7 @@
 		5B8D79FD2C73090200544E49 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79FC2C73090200544E49 /* FirebaseRemoteConfig */; };
 		5B8D79FF2C73090200544E49 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5B8D79FE2C73090200544E49 /* FirebaseStorage */; };
 		5B8D7A012C73A69900544E49 /* TestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D7A002C73A69900544E49 /* TestStatus.swift */; };
+		5B91EC252CE12ACC00B4A8EA /* Image++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91EC242CE12ACC00B4A8EA /* Image++.swift */; };
 		5B9220F92BDE85E100F96222 /* SettingsTabRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220F82BDE85E100F96222 /* SettingsTabRootViewModel.swift */; };
 		5B9220FB2BDE882500F96222 /* SettingsTabRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220FA2BDE882500F96222 /* SettingsTabRootView.swift */; };
 		5B9220FD2BDE8F1B00F96222 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220FC2BDE8F1B00F96222 /* SettingsTabView.swift */; };
@@ -94,6 +95,7 @@
 		5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		5B83F02B2C8E3AA5001D52BA /* Task++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task++.swift"; sourceTree = "<group>"; };
 		5B8D7A002C73A69900544E49 /* TestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatus.swift; sourceTree = "<group>"; };
+		5B91EC242CE12ACC00B4A8EA /* Image++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image++.swift"; sourceTree = "<group>"; };
 		5B9220F82BDE85E100F96222 /* SettingsTabRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRootViewModel.swift; sourceTree = "<group>"; };
 		5B9220FA2BDE882500F96222 /* SettingsTabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRootView.swift; sourceTree = "<group>"; };
 		5B9220FC2BDE8F1B00F96222 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				5BBC9AF32BD03E3900170B62 /* UIFont+.swift */,
 				5BBC9AF72BD03E9500170B62 /* View+.swift */,
 				5B83F02B2C8E3AA5001D52BA /* Task++.swift */,
+				5B91EC242CE12ACC00B4A8EA /* Image++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				5B83F02C2C8E3AA5001D52BA /* Task++.swift in Sources */,
 				5B9A4F882C726D4F00F22E6F /* AuthError.swift in Sources */,
 				5BBC9B002BD0405500170B62 /* TabBarView.swift in Sources */,
+				5B91EC252CE12ACC00B4A8EA /* Image++.swift in Sources */,
 				5B95AB1E2C98C28D00ACA281 /* Strings.swift in Sources */,
 				5BBC9AEB2BD03D1600170B62 /* AppTab.swift in Sources */,
 				5B9220FB2BDE882500F96222 /* SettingsTabRootView.swift in Sources */,

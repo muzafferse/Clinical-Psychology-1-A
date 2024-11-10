@@ -82,7 +82,7 @@ struct RegisterView: View {
                         dismiss()
                     }) {
                         HStack {
-                            viewModel.chevronLeft
+                            Image.chevronLeft
                             Text(AppStrings.registerBackButtonText)
                         }
                     }

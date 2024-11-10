@@ -31,7 +31,7 @@ struct SettingsTabRootView: View {
                             
                             Spacer()
                             
-                            viewModel.chevronRight
+                            Image.chevronRight
                                 .foregroundStyle(.colorWhite)
                         }
                     }

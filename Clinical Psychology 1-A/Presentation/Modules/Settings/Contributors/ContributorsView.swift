@@ -39,7 +39,7 @@ struct ContributorsView: View {
                        let mailURL = URL(string: "mailto:\(encodedEmail)") {
                         Link(destination: mailURL) {
                             VStack(alignment: .center, spacing: 5) {
-                                viewModel.mailIcon
+                                Image.mailIcon
                                     .robotoRegularFont(size: 32)
                                     .foregroundStyle(.colorWhite)
                                 
@@ -64,7 +64,7 @@ struct ContributorsView: View {
                     dismiss()
                 }) {
                     HStack {
-                        viewModel.chevronLeft
+                        Image.chevronLeft
                             .foregroundStyle(.colorWhite)
                         Text(AppStrings.contributorsBackButtonText)
                             .foregroundStyle(.colorWhite)
