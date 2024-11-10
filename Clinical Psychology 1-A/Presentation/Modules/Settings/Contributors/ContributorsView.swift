@@ -55,22 +55,10 @@ struct ContributorsView: View {
             }
             .listStyle(.plain)
         }
+        .navigationBarBackButtonHidden()
         .navigationTitle(AppStrings.contributorsTitle)
         .navigationBarTitleTextColor(.colorWhite)
-        .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: {
-                    dismiss()
-                }) {
-                    HStack {
-                        Image.chevronLeft
-                        Text(AppStrings.contributorsBackButtonText)
-                    }
-                }
-                .foregroundStyle(.colorWhite)
-            }
-        }
+        .backButton(text: AppStrings.contributorsBackButtonText)
     }
 }
 

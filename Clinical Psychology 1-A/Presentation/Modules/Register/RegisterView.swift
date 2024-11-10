@@ -72,31 +72,19 @@ struct RegisterView: View {
                 .clipped()
                 .scrollDisabled(true)
             }
-            .navigationBarBackButtonHidden()
-            .navigationTitle(AppStrings.appName)
-            .navigationBarTitleTextColor(.colorWhite)
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        dismiss()
-                    }) {
-                        HStack {
-                            Image.chevronLeft
-                            Text(AppStrings.registerBackButtonText)
-                        }
-                    }
-                    .foregroundStyle(.colorWhite)
-                }
+            .onTapGesture {
+                hideKeyboard()
             }
             .alert(isPresented: $viewModel.showAlert) {
                 Alert(title: Text(AppStrings.registerPopupTitle),
                       message: Text(viewModel.alertMessage),
                       dismissButton: .default(Text(AppStrings.registerPopupButtonText)))
             }
-            .onTapGesture {
-                hideKeyboard()
-            }
+            .navigationBarBackButtonHidden()
+            .navigationTitle(AppStrings.appName)
+            .navigationBarTitleTextColor(.colorWhite)
+            .navigationBarTitleDisplayMode(.large)
+            .backButton(text: AppStrings.registerBackButtonText)
         }
     }
 }

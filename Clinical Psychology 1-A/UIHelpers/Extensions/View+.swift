@@ -17,16 +17,6 @@ extension View {
     func frame(_ size: CGFloat) -> some View { frame(width: size, height: size, alignment: .center) }
 }
 
-extension View {
-    func alignHorizontally(_ alignment: HorizontalAlignment, _ value: CGFloat = 0) -> some View {
-        HStack(spacing: 0) {
-            Spacer.width(alignment == .leading ? value : nil)
-            self
-            Spacer.width(alignment == .trailing ? value : nil)
-        }
-    }
-}
-
 // MARK: - Hide keyboard
 extension View {
     func hideKeyboard() {
@@ -70,4 +60,11 @@ extension View {
         self.buttonStyle(.customButton(.constant(TextButtonStyle())))
     }
         
+}
+
+//MARK: - Back Button Modifier
+extension View {
+    func backButton(text: String) -> some View {
+        self.modifier(BackButton(text: text))
+    }
 }
