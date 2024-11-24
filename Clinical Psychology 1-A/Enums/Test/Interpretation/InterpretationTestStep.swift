@@ -10,4 +10,9 @@ import Foundation
 enum InterpretationTestStep {
     case welcomeMessage
     case trainingDescription
+    case questionDescription
+    case firstQuestion
+    case secondQuestion
+    case secondQuestionResult
+    case finish
 }

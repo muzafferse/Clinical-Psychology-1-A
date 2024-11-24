@@ -59,7 +59,6 @@ extension View {
     func textButtonStyle() -> some View {
         self.buttonStyle(.customButton(.constant(TextButtonStyle())))
     }
-        
 }
 
 //MARK: - Back Button Modifier

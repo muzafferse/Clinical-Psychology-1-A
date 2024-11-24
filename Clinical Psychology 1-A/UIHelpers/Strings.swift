@@ -55,6 +55,10 @@ struct AppStrings {
     static let interpretationTestTrainingButtonText = "BAŞLAT"
     static let interpretationTestTrainingFinishDescription = "Alıştırma bitti. Sonlandırmak ve çalışmaya başlamak içini aşağıdaki BİTİR VE DİĞER ADIMA GEÇ yazılı butona basın."
     static let interpretationTestTrainingFinishButtonText = "BİTİR VE DİĞER ADIMA GEÇ"
+    static let interpretationTestYes = "EVET"
+    static let interpretationTestNo = "HAYIR"
+    static let interpretationTestCorrect = "DOĞRU"
+    static let interpretationTestIncorrect = "YANLIŞ"
     
     // Auth Error Strings
     static let authErrorEmailAlreadyInUse = "Bu rumuz ile zaten bir kullanıcı kayıtlı."

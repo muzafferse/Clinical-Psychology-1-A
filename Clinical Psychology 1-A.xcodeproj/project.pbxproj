@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1BE4792CE66A39000AC960 /* InterpretationTestSecondQuestionResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE4782CE66A39000AC960 /* InterpretationTestSecondQuestionResultView.swift */; };
 		5B2490862C0E5AF40052F8BB /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2490852C0E5AF40052F8BB /* InputFieldView.swift */; };
 		5B2490882C0E5BFD0052F8BB /* PasswordInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2490872C0E5BFD0052F8BB /* PasswordInputFieldView.swift */; };
+		5B3353C22CE284160055759D /* InterpretationTestFirstQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3353C12CE284160055759D /* InterpretationTestFirstQuestionView.swift */; };
+		5B3353C42CE287AB0055759D /* AnswerTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3353C32CE287AB0055759D /* AnswerTextFieldView.swift */; };
+		5B3353C82CE291F00055759D /* InterpretationTestSecondQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3353C72CE291F00055759D /* InterpretationTestSecondQuestionView.swift */; };
 		5B3A373F2C7CD9BE0005FAE9 /* CautionTestStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */; };
 		5B3A37412C7CD9FA0005FAE9 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */; };
 		5B3A37432C7CDA4C0005FAE9 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */; };
@@ -23,6 +27,9 @@
 		5B8D7A012C73A69900544E49 /* TestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D7A002C73A69900544E49 /* TestStatus.swift */; };
 		5B91EC252CE12ACC00B4A8EA /* Image++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91EC242CE12ACC00B4A8EA /* Image++.swift */; };
 		5B91EC272CE12E8100B4A8EA /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91EC262CE12E8100B4A8EA /* BackButton.swift */; };
+		5B91EC2C2CE13C7100B4A8EA /* InterpretationTestQuestionDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91EC2B2CE13C7100B4A8EA /* InterpretationTestQuestionDescriptionView.swift */; };
+		5B91EC302CE13FF300B4A8EA /* QuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91EC2F2CE13FF300B4A8EA /* QuestionType.swift */; };
+		5B91EC322CE140AE00B4A8EA /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91EC312CE140AE00B4A8EA /* Answer.swift */; };
 		5B9220F92BDE85E100F96222 /* SettingsTabRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220F82BDE85E100F96222 /* SettingsTabRootViewModel.swift */; };
 		5B9220FB2BDE882500F96222 /* SettingsTabRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220FA2BDE882500F96222 /* SettingsTabRootView.swift */; };
 		5B9220FD2BDE8F1B00F96222 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9220FC2BDE8F1B00F96222 /* SettingsTabView.swift */; };
@@ -89,8 +96,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B1BE4782CE66A39000AC960 /* InterpretationTestSecondQuestionResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestSecondQuestionResultView.swift; sourceTree = "<group>"; };
 		5B2490852C0E5AF40052F8BB /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		5B2490872C0E5BFD0052F8BB /* PasswordInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInputFieldView.swift; sourceTree = "<group>"; };
+		5B3353C12CE284160055759D /* InterpretationTestFirstQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestFirstQuestionView.swift; sourceTree = "<group>"; };
+		5B3353C32CE287AB0055759D /* AnswerTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTextFieldView.swift; sourceTree = "<group>"; };
+		5B3353C72CE291F00055759D /* InterpretationTestSecondQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestSecondQuestionView.swift; sourceTree = "<group>"; };
 		5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CautionTestStep.swift; sourceTree = "<group>"; };
 		5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
@@ -98,6 +109,9 @@
 		5B8D7A002C73A69900544E49 /* TestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatus.swift; sourceTree = "<group>"; };
 		5B91EC242CE12ACC00B4A8EA /* Image++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image++.swift"; sourceTree = "<group>"; };
 		5B91EC262CE12E8100B4A8EA /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		5B91EC2B2CE13C7100B4A8EA /* InterpretationTestQuestionDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestQuestionDescriptionView.swift; sourceTree = "<group>"; };
+		5B91EC2F2CE13FF300B4A8EA /* QuestionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionType.swift; sourceTree = "<group>"; };
+		5B91EC312CE140AE00B4A8EA /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		5B9220F82BDE85E100F96222 /* SettingsTabRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRootViewModel.swift; sourceTree = "<group>"; };
 		5B9220FA2BDE882500F96222 /* SettingsTabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRootView.swift; sourceTree = "<group>"; };
 		5B9220FC2BDE8F1B00F96222 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
@@ -206,10 +220,8 @@
 		5B91EC292CE1314100B4A8EA /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				5BB433042C962B10001A1BB9 /* ArrowDirection.swift */,
-				5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */,
-				5BD528772CA04EAC0091C88B /* InterpretationTestStep.swift */,
-				5BB433062C962B3F001A1BB9 /* Position.swift */,
+				5B91EC2E2CE13FCF00B4A8EA /* Caution */,
+				5B91EC2D2CE13FBF00B4A8EA /* Interpretation */,
 				5B8D7A002C73A69900544E49 /* TestStatus.swift */,
 			);
 			path = Test;
@@ -224,6 +236,26 @@
 				5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		5B91EC2D2CE13FBF00B4A8EA /* Interpretation */ = {
+			isa = PBXGroup;
+			children = (
+				5BD528772CA04EAC0091C88B /* InterpretationTestStep.swift */,
+				5B91EC2F2CE13FF300B4A8EA /* QuestionType.swift */,
+				5B91EC312CE140AE00B4A8EA /* Answer.swift */,
+			);
+			path = Interpretation;
+			sourceTree = "<group>";
+		};
+		5B91EC2E2CE13FCF00B4A8EA /* Caution */ = {
+			isa = PBXGroup;
+			children = (
+				5BB433042C962B10001A1BB9 /* ArrowDirection.swift */,
+				5B3A373E2C7CD9BE0005FAE9 /* CautionTestStep.swift */,
+				5BB433062C962B3F001A1BB9 /* Position.swift */,
+			);
+			path = Caution;
 			sourceTree = "<group>";
 		};
 		5B9220FE2BDEB0D800F96222 /* Caution Test */ = {
@@ -320,6 +352,7 @@
 		5BBC9AC42BD0329000170B62 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5B3353C32CE287AB0055759D /* AnswerTextFieldView.swift */,
 				5BBC9B012BD0416100170B62 /* BackgroundView.swift */,
 				5BBC9B052BD041D800170B62 /* CustomButtonView.swift */,
 				5B2490852C0E5AF40052F8BB /* InputFieldView.swift */,
@@ -437,6 +470,10 @@
 			children = (
 				5BD528742CA04E4A0091C88B /* InterpretationTestWelcomeView.swift */,
 				5BD528792CA053480091C88B /* InterpretationTestTrainingDescriptionView.swift */,
+				5B91EC2B2CE13C7100B4A8EA /* InterpretationTestQuestionDescriptionView.swift */,
+				5B3353C12CE284160055759D /* InterpretationTestFirstQuestionView.swift */,
+				5B3353C72CE291F00055759D /* InterpretationTestSecondQuestionView.swift */,
+				5B1BE4782CE66A39000AC960 /* InterpretationTestSecondQuestionResultView.swift */,
 			);
 			path = StepViews;
 			sourceTree = "<group>";
@@ -578,8 +615,10 @@
 				5BBC9B482BD0601100170B62 /* HomeTabView.swift in Sources */,
 				5B91EC272CE12E8100B4A8EA /* BackButton.swift in Sources */,
 				5B9CB60A2BF53FDB00055481 /* InterpretationTestViewModel.swift in Sources */,
+				5B3353C82CE291F00055759D /* InterpretationTestSecondQuestionView.swift in Sources */,
 				5BEEFAA32C0745C000AF3445 /* ContributorsViewModel.swift in Sources */,
 				5BBC9AF62BD03E6300170B62 /* Spacer+.swift in Sources */,
+				5B91EC302CE13FF300B4A8EA /* QuestionType.swift in Sources */,
 				5BBC9AF42BD03E3900170B62 /* UIFont+.swift in Sources */,
 				5B3A37412C7CD9FA0005FAE9 /* FontStyle.swift in Sources */,
 				5B9220F92BDE85E100F96222 /* SettingsTabRootViewModel.swift in Sources */,
@@ -592,11 +631,15 @@
 				5BBC9AEF2BD03D8B00170B62 /* CustomTextFieldStyle.swift in Sources */,
 				5BEEFA932C07286C00AF3445 /* DescriptionView.swift in Sources */,
 				5B3A373F2C7CD9BE0005FAE9 /* CautionTestStep.swift in Sources */,
+				5B91EC322CE140AE00B4A8EA /* Answer.swift in Sources */,
 				5BB433052C962B10001A1BB9 /* ArrowDirection.swift in Sources */,
+				5B3353C22CE284160055759D /* InterpretationTestFirstQuestionView.swift in Sources */,
 				5B9A4F862C7249AE00F22E6F /* AuthManager.swift in Sources */,
 				5BEEFA972C0738A100AF3445 /* PlusSignView.swift in Sources */,
 				5B8D7A012C73A69900544E49 /* TestStatus.swift in Sources */,
+				5B1BE4792CE66A39000AC960 /* InterpretationTestSecondQuestionResultView.swift in Sources */,
 				5BBC9AE92BD03CB300170B62 /* AppState.swift in Sources */,
+				5B3353C42CE287AB0055759D /* AnswerTextFieldView.swift in Sources */,
 				5BBC9B4C2BD0608100170B62 /* HomeTabRootViewModel.swift in Sources */,
 				5BEEFA9C2C07399D00AF3445 /* SelectionView.swift in Sources */,
 				5BBC9B042BD0419400170B62 /* LoginTextFieldView.swift in Sources */,
@@ -621,6 +664,7 @@
 				5BBC9AEB2BD03D1600170B62 /* AppTab.swift in Sources */,
 				5B9220FB2BDE882500F96222 /* SettingsTabRootView.swift in Sources */,
 				5B3A37432C7CDA4C0005FAE9 /* CustomFont.swift in Sources */,
+				5B91EC2C2CE13C7100B4A8EA /* InterpretationTestQuestionDescriptionView.swift in Sources */,
 				5BEEFA992C0738DC00AF3445 /* PhotosView.swift in Sources */,
 				5BEEFA9E2C0739FB00AF3445 /* FinishView.swift in Sources */,
 			);
