@@ -9,9 +9,7 @@ import SwiftUI
 
 struct InterpretationTestView: View {
     @ObservedObject var viewModel = InterpretationTestViewModel()
-    @State var selectedStep: InterpretationTestStep = .welcomeMessage
     @State private var answer: String = ""
-    @State private var isSecondQuestionCorrect: Bool = false
     
     var body: some View {
         ZStack {
@@ -19,40 +17,45 @@ struct InterpretationTestView: View {
                 .ignoresSafeArea()
             
             VStack {
-                switch selectedStep {
+                switch viewModel.currentStep {
                 case .welcomeMessage:
-                    InterpretationTestWelcomeView(viewModel: viewModel) {
-                        selectedStep = .trainingDescription
+                    ITWelcomeView() {
+                        viewModel.nextStep()
                     }
                     
                 case .trainingDescription:
-                    InterpretationTestTrainingDescriptionView(viewModel: viewModel) {
-                        selectedStep = .questionDescription
+                    ITTrainingDescriptionView() {
+                        viewModel.nextStep()
+                    }
+                    
+                case .sessionDescription:
+                    ITSessionDescriptionView() {
+                        viewModel.nextStep()
                     }
                     
                 case .questionDescription:
-                    InterpretationTestQuestionDescriptionView(viewModel: viewModel) {
-                        selectedStep = .firstQuestion
-                    }
+                    ITQuestionDescriptionView(viewModel: viewModel)
                     
                 case .firstQuestion:
-                    InterpretationTestFirstQuestionView(viewModel: viewModel, answer: $answer) {
-                        selectedStep = .secondQuestion
-                    }
+                    ITFirstQuestionView(viewModel: viewModel, answer: $answer)
                     
                 case .secondQuestion:
-                    InterpretationTestSecondQuestionView(viewModel: viewModel) { isCorrect in
-                        isSecondQuestionCorrect = isCorrect
-                        selectedStep = .secondQuestionResult
+                    ITSecondQuestionView(viewModel: viewModel) { isCorrect in
+                        viewModel.updateAnswer(isCorrect: isCorrect)
+                        viewModel.nextStep()
                     }
                     
                 case .secondQuestionResult:
-                    InterpretationTestSecondQuestionResultView(isCorrect: isSecondQuestionCorrect) {
-                        selectedStep = .finish
+                    ITSecondQuestionResultView(viewModel: viewModel)
+                    
+                case .trainingFinish:
+                    ITTrainingFinishView() {
+                        viewModel.nextStep()
                     }
                     
                 case .finish:
-                    Text("AAA")
+                    ITSessionFinishView()
+                    //TODO: Add completion.
                 }
             }
             .padding(.horizontal, 24)

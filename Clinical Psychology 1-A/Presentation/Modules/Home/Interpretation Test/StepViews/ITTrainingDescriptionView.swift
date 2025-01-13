@@ -1,5 +1,5 @@
 //
-//  InterpretationTestTrainingDescriptionView.swift
+//  ITTrainingDescriptionView.swift
 //  Clinical Psychology 1-A
 //
 //  Created by Muzaffer Sevili on 22.09.2024.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct InterpretationTestTrainingDescriptionView: View {
-    let viewModel: InterpretationTestViewModel
+struct ITTrainingDescriptionView: View {
     let onNext: () -> Void
     
     var body: some View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(AppStrings.interpretationTestTrainingDescription)
+            Text(AppStrings.itTrainingDescription)
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
@@ -23,7 +22,7 @@ struct InterpretationTestTrainingDescriptionView: View {
             Spacer()
             
             Button(action: onNext) {
-                Text(AppStrings.interpretationTestTrainingButtonText)
+                Text(AppStrings.itTrainingButtonText)
             }
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
@@ -35,7 +34,6 @@ struct InterpretationTestTrainingDescriptionView: View {
     ZStack {
         Color(.colorBackground)
             .ignoresSafeArea()
-        InterpretationTestTrainingDescriptionView(viewModel: InterpretationTestViewModel(),
-                                                  onNext: {})
+        ITTrainingDescriptionView(onNext: {})
     }
 }

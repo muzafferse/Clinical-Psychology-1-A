@@ -1,30 +1,29 @@
 //
-//  FinishView.swift
+//  ITSessionFinishView.swift
 //  Clinical Psychology 1-A
 //
-//  Created by Muzaffer Sevili on 29.05.2024.
+//  Created by Muzaffer Sevili on 13.01.2025.
 //
 
 import SwiftUI
 
-struct FinishView: View {
-    let viewModel: CautionTestViewModel
-    @EnvironmentObject var appState: AppState
+struct ITSessionFinishView: View {
+    //TODO: Add Completion
     
     var body: some View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(AppStrings.cautionTestFinishDescription)
+            Text(AppStrings.itFinishDescription)
                 .robotoRegularFont(size: 16)
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
             Spacer()
             
             Button(action: {
-                self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
+                
             }, label: {
-                Text(AppStrings.cautionTestFinishButtonText)
+                Text(AppStrings.itFinishButtonText)
             })
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
@@ -36,6 +35,6 @@ struct FinishView: View {
     ZStack {
         Color(.colorBackground)
             .ignoresSafeArea()
-        FinishView(viewModel: CautionTestViewModel())
+        ITSessionFinishView()
     }
 }

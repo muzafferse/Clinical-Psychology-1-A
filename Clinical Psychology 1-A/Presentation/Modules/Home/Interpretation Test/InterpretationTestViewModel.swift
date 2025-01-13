@@ -7,22 +7,98 @@
 
 import SwiftUI
 
-struct InterpretationQuestion: Identifiable {
-    let id = UUID()
-    let questionDescription: String
-    let firstQuestion: String
-    let firstQuestionAnswer: String
-    let secondQuestion: String
-    let secondQuestionAnswer: Answer
-    let type: QuestionType
-}
-
 class InterpretationTestViewModel: ObservableObject {
-    let interpretationQuestions: [InterpretationQuestion] = [InterpretationQuestion(questionDescription: "Arkadaşlarınızla uzun zamandır beklediğiniz bir filme gitmeye karar veriyorsunuz. Sinema salonunun önüne geldiğinizde uzun bir kuyruk olduğunu görüyorsunuz. Bu kuyruk yüzünden… ",
-                                                                                    firstQuestion: "filme g_ç kalıyorsunuz.",
-                                                                                    firstQuestionAnswer: "e",
-                                                                                    secondQuestion: "Filme zamanında girdiniz mi?",
-                                                                                    secondQuestionAnswer: .no,
-                                                                                    type: .neutral)
-    ]
+    @Published var interpretationQuestions: [InterpretationCategory] = []
+    @Published var currentSession: [Question] = []
+    @Published var neutralSession: [Question]?
+    @Published var currentStep: ITStep = .welcomeMessage
+    @Published var currentQuestionIndex: Int = 0
+    @Published var isFirstSession: Bool = true
+    @Published var isCorrectAnswer: Bool = false
+    
+    private var testSessionGenerator: ITSessionManager?
+    
+    init() {
+        generateSession()
+    }
+    
+    private func generateSession() {
+        if let categories = loadJSON(fileName: "interpretation_all") {
+            self.interpretationQuestions = categories
+            self.testSessionGenerator = ITSessionManager(categories: categories)
+            
+            if isFirstSession {
+                if let neutralCategories = loadJSON(fileName: "interpretation_exercise") {
+                    self.neutralSession = neutralCategories.first?.questions ?? []
+                }
+            }
+            
+            if let generator = testSessionGenerator {
+                self.currentSession = generator.generateSession()
+            }
+        }
+    }
+    
+    private func loadJSON(fileName: String) -> [InterpretationCategory]? {
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let categories = try? JSONDecoder().decode([InterpretationCategory].self, from: data) else {
+            print("JSON dosyası yüklenemedi: \(fileName)")
+            return nil
+        }
+        return categories
+    }
+    
+    //TODO: Add getCurrentQuestion - maybe in manager
+    
+    func updateAnswer(isCorrect: Bool) {
+        isCorrectAnswer = isCorrect
+    }
+    
+    func nextStep() {
+        switch currentStep {
+        case .welcomeMessage:
+            currentStep = isFirstSession ? .trainingDescription : .sessionDescription
+            
+        case .trainingDescription:
+            currentStep = .questionDescription
+            
+        case .questionDescription:
+            currentStep = .firstQuestion
+            
+        case .firstQuestion:
+            currentStep = .secondQuestion
+            
+        case .secondQuestion:
+            currentStep = .secondQuestionResult
+            
+        case .secondQuestionResult:
+            if isFirstSession {
+                if currentQuestionIndex < 4 {
+                    currentQuestionIndex += 1
+                    currentStep = .questionDescription
+                } else {
+                    currentStep = .trainingFinish
+                    currentQuestionIndex = 0
+                }
+            } else {
+                if currentQuestionIndex < currentSession.count - 1 {
+                    currentQuestionIndex += 1
+                    currentStep = .questionDescription
+                } else {
+                    currentStep = .finish
+                }
+            }
+            
+        case .trainingFinish:
+            isFirstSession = false
+            currentStep = .sessionDescription
+            
+        case .sessionDescription:
+            currentStep = .questionDescription
+            
+        case .finish:
+            break
+        }
+    }
 }

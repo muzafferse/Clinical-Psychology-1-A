@@ -1,0 +1,16 @@
+//
+//  Question.swift
+//  Clinical Psychology 1-A
+//
+//  Created by Muzaffer Sevili on 29.12.2024.
+//
+
+import Foundation
+
+struct Question: Codable {
+    let questionDescription: String
+    let firstQuestion: String
+    let firstQuestionAnswer: String
+    let secondQuestion: String
+    let secondQuestionAnswer: Answer
+}

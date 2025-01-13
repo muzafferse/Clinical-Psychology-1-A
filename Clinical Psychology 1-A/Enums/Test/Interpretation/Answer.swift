@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Answer: String {
+enum Answer: String, Codable {
     case yes = "EVET"
     case no = "HAYIR"
 }
