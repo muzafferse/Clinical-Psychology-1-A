@@ -79,10 +79,11 @@ struct SelectionView: View {
 }
 
 #Preview {
-    ZStack {
+    SelectionView(viewModel: CautionTestViewModel(),
+                  onSelection: {})
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
         Color(.colorBackground)
             .ignoresSafeArea()
-        SelectionView(viewModel: CautionTestViewModel(),
-                      onSelection: {})
-    }
+    )
 }
