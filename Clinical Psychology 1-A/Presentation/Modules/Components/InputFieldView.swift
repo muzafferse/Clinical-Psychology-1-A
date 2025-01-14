@@ -21,6 +21,11 @@ struct InputFieldView: View {
             LoginTextFieldView(text: $text,
                                loginTextFieldStyle: .constant(textFieldStyle))
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
     }
 }
 
@@ -28,9 +33,4 @@ struct InputFieldView: View {
     InputFieldView(title: AppStrings.nickName,
                    text: .constant(AppStrings.nickName),
                    textFieldStyle: UsernameTextFieldStyle())
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(
-        Color(.colorBackground)
-            .ignoresSafeArea()
-    )
 }

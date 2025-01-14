@@ -36,14 +36,14 @@ struct PhotosView: View {
                     .frame(width: 256, height: 192)
             }
         }
-    }
-}
-
-#Preview {
-    PhotosView(viewModel: CautionTestViewModel())
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
+    }
+}
+
+#Preview {
+    PhotosView(viewModel: CautionTestViewModel())
 }

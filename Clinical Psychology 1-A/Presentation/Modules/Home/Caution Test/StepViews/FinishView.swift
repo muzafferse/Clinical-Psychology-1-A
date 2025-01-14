@@ -29,14 +29,14 @@ struct FinishView: View {
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
-    }
-}
-
-#Preview {
-    FinishView(viewModel: CautionTestViewModel())
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
+    }
+}
+
+#Preview {
+    FinishView(viewModel: CautionTestViewModel())
 }

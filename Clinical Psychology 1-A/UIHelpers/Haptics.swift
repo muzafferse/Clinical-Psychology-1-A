@@ -7,7 +7,7 @@
 
 import UIKit
 
-//Generate Haptics
+// Generate Haptics
 func generateHaptics() {
     let impactMed = UIImpactFeedbackGenerator(style: .rigid)
     impactMed.impactOccurred()

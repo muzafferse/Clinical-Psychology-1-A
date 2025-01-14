@@ -43,6 +43,11 @@ struct AnswerTextFieldView: View {
                     }
                 }
         }, height: 48)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
     }
 }
 
@@ -50,9 +55,4 @@ struct AnswerTextFieldView: View {
     AnswerTextFieldView(text: .constant(""),
                         expectedCharacter: "e",
                         onCorrectInput: {})
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(
-        Color(.colorBackground)
-            .ignoresSafeArea()
-    )
 }

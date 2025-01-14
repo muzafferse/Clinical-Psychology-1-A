@@ -20,6 +20,11 @@ struct ITQuestionDescriptionView: View {
                     .foregroundStyle(.colorWhite)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
         .onTapGesture {
             if isGestureEnabled {
                 viewModel.nextStep()
@@ -52,9 +57,4 @@ struct ITQuestionDescriptionView: View {
 
 #Preview {
     ITQuestionDescriptionView(viewModel: InterpretationTestViewModel())
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            Color(.colorBackground)
-                .ignoresSafeArea()
-        )
 }

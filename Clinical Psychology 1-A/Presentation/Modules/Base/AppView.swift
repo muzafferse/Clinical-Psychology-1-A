@@ -22,9 +22,11 @@ struct AppView: View {
             VStack {
                 switch self.appState.selectedTab {
                 case .home:
-                    HomeTabView(parentViewModel: homeTabViewModel) // Show the Home tab content
+                    HomeTabView(parentViewModel: homeTabViewModel)
+                        .navigationBarTitleDisplayMode(.large)
                 case .settings:
-                    SettingsTabView(parentViewModel: settingsTabViewModel) // Show the Settings tab content
+                    SettingsTabView(parentViewModel: settingsTabViewModel)
+                        .navigationBarTitleDisplayMode(.large)
                 }
                 Spacer()
                 TabBarView(selectedTab: $appState.selectedTab) // Display the tab bar

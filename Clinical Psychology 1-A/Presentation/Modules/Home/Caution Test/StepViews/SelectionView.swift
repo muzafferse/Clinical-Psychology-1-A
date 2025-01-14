@@ -32,6 +32,11 @@ struct SelectionView: View {
             
             selectionButtonsView(onSelection: onSelection)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
     }
     
     private func arrowFrameView(direction: ArrowDirection) -> some View {
@@ -81,9 +86,4 @@ struct SelectionView: View {
 #Preview {
     SelectionView(viewModel: CautionTestViewModel(),
                   onSelection: {})
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(
-        Color(.colorBackground)
-            .ignoresSafeArea()
-    )
 }

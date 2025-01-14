@@ -28,14 +28,14 @@ struct ITSessionFinishView: View {
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
     }
 }
 
 #Preview {
     ITSessionFinishView()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            Color(.colorBackground)
-                .ignoresSafeArea()
-        )
 }

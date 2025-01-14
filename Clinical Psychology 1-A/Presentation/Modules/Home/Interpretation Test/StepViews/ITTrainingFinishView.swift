@@ -26,14 +26,14 @@ struct ITTrainingFinishView: View {
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
-    }
-}
-
-#Preview {
-    ITTrainingFinishView(onNext: {})
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
+    }
+}
+
+#Preview {
+    ITTrainingFinishView(onNext: {})
 }

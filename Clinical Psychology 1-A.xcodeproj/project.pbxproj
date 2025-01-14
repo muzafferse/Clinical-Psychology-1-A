@@ -287,9 +287,6 @@
 		5B9220FF2BDEB0DF00F96222 /* Interpretation Test */ = {
 			isa = PBXGroup;
 			children = (
-				5BA491CC2D206A110035316D /* Data */,
-				5BA491D22D2177A10035316D /* Model */,
-				5BA491CF2D216F430035316D /* Manager */,
 				5BD528762CA04E4E0091C88B /* StepViews */,
 				5B9CB60B2BF53FE700055481 /* InterpretationTestView.swift */,
 				5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */,
@@ -301,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9A4F852C7249AE00F22E6F /* AuthManager.swift */,
+				5BA491D02D216F570035316D /* ITSessionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -312,14 +310,6 @@
 				5BA491CA2D2069ED0035316D /* interpretation_exercise.json */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		5BA491CF2D216F430035316D /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				5BA491D02D216F570035316D /* ITSessionManager.swift */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		5BA491D22D2177A10035316D /* Model */ = {
@@ -353,8 +343,10 @@
 				5BBC9B0B2BD059AD00170B62 /* GoogleService-Info.plist */,
 				5BBC9AC12BD0311E00170B62 /* Clinical-Psychology-1-A-Info.plist */,
 				5BBC9AC92BD0332D00170B62 /* AppState */,
+				5BA491CC2D206A110035316D /* Data */,
 				5BBC9AC82BD0331C00170B62 /* Enums */,
 				5B9A4F842C72499800F22E6F /* Manager */,
+				5BA491D22D2177A10035316D /* Model */,
 				5BBC9AC22BD031F000170B62 /* Presentation */,
 				5BBC9AC72BD0330C00170B62 /* UIHelpers */,
 				5BBC9ACA2BD0333F00170B62 /* Resources */,
@@ -442,8 +434,8 @@
 				5B91EC282CE1312400B4A8EA /* Auth */,
 				5B91EC2A2CE1317400B4A8EA /* Style */,
 				5B91EC292CE1314100B4A8EA /* Test */,
-				5BBC9AEA2BD03D1600170B62 /* AppTab.swift */,
 				5BBC9AEC2BD03D4700170B62 /* AppNavigationDestination.swift */,
+				5BBC9AEA2BD03D1600170B62 /* AppTab.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";

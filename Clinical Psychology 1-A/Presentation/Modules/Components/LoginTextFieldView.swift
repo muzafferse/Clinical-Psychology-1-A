@@ -48,6 +48,11 @@ struct LoginTextFieldView: View {
             }
         },
                        height: 48)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
         .onTapGesture {
             isFocused = true
         }
@@ -65,9 +70,4 @@ struct LoginTextFieldView: View {
                            loginTextFieldStyle: .constant(UsernameTextFieldStyle()))
     }
     .padding(.horizontal, 8)
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(
-        Color(.colorBackground)
-            .ignoresSafeArea()
-    )
 }

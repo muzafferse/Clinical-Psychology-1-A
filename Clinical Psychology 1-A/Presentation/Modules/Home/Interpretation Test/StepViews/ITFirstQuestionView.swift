@@ -46,6 +46,11 @@ struct ITFirstQuestionView: View {
                 }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
     }
     
     //TODO: Should move on viewModel or sessionGenerator
@@ -77,9 +82,4 @@ struct ITFirstQuestionView: View {
 #Preview {
     ITFirstQuestionView(viewModel: InterpretationTestViewModel(),
                         answer: .constant(""))
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(
-        Color(.colorBackground)
-            .ignoresSafeArea()
-    )
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 /** It provides to reach custom button easily
-    i.e .buttonStyle(.customButton($simpleButton))
+ i.e .buttonStyle(.customButton($simpleButton))
  */
 extension ButtonStyle where Self == CustomButtonView {
     static func customButton(_ buttonType: Binding<CustomButtonStyle>) -> Self {

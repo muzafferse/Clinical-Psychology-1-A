@@ -44,6 +44,11 @@ struct ITSecondQuestionView: View {
                 .foregroundStyle(.colorWhite)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
         .onAppear {
             startTimer()
         }
@@ -88,9 +93,4 @@ struct ITSecondQuestionView: View {
 
 #Preview {
     ITSecondQuestionView(viewModel: InterpretationTestViewModel(), onCompletion: {_ in })
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            Color(.colorBackground)
-                .ignoresSafeArea()
-        )
 }

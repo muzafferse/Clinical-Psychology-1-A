@@ -27,14 +27,14 @@ struct ITWelcomeView: View {
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
-    }
-}
-
-#Preview {
-    ITWelcomeView(onNext: {})
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
+    }
+}
+
+#Preview {
+    ITWelcomeView(onNext: {})
 }

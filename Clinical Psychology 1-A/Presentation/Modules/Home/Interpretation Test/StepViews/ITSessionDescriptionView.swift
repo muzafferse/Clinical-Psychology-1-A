@@ -27,14 +27,14 @@ struct ITSessionDescriptionView: View {
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
-    }
-}
-
-#Preview {
-    ITSessionDescriptionView(onNext: {})
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
+    }
+}
+
+#Preview {
+    ITSessionDescriptionView(onNext: {})
 }

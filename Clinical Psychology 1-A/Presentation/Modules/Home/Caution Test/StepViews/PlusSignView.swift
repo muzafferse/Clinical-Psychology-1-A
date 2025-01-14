@@ -14,14 +14,14 @@ struct PlusSignView: View {
         Image.plusIcon
             .robotoRegularFont(size: 32)
             .foregroundStyle(.colorWhite)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Color(.colorBackground)
+                    .ignoresSafeArea()
+            )
     }
 }
 
 #Preview {
     PlusSignView(viewModel: CautionTestViewModel())
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            Color(.colorBackground)
-                .ignoresSafeArea()
-        )
 }

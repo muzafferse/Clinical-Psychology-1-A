@@ -17,6 +17,11 @@ struct ITSecondQuestionResultView: View {
                 .multilineTextAlignment(.leading)
                 .foregroundStyle(.colorWhite)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 viewModel.nextStep()
@@ -27,9 +32,4 @@ struct ITSecondQuestionResultView: View {
 
 #Preview {
     ITSecondQuestionResultView(viewModel: InterpretationTestViewModel())
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            Color(.colorBackground)
-                .ignoresSafeArea()
-        )
 }

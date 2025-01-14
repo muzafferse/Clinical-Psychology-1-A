@@ -29,6 +29,11 @@ struct BackgroundView<Content: View>: View {
                     content
                 }
                     .padding(.horizontal, 8))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Color(.colorBackground)
+                    .ignoresSafeArea()
+            )
     }
 }
 
@@ -36,9 +41,4 @@ struct BackgroundView<Content: View>: View {
     BackgroundView(content:  {
         EmptyView()
     }, height: 42)
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(
-        Color(.colorBackground)
-            .ignoresSafeArea()
-    )
 }

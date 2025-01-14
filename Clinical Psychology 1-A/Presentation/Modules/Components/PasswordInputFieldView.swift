@@ -30,6 +30,11 @@ struct PasswordInputFieldView: View {
                     .foregroundColor(.red)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
         .animation(.easeInOut, value: warningMessage)
     }
 }
@@ -39,9 +44,4 @@ struct PasswordInputFieldView: View {
                            text: .constant(AppStrings.password),
                            textFieldStyle: .constant(PasswordTextFieldStyle()),
                            toggleAction: {})
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(
-        Color(.colorBackground)
-            .ignoresSafeArea()
-    )
 }

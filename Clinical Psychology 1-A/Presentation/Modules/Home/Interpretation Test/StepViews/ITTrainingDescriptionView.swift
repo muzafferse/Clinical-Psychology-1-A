@@ -27,14 +27,14 @@ struct ITTrainingDescriptionView: View {
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
-    }
-}
-
-#Preview {
-    ITTrainingDescriptionView(onNext: {})
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
+    }
+}
+
+#Preview {
+    ITTrainingDescriptionView(onNext: {})
 }

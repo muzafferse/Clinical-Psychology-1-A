@@ -28,15 +28,15 @@ struct DescriptionView: View {
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
     }
 }
 
 #Preview {
     DescriptionView(viewModel: CautionTestViewModel(),
                     onNext: {})
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(
-        Color(.colorBackground)
-            .ignoresSafeArea()
-    )
 }
