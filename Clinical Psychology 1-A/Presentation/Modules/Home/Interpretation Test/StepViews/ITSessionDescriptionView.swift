@@ -31,9 +31,10 @@ struct ITSessionDescriptionView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        ITSessionDescriptionView(onNext: {})
-    }
+    ITSessionDescriptionView(onNext: {})
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

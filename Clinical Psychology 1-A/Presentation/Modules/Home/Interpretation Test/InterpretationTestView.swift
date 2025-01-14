@@ -53,7 +53,7 @@ struct InterpretationTestView: View {
                         viewModel.nextStep()
                     }
                     
-                case .finish:
+                case .sessionFinish:
                     ITSessionFinishView()
                     //TODO: Add completion.
                 }

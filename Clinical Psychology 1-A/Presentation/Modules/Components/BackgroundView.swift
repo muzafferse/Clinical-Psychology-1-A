@@ -33,11 +33,12 @@ struct BackgroundView<Content: View>: View {
 }
 
 #Preview {
-    ZStack {
+    BackgroundView(content:  {
+        EmptyView()
+    }, height: 42)
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
         Color(.colorBackground)
             .ignoresSafeArea()
-        BackgroundView(content:  {
-            EmptyView()
-        }, height: 42)
-    }
+    )
 }

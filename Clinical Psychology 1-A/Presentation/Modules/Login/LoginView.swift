@@ -84,7 +84,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    ZStack {
-        LoginView()
-    }
+    LoginView()
 }

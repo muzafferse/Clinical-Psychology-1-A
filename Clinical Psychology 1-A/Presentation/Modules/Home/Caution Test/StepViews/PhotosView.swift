@@ -40,9 +40,10 @@ struct PhotosView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        PhotosView(viewModel: CautionTestViewModel())
-    }
+    PhotosView(viewModel: CautionTestViewModel())
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

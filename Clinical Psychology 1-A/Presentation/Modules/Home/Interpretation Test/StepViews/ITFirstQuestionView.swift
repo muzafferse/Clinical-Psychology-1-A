@@ -75,10 +75,11 @@ struct ITFirstQuestionView: View {
 }
 
 #Preview {
-    ZStack {
+    ITFirstQuestionView(viewModel: InterpretationTestViewModel(),
+                        answer: .constant(""))
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
         Color(.colorBackground)
             .ignoresSafeArea()
-        ITFirstQuestionView(viewModel: InterpretationTestViewModel(),
-                            answer: .constant(""))
-    }
+    )
 }

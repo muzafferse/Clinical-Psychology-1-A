@@ -26,9 +26,10 @@ struct ITSecondQuestionResultView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        ITSecondQuestionResultView(viewModel: InterpretationTestViewModel())
-    }
+    ITSecondQuestionResultView(viewModel: InterpretationTestViewModel())
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

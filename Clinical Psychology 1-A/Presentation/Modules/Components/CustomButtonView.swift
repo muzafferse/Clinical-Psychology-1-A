@@ -29,26 +29,26 @@ struct CustomButtonView: ButtonStyle {
 }
 
 #Preview {
-    ZStack {
+    HStack {
+        VStack(spacing: 32) {
+            Button(action: { },
+                   label: {
+                Text(AppStrings.settings)
+            })
+            .primaryActiveButtonStyle()
+            
+            Button(action: { },
+                   label: {
+                Text(AppStrings.home)
+            })
+            .primaryInactiveButtonStyle()
+            .disabled(true)
+        }
+    }
+    .padding(.horizontal)
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
         Color(.colorWhite)
             .ignoresSafeArea()
-        
-        HStack {
-            VStack(spacing: 32) {
-                Button(action: { },
-                       label: {
-                    Text(AppStrings.settings)
-                })
-                .primaryActiveButtonStyle()
-                
-                Button(action: { },
-                       label: {
-                    Text(AppStrings.home)
-                })
-                .primaryInactiveButtonStyle()
-                .disabled(true)
-            }
-        }
-        .padding(.horizontal)
-    }
+    )
 }

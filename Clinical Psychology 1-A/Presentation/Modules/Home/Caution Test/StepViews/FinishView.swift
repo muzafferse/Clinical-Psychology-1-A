@@ -33,9 +33,10 @@ struct FinishView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        FinishView(viewModel: CautionTestViewModel())
-    }
+    FinishView(viewModel: CautionTestViewModel())
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

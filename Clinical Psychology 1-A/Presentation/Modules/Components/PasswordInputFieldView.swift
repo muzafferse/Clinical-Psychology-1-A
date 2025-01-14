@@ -21,8 +21,8 @@ struct PasswordInputFieldView: View {
                 .foregroundStyle(.colorWhite)
             
             LoginTextFieldView(text: $text,
-                                     loginTextFieldStyle: $textFieldStyle,
-                                     onRightButtonTap: toggleAction)
+                               loginTextFieldStyle: $textFieldStyle,
+                               onRightButtonTap: toggleAction)
             
             if let warningMessage = warningMessage {
                 Text(warningMessage)
@@ -35,12 +35,13 @@ struct PasswordInputFieldView: View {
 }
 
 #Preview {
-    ZStack {
+    PasswordInputFieldView(title: AppStrings.password,
+                           text: .constant(AppStrings.password),
+                           textFieldStyle: .constant(PasswordTextFieldStyle()),
+                           toggleAction: {})
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
         Color(.colorBackground)
             .ignoresSafeArea()
-        PasswordInputFieldView(title: AppStrings.password,
-                               text: .constant(AppStrings.password),
-                               textFieldStyle: .constant(PasswordTextFieldStyle()),
-                               toggleAction: {})
-    }
+    )
 }

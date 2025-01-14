@@ -18,9 +18,10 @@ struct PlusSignView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        PlusSignView(viewModel: CautionTestViewModel())
-    }
+    PlusSignView(viewModel: CautionTestViewModel())
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

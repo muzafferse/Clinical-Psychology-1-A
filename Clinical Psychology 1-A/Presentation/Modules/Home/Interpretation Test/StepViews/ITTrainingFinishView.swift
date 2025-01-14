@@ -30,9 +30,10 @@ struct ITTrainingFinishView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        ITTrainingFinishView(onNext: {})
-    }
+    ITTrainingFinishView(onNext: {})
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

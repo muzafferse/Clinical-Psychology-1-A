@@ -86,7 +86,7 @@ class InterpretationTestViewModel: ObservableObject {
                     currentQuestionIndex += 1
                     currentStep = .questionDescription
                 } else {
-                    currentStep = .finish
+                    currentStep = .sessionFinish
                 }
             }
             
@@ -97,7 +97,7 @@ class InterpretationTestViewModel: ObservableObject {
         case .sessionDescription:
             currentStep = .questionDescription
             
-        case .finish:
+        case .sessionFinish: //TODO: finish
             break
         }
     }

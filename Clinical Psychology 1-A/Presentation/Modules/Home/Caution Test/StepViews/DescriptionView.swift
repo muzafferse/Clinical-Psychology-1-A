@@ -32,10 +32,11 @@ struct DescriptionView: View {
 }
 
 #Preview {
-    ZStack {
+    DescriptionView(viewModel: CautionTestViewModel(),
+                    onNext: {})
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
         Color(.colorBackground)
             .ignoresSafeArea()
-        DescriptionView(viewModel: CautionTestViewModel(),
-                        onNext: {})
-    }
+    )
 }

@@ -90,7 +90,5 @@ struct RegisterView: View {
 }
 
 #Preview {
-    ZStack {
-        RegisterView()
-    }
+    RegisterView()
 }

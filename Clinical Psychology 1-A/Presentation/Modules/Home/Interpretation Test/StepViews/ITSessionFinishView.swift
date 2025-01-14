@@ -32,9 +32,10 @@ struct ITSessionFinishView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        ITSessionFinishView()
-    }
+    ITSessionFinishView()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

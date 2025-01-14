@@ -31,9 +31,10 @@ struct ITTrainingDescriptionView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        ITTrainingDescriptionView(onNext: {})
-    }
+    ITTrainingDescriptionView(onNext: {})
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

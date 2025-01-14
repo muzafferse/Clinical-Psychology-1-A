@@ -47,11 +47,12 @@ struct AnswerTextFieldView: View {
 }
 
 #Preview {
-    ZStack {
+    AnswerTextFieldView(text: .constant(""),
+                        expectedCharacter: "e",
+                        onCorrectInput: {})
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
         Color(.colorBackground)
             .ignoresSafeArea()
-        AnswerTextFieldView(text: .constant(""),
-                            expectedCharacter: "e",
-                            onCorrectInput: {})
-    }
+    )
 }

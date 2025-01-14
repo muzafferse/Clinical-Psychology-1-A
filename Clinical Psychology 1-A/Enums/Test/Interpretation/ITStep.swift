@@ -8,7 +8,6 @@
 import Foundation
 
 enum ITStep {
-    //TODO: Check, if all steps including.
     case welcomeMessage
     case trainingDescription
     case sessionDescription
@@ -17,5 +16,5 @@ enum ITStep {
     case secondQuestion
     case secondQuestionResult
     case trainingFinish
-    case finish
+    case sessionFinish
 }

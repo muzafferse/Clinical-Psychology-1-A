@@ -61,13 +61,14 @@ struct LoginTextFieldView: View {
 
 // MARK: - Preview
 #Preview {
-    ZStack {
+    VStack(spacing: 8) {
+        LoginTextFieldView(text: .constant(AppStrings.nickName),
+                           loginTextFieldStyle: .constant(UsernameTextFieldStyle()))
+    }
+    .padding(.horizontal, 8)
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
         Color(.colorBackground)
             .ignoresSafeArea()
-        VStack(spacing: 8) {
-            LoginTextFieldView(text: .constant(AppStrings.nickName),
-                                     loginTextFieldStyle: .constant(UsernameTextFieldStyle()))
-        }
-        .padding(.horizontal, 8)
-    }
+    )
 }

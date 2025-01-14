@@ -87,9 +87,10 @@ struct ITSecondQuestionView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        ITSecondQuestionView(viewModel: InterpretationTestViewModel(), onCompletion: {_ in })
-    }
+    ITSecondQuestionView(viewModel: InterpretationTestViewModel(), onCompletion: {_ in })
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }

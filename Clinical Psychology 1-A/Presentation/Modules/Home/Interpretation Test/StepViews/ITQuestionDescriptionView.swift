@@ -56,9 +56,5 @@ struct ITQuestionDescriptionView: View {
 }
 
 #Preview {
-    ZStack {
-        Color(.colorBackground)
-            .ignoresSafeArea()
-        ITQuestionDescriptionView(viewModel: InterpretationTestViewModel())
-    }
+    ITQuestionDescriptionView(viewModel: InterpretationTestViewModel())
 }
