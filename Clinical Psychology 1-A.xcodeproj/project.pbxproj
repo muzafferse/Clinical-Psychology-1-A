@@ -358,8 +358,8 @@
 				5BBC9AC22BD031F000170B62 /* Presentation */,
 				5BBC9AC72BD0330C00170B62 /* UIHelpers */,
 				5BBC9ACA2BD0333F00170B62 /* Resources */,
-				5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */,
 				5BBC9AE42BD03BBB00170B62 /* AppCordinator.swift */,
+				5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */,
 				5BBC9B442BD05B1900170B62 /* FirebaseGateway.swift */,
 			);
 			path = "Clinical Psychology 1-A";
