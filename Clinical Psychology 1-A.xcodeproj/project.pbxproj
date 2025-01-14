@@ -246,9 +246,9 @@
 		5B91EC2A2CE1317400B4A8EA /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				5BBC9AEE2BD03D8B00170B62 /* CustomTextFieldStyle.swift */,
 				5BBC9AF02BD03DC400170B62 /* CustomButtonStyle.swift */,
 				5B3A37422C7CDA4C0005FAE9 /* CustomFont.swift */,
+				5BBC9AEE2BD03D8B00170B62 /* CustomTextFieldStyle.swift */,
 				5B3A37402C7CD9FA0005FAE9 /* FontStyle.swift */,
 			);
 			path = Style;
@@ -257,9 +257,9 @@
 		5B91EC2D2CE13FBF00B4A8EA /* Interpretation */ = {
 			isa = PBXGroup;
 			children = (
-				5BD528772CA04EAC0091C88B /* ITStep.swift */,
-				5B91EC2F2CE13FF300B4A8EA /* Category.swift */,
 				5B91EC312CE140AE00B4A8EA /* Answer.swift */,
+				5B91EC2F2CE13FF300B4A8EA /* Category.swift */,
+				5BD528772CA04EAC0091C88B /* ITStep.swift */,
 			);
 			path = Interpretation;
 			sourceTree = "<group>";
@@ -325,8 +325,8 @@
 		5BA491D22D2177A10035316D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5BA491D32D2177B80035316D /* Question.swift */,
 				5BA491D52D2177E60035316D /* InterpretationCategory.swift */,
+				5BA491D32D2177B80035316D /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,8 +401,8 @@
 				5BBC9B012BD0416100170B62 /* BackgroundView.swift */,
 				5BBC9B052BD041D800170B62 /* CustomButtonView.swift */,
 				5B2490852C0E5AF40052F8BB /* InputFieldView.swift */,
-				5B2490872C0E5BFD0052F8BB /* PasswordInputFieldView.swift */,
 				5BBC9B032BD0419400170B62 /* LoginTextFieldView.swift */,
+				5B2490872C0E5BFD0052F8BB /* PasswordInputFieldView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
