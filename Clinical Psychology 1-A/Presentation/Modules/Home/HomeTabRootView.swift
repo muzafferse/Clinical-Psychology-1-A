@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: - Home View
+//MARK: - HomeView
 // The main view for displaying the Home dashboard
 struct HomeTabRootView: View {
     @EnvironmentObject var appState: AppState

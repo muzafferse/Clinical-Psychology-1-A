@@ -9,6 +9,6 @@ import Foundation
 
 // Enum representing different tabs or sections in the app's user interface.
 enum AppTab: Int {
-    case home           // Tab for the Home page
-    case settings        // Tab for the settings page
+    case home
+    case settings
 }

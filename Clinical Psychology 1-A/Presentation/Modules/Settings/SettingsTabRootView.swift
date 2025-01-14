@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: - Settings View
+//MARK: - SettingsView
 // The main view for displaying the Settings dashboard
 struct SettingsTabRootView: View {
     @EnvironmentObject var appState: AppState

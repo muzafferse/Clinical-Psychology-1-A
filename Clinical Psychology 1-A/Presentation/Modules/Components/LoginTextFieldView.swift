@@ -59,7 +59,6 @@ struct LoginTextFieldView: View {
     }
 }
 
-// MARK: - Preview
 #Preview {
     VStack(spacing: 8) {
         LoginTextFieldView(text: .constant(AppStrings.nickName),

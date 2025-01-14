@@ -16,8 +16,6 @@ struct Contributor: Identifiable {
 }
 
 class ContributorsViewModel: ObservableObject, Identifiable {
-    
-    // MARK: - Properties
     @Published var contributorsData: [Contributor] = [
         Contributor(name: "Muzaffer Sevili",
                     title: "Proje Öğrencisi",
