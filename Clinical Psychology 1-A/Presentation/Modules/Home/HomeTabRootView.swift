@@ -15,36 +15,35 @@ struct HomeTabRootView: View {
     @ObservedObject var viewModel: HomeTabRootViewModel
     
     var body: some View {
-        ZStack {
+        VStack(spacing: 24) {
+            VStack(spacing: 32) {
+                let username = authManager.user?.email?.components(separatedBy: "@").first ?? AppStrings.guestUser
+                Text("Merhaba, \(username)")
+                    .robotoMediumFont(size: 20)
+                    .foregroundStyle(.colorWhite)
+                
+                Text(AppStrings.welcomeDescription)
+                    .robotoRegularFont(size: 16)
+                    .multilineTextAlignment(.leading)
+                    .foregroundStyle(.colorWhite)
+            }
+            
+            Spacer(minLength: 0)
+            
+            Button {
+                //TODO: caution Test
+                self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
+            } label: {
+                Text(AppStrings.startTestButtonText)
+            }
+            .primaryActiveButtonStyle()
+            .padding(.bottom, 12)
+        }
+        .padding(.all, 24)
+        .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
-            
-            VStack(spacing: 24) {
-                VStack(spacing: 32) {
-                    let username = authManager.user?.email?.components(separatedBy: "@").first ?? AppStrings.guestUser
-                    Text("Merhaba, \(username)")
-                        .robotoMediumFont(size: 20)
-                        .foregroundStyle(.colorWhite)
-                    
-                    Text(AppStrings.welcomeDescription)
-                        .robotoRegularFont(size: 16)
-                        .multilineTextAlignment(.leading)
-                        .foregroundStyle(.colorWhite)
-                }
-                
-                Spacer(minLength: 0)
-                
-                Button {
-                    //TODO: caution Test
-                    self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
-                } label: {
-                    Text(AppStrings.startTestButtonText)
-                }
-                .primaryActiveButtonStyle()
-                .padding(.bottom, 12)
-            }
-            .padding(.all, 24)
-        }
+        )
         .navigationTitle(AppStrings.homeTitle)
         .navigationBarTitleTextColor(.colorWhite)
     }
@@ -52,6 +51,6 @@ struct HomeTabRootView: View {
 
 #Preview {
     HomeTabRootView(viewModel: HomeTabRootViewModel())
-        .environmentObject(AppState()) // Provide an instance of AppState as an environment object
+        .environmentObject(AppState())
         .environmentObject(AuthManager())
 }

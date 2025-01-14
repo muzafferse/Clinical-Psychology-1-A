@@ -12,54 +12,53 @@ struct InterpretationTestView: View {
     @State private var answer: String = ""
     
     var body: some View {
-        ZStack {
+        VStack {
+            switch viewModel.currentStep {
+            case .welcomeMessage:
+                ITWelcomeView() {
+                    viewModel.nextStep()
+                }
+                
+            case .trainingDescription:
+                ITTrainingDescriptionView() {
+                    viewModel.nextStep()
+                }
+                
+            case .sessionDescription:
+                ITSessionDescriptionView() {
+                    viewModel.nextStep()
+                }
+                
+            case .questionDescription:
+                ITQuestionDescriptionView(viewModel: viewModel)
+                
+            case .firstQuestion:
+                ITFirstQuestionView(viewModel: viewModel, answer: $answer)
+                
+            case .secondQuestion:
+                ITSecondQuestionView(viewModel: viewModel) { isCorrect in
+                    viewModel.updateAnswer(isCorrect: isCorrect)
+                    viewModel.nextStep()
+                }
+                
+            case .secondQuestionResult:
+                ITSecondQuestionResultView(viewModel: viewModel)
+                
+            case .trainingFinish:
+                ITTrainingFinishView() {
+                    viewModel.nextStep()
+                }
+                
+            case .sessionFinish:
+                ITSessionFinishView()
+                //TODO: Add completion.
+            }
+        }
+        .padding(.horizontal, 24)
+        .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
-            
-            VStack {
-                switch viewModel.currentStep {
-                case .welcomeMessage:
-                    ITWelcomeView() {
-                        viewModel.nextStep()
-                    }
-                    
-                case .trainingDescription:
-                    ITTrainingDescriptionView() {
-                        viewModel.nextStep()
-                    }
-                    
-                case .sessionDescription:
-                    ITSessionDescriptionView() {
-                        viewModel.nextStep()
-                    }
-                    
-                case .questionDescription:
-                    ITQuestionDescriptionView(viewModel: viewModel)
-                    
-                case .firstQuestion:
-                    ITFirstQuestionView(viewModel: viewModel, answer: $answer)
-                    
-                case .secondQuestion:
-                    ITSecondQuestionView(viewModel: viewModel) { isCorrect in
-                        viewModel.updateAnswer(isCorrect: isCorrect)
-                        viewModel.nextStep()
-                    }
-                    
-                case .secondQuestionResult:
-                    ITSecondQuestionResultView(viewModel: viewModel)
-                    
-                case .trainingFinish:
-                    ITTrainingFinishView() {
-                        viewModel.nextStep()
-                    }
-                    
-                case .sessionFinish:
-                    ITSessionFinishView()
-                    //TODO: Add completion.
-                }
-            }
-            .padding(.horizontal, 24)
-        }
+        )
         .navigationBarBackButtonHidden()
     }
 }

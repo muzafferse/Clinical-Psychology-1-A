@@ -12,49 +12,48 @@ struct ContributorsView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        ZStack {
-            Color(.colorBackground)
-                .ignoresSafeArea()
-            
-            List(viewModel.contributorsData) { contributor in
-                HStack {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(contributor.name)
-                            .robotoMediumFont(size: 16)
-                            .foregroundStyle(.colorWhite)
-                        
-                        Text(contributor.title)
-                            .robotoRegularFont(size: 14)
-                            .foregroundStyle(.colorWhite)
-                        
-                        Text(contributor.company)
-                            .robotoRegularFont(size: 14)
-                            .foregroundStyle(.colorWhite)
-                    }
-                    .padding(.vertical, 10)
+        List(viewModel.contributorsData) { contributor in
+            HStack {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(contributor.name)
+                        .robotoMediumFont(size: 16)
+                        .foregroundStyle(.colorWhite)
                     
-                    Spacer()
+                    Text(contributor.title)
+                        .robotoRegularFont(size: 14)
+                        .foregroundStyle(.colorWhite)
                     
-                    if let encodedEmail = contributor.email.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-                       let mailURL = URL(string: "mailto:\(encodedEmail)") {
-                        Link(destination: mailURL) {
-                            VStack(alignment: .center, spacing: 5) {
-                                Image.mailIcon
-                                    .robotoRegularFont(size: 32)
-                                    .foregroundStyle(.colorWhite)
-                                
-                                Text(AppStrings.contactButtonText)
-                                    .robotoRegularFont(size: 14)
-                                    .foregroundStyle(.colorWhite)
-                            }
+                    Text(contributor.company)
+                        .robotoRegularFont(size: 14)
+                        .foregroundStyle(.colorWhite)
+                }
+                .padding(.vertical, 10)
+                
+                Spacer()
+                
+                if let encodedEmail = contributor.email.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                   let mailURL = URL(string: "mailto:\(encodedEmail)") {
+                    Link(destination: mailURL) {
+                        VStack(alignment: .center, spacing: 5) {
+                            Image.mailIcon
+                                .robotoRegularFont(size: 32)
+                                .foregroundStyle(.colorWhite)
+                            
+                            Text(AppStrings.contactButtonText)
+                                .robotoRegularFont(size: 14)
+                                .foregroundStyle(.colorWhite)
                         }
                     }
                 }
-                .listRowBackground(Color.colorBackground)
-                .listRowSeparatorTint(.colorInactive)
             }
-            .listStyle(.plain)
+            .listRowBackground(Color.colorBackground)
+            .listRowSeparatorTint(.colorInactive)
         }
+        .listStyle(.plain)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
         .navigationBarBackButtonHidden()
         .navigationTitle(AppStrings.contributorsTitle)
         .navigationBarTitleTextColor(.colorWhite)

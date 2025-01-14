@@ -16,31 +16,28 @@ struct AppView: View {
     @StateObject private var settingsTabViewModel = SettingsTabRootViewModel()
     
     var body: some View {
-        ZStack {
-            if authManager.authState == .loading {
-                ProgressView("Loading...")
-            } else if authManager.authState == .signedIn {
-                VStack {
-                    // Display different views based on the selected tab
-                    switch self.appState.selectedTab {
-                    case .home:
-                        HomeTabView(parentViewModel: homeTabViewModel) // Show the Home tab content
-                    case .settings:
-                        SettingsTabView(parentViewModel: settingsTabViewModel) // Show the Settings tab content
-                    }
-                    Spacer()
-                    TabBarView(selectedTab: $appState.selectedTab) // Display the tab bar
+        if authManager.authState == .loading {
+            ProgressView("Loading...")
+        } else if authManager.authState == .signedIn {
+            VStack {
+                switch self.appState.selectedTab {
+                case .home:
+                    HomeTabView(parentViewModel: homeTabViewModel) // Show the Home tab content
+                case .settings:
+                    SettingsTabView(parentViewModel: settingsTabViewModel) // Show the Settings tab content
                 }
-                .ignoresSafeArea()
-            } else {
-                LoginView()
+                Spacer()
+                TabBarView(selectedTab: $appState.selectedTab) // Display the tab bar
             }
+            .ignoresSafeArea()
+        } else {
+            LoginView()
         }
     }
 }
 
 #Preview {
     AppView()
-        .environmentObject(AppState()) // Provide an instance of AppState as an environment object
+        .environmentObject(AppState())
         .environmentObject(AuthManager())
 }

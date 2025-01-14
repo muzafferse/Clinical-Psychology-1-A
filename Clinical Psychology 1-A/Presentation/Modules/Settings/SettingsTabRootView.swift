@@ -15,54 +15,53 @@ struct SettingsTabRootView: View {
     @ObservedObject var viewModel: SettingsTabRootViewModel
     
     var body: some View {
-        ZStack {
+        VStack {
+            VStack(spacing: 3) {
+                HStack {
+                    Button(action: {
+                        self.appState.settingsNavigation.append(SettingsNavDestination.contributors)
+                    }) {
+                        Text(AppStrings.contributorsButtonText)
+                            .robotoMediumFont(size: 20)
+                            .foregroundStyle(.colorWhite)
+                        
+                        Spacer()
+                        
+                        Image.chevronRight
+                            .foregroundStyle(.colorWhite)
+                    }
+                }
+                
+                Divider()
+                    .frame(height: 1)
+                    .background(.colorInactive)
+            }
+            .padding(.horizontal, 24)
+            
+            Button(action: {
+                Task {
+                    do {
+                        try await authManager.signOut()
+                        authManager.authState = .signedOut
+                        appState.selectedTab = .home
+                    } catch {
+                        print("Error signing out: \(error)")
+                    }
+                }
+            }) {
+                Text(AppStrings.logoutButtonText)
+            }
+            .primaryActiveButtonStyle()
+            .padding(.top, 24)
+            .padding(.horizontal, 24)
+            
+            Spacer()
+        }
+        .padding(.vertical, 12)
+        .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
-            
-            VStack {
-                VStack(spacing: 3) {
-                    HStack {
-                        Button(action: {
-                            self.appState.settingsNavigation.append(SettingsNavDestination.contributors)
-                        }) {
-                            Text(AppStrings.contributorsButtonText)
-                                .robotoMediumFont(size: 20)
-                                .foregroundStyle(.colorWhite)
-                            
-                            Spacer()
-                            
-                            Image.chevronRight
-                                .foregroundStyle(.colorWhite)
-                        }
-                    }
-                    
-                    Divider()
-                        .frame(height: 1)
-                        .background(.colorInactive)
-                }
-                .padding(.horizontal, 24)
-                
-                Button(action: {
-                    Task {
-                        do {
-                            try await authManager.signOut()
-                            authManager.authState = .signedOut
-                            appState.selectedTab = .home
-                        } catch {
-                            print("Error signing out: \(error)")
-                        }
-                    }
-                }) {
-                    Text(AppStrings.logoutButtonText)
-                }
-                .primaryActiveButtonStyle()
-                .padding(.top, 24)
-                .padding(.horizontal, 24)
-                
-                Spacer()
-            }
-            .padding(.vertical, 12)
-        }
+        )
         .navigationTitle(AppStrings.settingsTitle)
         .navigationBarTitleTextColor(.colorWhite)
     }

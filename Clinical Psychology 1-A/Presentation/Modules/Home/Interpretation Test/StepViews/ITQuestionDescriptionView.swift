@@ -12,17 +12,12 @@ struct ITQuestionDescriptionView: View {
     @State private var isGestureEnabled: Bool = false
     
     var body: some View {
-        ZStack {
-            Color(.colorBackground)
-                .ignoresSafeArea()
-            
-            VStack(spacing: 32) {
-                if let currentQuestion = getCurrentQuestion() {
-                    Text(currentQuestion.questionDescription)
-                        .robotoRegularFont(size: 16)
-                        .multilineTextAlignment(.leading)
-                        .foregroundStyle(.colorWhite)
-                }
+        VStack(spacing: 32) {
+            if let currentQuestion = getCurrentQuestion() {
+                Text(currentQuestion.questionDescription)
+                    .robotoRegularFont(size: 16)
+                    .multilineTextAlignment(.leading)
+                    .foregroundStyle(.colorWhite)
             }
         }
         .onTapGesture {
@@ -57,4 +52,9 @@ struct ITQuestionDescriptionView: View {
 
 #Preview {
     ITQuestionDescriptionView(viewModel: InterpretationTestViewModel())
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Color(.colorBackground)
+                .ignoresSafeArea()
+        )
 }
