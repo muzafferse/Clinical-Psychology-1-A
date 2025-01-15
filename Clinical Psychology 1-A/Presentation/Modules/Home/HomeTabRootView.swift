@@ -23,7 +23,8 @@ struct HomeTabRootView: View {
                     .foregroundStyle(.colorWhite)
                 
                 Text(AppStrings.welcomeDescription)
-                    .robotoRegularFont(size: 16)
+                //TODO: Check for standartization.
+                    .robotoRegularFont(size: 14)
                     .multilineTextAlignment(.leading)
                     .foregroundStyle(.colorWhite)
             }
