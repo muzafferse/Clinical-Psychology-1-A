@@ -10,7 +10,6 @@ import SwiftUI
 struct AnswerTextFieldView: View {
     @Binding var text: String
     @FocusState private var isFocused: Bool
-    //TODO: Check for next step, wrong enter cases.
     var expectedCharacter: String
     var onCorrectInput: () -> Void
     
