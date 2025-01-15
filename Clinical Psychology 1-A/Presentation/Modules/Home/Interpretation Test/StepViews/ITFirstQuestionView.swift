@@ -25,18 +25,11 @@ struct ITFirstQuestionView: View {
     var body: some View {
         VStack(spacing: 32) {
             if showCompletedSentence {
-                Text(completedSentence)
-                    .robotoRegularFont(size: 16)
-                    .multilineTextAlignment(.leading)
-                    .foregroundStyle(.colorWhite)
+                textView(text: completedSentence)
             } else {
                 if let question = getCurrentQuestion()?.firstQuestion {
-                    Text(question)
-                        .robotoRegularFont(size: 16)
-                        .multilineTextAlignment(.leading)
-                        .foregroundStyle(.colorWhite)
+                    textView(text: question)
                 }
-                
                 if let expectedAnswer = getCurrentQuestion()?.firstQuestionAnswer {
                     AnswerTextFieldView(text: $answer,
                                         expectedCharacter: expectedAnswer) {
@@ -76,6 +69,15 @@ struct ITFirstQuestionView: View {
             showCompletedSentence = false
             viewModel.nextStep()
         }
+    }
+}
+
+extension ITFirstQuestionView {
+    private func textView(text: String) -> some View {
+        Text(text)
+            .robotoRegularFont(size: 16)
+            .multilineTextAlignment(.leading)
+            .foregroundStyle(.colorWhite)
     }
 }
 
