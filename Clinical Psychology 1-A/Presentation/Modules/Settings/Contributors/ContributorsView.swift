@@ -14,37 +14,9 @@ struct ContributorsView: View {
     var body: some View {
         List(viewModel.contributorsData) { contributor in
             HStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(contributor.name)
-                        .robotoMediumFont(size: 16)
-                        .foregroundStyle(.colorWhite)
-                    
-                    Text(contributor.title)
-                        .robotoRegularFont(size: 14)
-                        .foregroundStyle(.colorWhite)
-                    
-                    Text(contributor.company)
-                        .robotoRegularFont(size: 14)
-                        .foregroundStyle(.colorWhite)
-                }
-                .padding(.vertical, 10)
-                
+                personInfoView(person: contributor)
                 Spacer()
-                
-                if let encodedEmail = contributor.email.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-                   let mailURL = URL(string: "mailto:\(encodedEmail)") {
-                    Link(destination: mailURL) {
-                        VStack(alignment: .center, spacing: 5) {
-                            Image.mailIcon
-                                .robotoRegularFont(size: 32)
-                                .foregroundStyle(.colorWhite)
-                            
-                            Text(AppStrings.contactButtonText)
-                                .robotoRegularFont(size: 14)
-                                .foregroundStyle(.colorWhite)
-                        }
-                    }
-                }
+                emailView(person: contributor)
             }
             .listRowBackground(Color.colorBackground)
             .listRowSeparatorTint(.colorInactive)
@@ -58,6 +30,44 @@ struct ContributorsView: View {
         .navigationTitle(AppStrings.contributorsTitle)
         .navigationBarTitleTextColor(.colorWhite)
         .backButton(text: AppStrings.contributorsBackButtonText)
+    }
+}
+
+extension ContributorsView {
+    private func personInfoView(person: Contributor) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(person.name)
+                .robotoMediumFont(size: 16)
+                .foregroundStyle(.colorWhite)
+            
+            Text(person.title)
+                .robotoRegularFont(size: 14)
+                .foregroundStyle(.colorWhite)
+            
+            Text(person.company)
+                .robotoRegularFont(size: 14)
+                .foregroundStyle(.colorWhite)
+        }
+        .padding(.vertical, 10)
+    }
+    
+    private func emailView(person: Contributor) -> some View {
+        VStack {
+            if let encodedEmail = person.email.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+               let mailURL = URL(string: "mailto:\(encodedEmail)") {
+                Link(destination: mailURL) {
+                    VStack(alignment: .center, spacing: 5) {
+                        Image.mailIcon
+                            .robotoRegularFont(size: 32)
+                            .foregroundStyle(.colorWhite)
+                        
+                        Text(AppStrings.contactButtonText)
+                            .robotoRegularFont(size: 14)
+                            .foregroundStyle(.colorWhite)
+                    }
+                }
+            }
+        }
     }
 }
 
