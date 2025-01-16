@@ -52,7 +52,10 @@ struct LoginView: View {
                     .disabled(!viewModel.isLoginButtonActive())
                     
                     // Register Button
-                    NavigationLink(destination: RegisterView()) {
+                    NavigationLink(destination: RegisterView()
+                        .environmentObject(authManager)
+                        .environmentObject(appState)
+                    ) {
                         Text(AppStrings.registerButtonText)
                     }
                     .textButtonStyle()
