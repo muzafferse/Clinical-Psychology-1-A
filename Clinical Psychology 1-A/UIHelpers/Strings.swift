@@ -9,7 +9,7 @@ import Foundation
 
 struct AppStrings {
     // General Strings
-    static let appName = "Klinik Psikoloji Grup 1-A"
+    static let appName = "Klinik Psikoloji 1-A"
     
     // Login & Register Strings
     static let nickName = "Rumuz"

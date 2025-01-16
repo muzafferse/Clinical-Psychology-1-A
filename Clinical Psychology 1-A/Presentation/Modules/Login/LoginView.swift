@@ -16,50 +16,9 @@ struct LoginView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 32) {
-                    VStack(spacing: 24) {
-                        
-                        // User Nickname Textfield
-                        InputFieldView(title: AppStrings.nickName,
-                                       text: $viewModel.nickName,
-                                       textFieldStyle: UsernameTextFieldStyle())
-                        
-                        // Password Textfield
-                        PasswordInputFieldView(title: AppStrings.password,
-                                               text: $viewModel.password,
-                                               textFieldStyle: $viewModel.passwordTextFieldStyle,
-                                               toggleAction: { viewModel.passwordTextFieldStyle.isHidden.toggle()
-                        },
-                                               warningMessage: viewModel.isPasswordEnough() ? nil : AppStrings.loginPasswordLengthWarning)
-                    }
-                    
-                    // Login Button
-                    Button(action: {
-                        authManager.signIn(withEmail: viewModel.nickName,
-                                           password: viewModel.password) { success, error in
-                            if success {
-                                authManager.authState = .signedIn
-                                appState.selectedTab = .home
-                            } else if let error = error {
-                                viewModel.alertMessage = error.localizedDescription
-                                viewModel.showAlert = true
-                            }
-                        }
-                    },
-                           label: {
-                        Text(AppStrings.loginButtonText)
-                    })
-                    .buttonStyle(.customButton(.constant(viewModel.loginButtonStyle)))
-                    .disabled(!viewModel.isLoginButtonActive())
-                    
-                    // Register Button
-                    NavigationLink(destination: RegisterView()
-                        .environmentObject(authManager)
-                        .environmentObject(appState)
-                    ) {
-                        Text(AppStrings.registerButtonText)
-                    }
-                    .textButtonStyle()
-                    
+                    textFieldsView
+                    loginButton
+                    registerButton
                 }
                 .padding(.horizontal, 24)
                 .padding(.top, 60)
@@ -82,6 +41,55 @@ struct LoginView: View {
         .onTapGesture {
             hideKeyboard()
         }
+    }
+}
+
+extension LoginView {
+    private var textFieldsView: some View {
+        VStack(spacing: 24) {
+            
+            // User Nickname Textfield
+            InputFieldView(title: AppStrings.nickName,
+                           text: $viewModel.nickName,
+                           textFieldStyle: UsernameTextFieldStyle())
+            
+            // Password Textfield
+            PasswordInputFieldView(title: AppStrings.password,
+                                   text: $viewModel.password,
+                                   textFieldStyle: $viewModel.passwordTextFieldStyle,
+                                   toggleAction: { viewModel.passwordTextFieldStyle.isHidden.toggle()
+            },
+                                   warningMessage: viewModel.isPasswordEnough() ? nil : AppStrings.loginPasswordLengthWarning)
+        }
+    }
+    
+    private var loginButton: some View {
+        // Login Button
+        Button(action: {
+            authManager.signIn(withEmail: viewModel.nickName,
+                               password: viewModel.password) { success, error in
+                if success {
+                    authManager.authState = .signedIn
+                    appState.selectedTab = .home
+                } else if let error = error {
+                    viewModel.alertMessage = error.localizedDescription
+                    viewModel.showAlert = true
+                }
+            }
+        },
+               label: {
+            Text(AppStrings.loginButtonText)
+        })
+        .buttonStyle(.customButton(.constant(viewModel.loginButtonStyle)))
+        .disabled(!viewModel.isLoginButtonActive())
+    }
+    
+    private var registerButton: some View {
+        // Register Button
+        NavigationLink(destination: RegisterView()) {
+            Text(AppStrings.registerButtonText)
+        }
+        .textButtonStyle()
     }
 }
 
