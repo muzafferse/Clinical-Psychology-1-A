@@ -22,6 +22,9 @@ struct LoginView: View {
                 }
                 .padding(.horizontal, 24)
                 .padding(.top, 60)
+                .onTapGesture {
+                    hideKeyboard()
+                }
             }
             .clipped()
             .scrollDisabled(true)
@@ -37,9 +40,6 @@ struct LoginView: View {
             Alert(title: Text(AppStrings.loginPopupTitle),
                   message: Text(viewModel.alertMessage),
                   dismissButton: .default(Text(AppStrings.loginPopupButtonText)))
-        }
-        .onTapGesture {
-            hideKeyboard()
         }
     }
 }
