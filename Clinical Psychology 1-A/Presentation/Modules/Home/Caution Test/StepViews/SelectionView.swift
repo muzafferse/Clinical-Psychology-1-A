@@ -45,12 +45,10 @@ struct SelectionView: View {
             VStack {
                 if direction == .right {
                     Image.rightArrowIcon
-                        .robotoRegularFont(size: 32)
-                        .foregroundStyle(.colorWhite)
+                        .regularTextStyle(size: 32)
                 } else {
                     Image.leftArrowIcon
-                        .robotoRegularFont(size: 32)
-                        .foregroundStyle(.colorWhite)
+                        .regularTextStyle(size: 32)
                 }
             }
         }

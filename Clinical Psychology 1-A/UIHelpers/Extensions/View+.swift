@@ -44,6 +44,14 @@ extension View {
     func robotoRegularFont(size: CGFloat) -> some View {
         self.font(.custom(.roboto, style: .regular, size: size))
     }
+    
+    func regularTextStyle(size: CGFloat) -> some View {
+        self.modifier(RegularText(size: size))
+    }
+    
+    func mediumTextStyle(size: CGFloat) -> some View {
+        self.modifier(MediumText(size: size))
+    }
 }
 
 // MARK: - Button Modifiers
@@ -65,5 +73,26 @@ extension View {
 extension View {
     func backButton(text: String) -> some View {
         self.modifier(BackButton(text: text))
+    }
+}
+
+//MARK: - Text Modifiers
+struct RegularText: ViewModifier {
+    let size: CGFloat
+    
+    func body(content: Content) -> some View {
+        content
+            .robotoRegularFont(size: size)
+            .foregroundStyle(.colorWhite)
+    }
+}
+
+struct MediumText: ViewModifier {
+    let size: CGFloat
+    
+    func body(content: Content) -> some View {
+        content
+            .robotoMediumFont(size: size)
+            .foregroundStyle(.colorWhite)
     }
 }

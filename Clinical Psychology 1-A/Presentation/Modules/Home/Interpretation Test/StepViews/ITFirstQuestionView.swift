@@ -75,9 +75,8 @@ struct ITFirstQuestionView: View {
 extension ITFirstQuestionView {
     private func textView(text: String) -> some View {
         Text(text)
-            .robotoRegularFont(size: 16)
+            .regularTextStyle(size: 16)
             .multilineTextAlignment(.leading)
-            .foregroundStyle(.colorWhite)
     }
 }
 

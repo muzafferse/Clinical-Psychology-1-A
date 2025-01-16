@@ -16,9 +16,8 @@ struct DescriptionView: View {
             Spacer()
             
             Text(AppStrings.ctStartDescription)
-                .robotoRegularFont(size: 16)
+                .regularTextStyle(size: 16)
                 .multilineTextAlignment(.leading)
-                .foregroundStyle(.colorWhite)
             
             Spacer()
             

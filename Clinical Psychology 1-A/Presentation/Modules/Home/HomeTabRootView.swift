@@ -19,20 +19,18 @@ struct HomeTabRootView: View {
             VStack(spacing: 32) {
                 let username = authManager.user?.email?.components(separatedBy: "@").first ?? AppStrings.guestUser
                 Text("Merhaba, \(username)")
-                    .robotoMediumFont(size: 20)
-                    .foregroundStyle(.colorWhite)
+                    .mediumTextStyle(size: 20)
                 
                 Text(AppStrings.welcomeDescription)
                 //TODO: Check for standartization.
-                    .robotoRegularFont(size: 14)
+                    .regularTextStyle(size: 14)
                     .multilineTextAlignment(.leading)
-                    .foregroundStyle(.colorWhite)
             }
             
             Spacer(minLength: 0)
             
             Button {
-//TODO: self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
+                //TODO: self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
                 self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
             } label: {
                 Text(AppStrings.startTestButtonText)

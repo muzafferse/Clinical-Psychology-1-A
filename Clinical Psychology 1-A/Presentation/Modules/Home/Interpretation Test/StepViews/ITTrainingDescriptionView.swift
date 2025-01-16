@@ -15,9 +15,8 @@ struct ITTrainingDescriptionView: View {
             Spacer()
             
             Text(AppStrings.itTrainingDescription)
-                .robotoRegularFont(size: 16)
+                .regularTextStyle(size: 16)
                 .multilineTextAlignment(.leading)
-                .foregroundStyle(.colorWhite)
             
             Spacer()
             

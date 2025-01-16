@@ -22,6 +22,7 @@ struct ContributorsView: View {
             .listRowSeparatorTint(.colorInactive)
         }
         .listStyle(.plain)
+        .scrollContentBackground(.hidden)
         .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
@@ -37,16 +38,13 @@ extension ContributorsView {
     private func personInfoView(person: Contributor) -> some View {
         VStack(alignment: .leading, spacing: 2) {
             Text(person.name)
-                .robotoMediumFont(size: 16)
-                .foregroundStyle(.colorWhite)
+                .mediumTextStyle(size: 16)
             
             Text(person.title)
-                .robotoRegularFont(size: 14)
-                .foregroundStyle(.colorWhite)
+                .regularTextStyle(size: 14)
             
             Text(person.company)
-                .robotoRegularFont(size: 14)
-                .foregroundStyle(.colorWhite)
+                .regularTextStyle(size: 14)
         }
         .padding(.vertical, 10)
     }
@@ -58,12 +56,10 @@ extension ContributorsView {
                 Link(destination: mailURL) {
                     VStack(alignment: .center, spacing: 5) {
                         Image.mailIcon
-                            .robotoRegularFont(size: 32)
-                            .foregroundStyle(.colorWhite)
+                            .regularTextStyle(size: 32)
                         
                         Text(AppStrings.contactButtonText)
-                            .robotoRegularFont(size: 14)
-                            .foregroundStyle(.colorWhite)
+                            .regularTextStyle(size: 14)
                     }
                 }
             }

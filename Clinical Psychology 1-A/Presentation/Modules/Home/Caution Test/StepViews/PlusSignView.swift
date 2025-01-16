@@ -12,8 +12,7 @@ struct PlusSignView: View {
     
     var body: some View {
         Image.plusIcon
-            .robotoRegularFont(size: 32)
-            .foregroundStyle(.colorWhite)
+            .regularTextStyle(size: 32)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
                 Color(.colorBackground)

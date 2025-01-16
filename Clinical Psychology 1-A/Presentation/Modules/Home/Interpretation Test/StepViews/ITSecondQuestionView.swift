@@ -17,10 +17,8 @@ struct ITSecondQuestionView: View {
         VStack(spacing: 96) {
             if let currentQuestion = getCurrentQuestion() {
                 Text(currentQuestion.secondQuestion)
-                    .robotoRegularFont(size: 16)
+                    .regularTextStyle(size: 16)
                     .multilineTextAlignment(.leading)
-                    .foregroundStyle(.colorWhite)
-                
                 
                 HStack(spacing: 96) {
                     Button(action: {

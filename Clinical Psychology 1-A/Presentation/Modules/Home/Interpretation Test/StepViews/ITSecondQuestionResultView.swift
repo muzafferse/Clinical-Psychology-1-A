@@ -13,9 +13,8 @@ struct ITSecondQuestionResultView: View {
     var body: some View {
         VStack(spacing: 32) {
             Text(viewModel.isCorrectAnswer ? AppStrings.itCorrect : AppStrings.itIncorrect)
-                .robotoRegularFont(size: 16)
+                .regularTextStyle(size: 16)
                 .multilineTextAlignment(.leading)
-                .foregroundStyle(.colorWhite)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(

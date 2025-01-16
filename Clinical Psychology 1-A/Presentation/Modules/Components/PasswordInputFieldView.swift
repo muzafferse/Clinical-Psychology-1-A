@@ -17,8 +17,7 @@ struct PasswordInputFieldView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .robotoMediumFont(size: 14)
-                .foregroundStyle(.colorWhite)
+                .mediumTextStyle(size: 14)
             
             LoginTextFieldView(text: $text,
                                loginTextFieldStyle: $textFieldStyle,
@@ -27,7 +26,7 @@ struct PasswordInputFieldView: View {
             if let warningMessage = warningMessage {
                 Text(warningMessage)
                     .robotoRegularFont(size: 12)
-                    .foregroundColor(.red)
+                    .foregroundStyle(.red)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

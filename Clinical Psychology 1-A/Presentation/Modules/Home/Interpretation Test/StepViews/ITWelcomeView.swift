@@ -15,9 +15,8 @@ struct ITWelcomeView: View {
             Spacer()
             
             Text(AppStrings.itWelcomeMessage)
-                .robotoRegularFont(size: 16)
+                .regularTextStyle(size: 16)
                 .multilineTextAlignment(.leading)
-                .foregroundStyle(.colorWhite)
             
             Spacer()
             

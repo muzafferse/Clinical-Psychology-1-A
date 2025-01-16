@@ -15,9 +15,8 @@ struct ITQuestionDescriptionView: View {
         VStack(spacing: 32) {
             if let currentQuestion = getCurrentQuestion() {
                 Text(currentQuestion.questionDescription)
-                    .robotoRegularFont(size: 16)
+                    .regularTextStyle(size: 16)
                     .multilineTextAlignment(.leading)
-                    .foregroundStyle(.colorWhite)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

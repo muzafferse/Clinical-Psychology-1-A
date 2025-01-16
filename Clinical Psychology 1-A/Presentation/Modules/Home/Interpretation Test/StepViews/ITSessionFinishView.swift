@@ -15,9 +15,9 @@ struct ITSessionFinishView: View {
             Spacer()
             
             Text(AppStrings.itFinishDescription)
-                .robotoRegularFont(size: 16)
+                .regularTextStyle(size: 16)
                 .multilineTextAlignment(.leading)
-                .foregroundStyle(.colorWhite)
+            
             Spacer()
             
             Button(action: {

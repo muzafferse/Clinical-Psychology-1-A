@@ -15,8 +15,7 @@ struct InputFieldView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .robotoMediumFont(size: 14)
-                .foregroundStyle(.colorWhite)
+                .mediumTextStyle(size: 14)
             
             LoginTextFieldView(text: $text,
                                loginTextFieldStyle: .constant(textFieldStyle))

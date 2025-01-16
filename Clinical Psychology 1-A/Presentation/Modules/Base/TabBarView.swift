@@ -28,6 +28,7 @@ struct TabBarView: View {
                                 .frame(maxWidth: .infinity,
                                        minHeight: 24,
                                        maxHeight: 24)
+                            
                             Text(AppStrings.home)
                                 .robotoMediumFont(size: 10)
                                 .multilineTextAlignment(.center)
