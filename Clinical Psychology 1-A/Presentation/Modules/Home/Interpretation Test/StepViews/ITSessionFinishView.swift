@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ITSessionFinishView: View {
-    //TODO: Add Completion
+    let onFinish: () -> Void
     
     var body: some View {
         VStack(spacing: 32) {
@@ -20,9 +20,8 @@ struct ITSessionFinishView: View {
             
             Spacer()
             
-            Button(action: {
-                
-            }, label: {
+            Button(action: onFinish,
+                   label: {
                 Text(AppStrings.itFinishButtonText)
             })
             .primaryActiveButtonStyle()
@@ -36,6 +35,6 @@ struct ITSessionFinishView: View {
 }
 
 #Preview {
-    ITSessionFinishView()
+    ITSessionFinishView(onFinish: {})
         .frame(maxWidth: .infinity, maxHeight: .infinity)
 }

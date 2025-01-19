@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InterpretationTestView: View {
+    @EnvironmentObject var appState: AppState
     @ObservedObject var viewModel = InterpretationTestViewModel()
     @State private var answer: String = ""
     
@@ -50,8 +51,9 @@ struct InterpretationTestView: View {
                 }
                 
             case .sessionFinish:
-                ITSessionFinishView()
-                //TODO: Add completion.
+                ITSessionFinishView() {
+                    appState.homeNavigation = .init()
+                }
             }
         }
         .padding(.horizontal, 24)

@@ -110,7 +110,7 @@ class InterpretationTestViewModel: ObservableObject {
         case .sessionDescription:
             currentStep = .questionDescription
             
-        case .sessionFinish: //TODO: finish
+        case .sessionFinish:
             break
         }
     }
