@@ -14,8 +14,9 @@ struct ITFirstQuestionView: View {
     @State private var showCompletedSentence: Bool = false
     
     private var completedSentence: String {
-        if let question = getCurrentQuestion()?.firstQuestion,
-           let answer = getCurrentQuestion()?.firstQuestionAnswer {
+        if let currentQuestion = viewModel.getCurrentQuestion() {
+            let question = currentQuestion.firstQuestion
+            let answer = currentQuestion.firstQuestionAnswer
             return question.replacingOccurrences(of: "_", with: answer)
         } else {
             return ""
@@ -27,10 +28,10 @@ struct ITFirstQuestionView: View {
             if showCompletedSentence {
                 textView(text: completedSentence)
             } else {
-                if let question = getCurrentQuestion()?.firstQuestion {
+                if let question = viewModel.getCurrentQuestion()?.firstQuestion {
                     textView(text: question)
                 }
-                if let expectedAnswer = getCurrentQuestion()?.firstQuestionAnswer {
+                if let expectedAnswer = viewModel.getCurrentQuestion()?.firstQuestionAnswer {
                     AnswerTextFieldView(text: $answer,
                                         expectedCharacter: expectedAnswer) {
                         handleCorrectAnswer()
@@ -44,22 +45,6 @@ struct ITFirstQuestionView: View {
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
-    }
-    
-    //TODO: Should move on viewModel or sessionGenerator
-    private func getCurrentQuestion() -> Question? {
-        if viewModel.isFirstSession {
-            guard let neutralSession = viewModel.neutralSession,
-                  viewModel.currentQuestionIndex < neutralSession.count else {
-                return nil
-            }
-            return neutralSession[viewModel.currentQuestionIndex]
-        } else {
-            guard viewModel.currentQuestionIndex < viewModel.currentSession.count else {
-                return nil
-            }
-            return viewModel.currentSession[viewModel.currentQuestionIndex]
-        }
     }
     
     private func handleCorrectAnswer() {

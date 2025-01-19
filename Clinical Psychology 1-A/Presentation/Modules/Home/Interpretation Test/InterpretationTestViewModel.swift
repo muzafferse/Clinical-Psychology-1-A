@@ -49,7 +49,20 @@ class InterpretationTestViewModel: ObservableObject {
         return categories
     }
     
-    //TODO: Add getCurrentQuestion - maybe in manager
+    func getCurrentQuestion() -> Question? {
+        if isFirstSession {
+            guard let neutralSession = neutralSession,
+                  currentQuestionIndex < neutralSession.count else {
+                return nil
+            }
+            return neutralSession[currentQuestionIndex]
+        } else {
+            guard currentQuestionIndex < currentSession.count else {
+                return nil
+            }
+            return currentSession[currentQuestionIndex]
+        }
+    }
     
     func updateAnswer(isCorrect: Bool) {
         isCorrectAnswer = isCorrect

@@ -15,7 +15,7 @@ struct ITSecondQuestionView: View {
     
     var body: some View {
         VStack(spacing: 96) {
-            if let currentQuestion = getCurrentQuestion() {
+            if let currentQuestion = viewModel.getCurrentQuestion() {
                 Text(currentQuestion.secondQuestion)
                     .regularTextStyle(size: 16)
                     .multilineTextAlignment(.leading)
@@ -59,22 +59,6 @@ struct ITSecondQuestionView: View {
         isButtonDisabled = true
         stopTimer()
         onCompletion(isCorrect)
-    }
-    
-    //TODO: Should move on viewModel or sessionGenerator
-    private func getCurrentQuestion() -> Question? {
-        if viewModel.isFirstSession {
-            guard let neutralSession = viewModel.neutralSession,
-                  viewModel.currentQuestionIndex < neutralSession.count else {
-                return nil
-            }
-            return neutralSession[viewModel.currentQuestionIndex]
-        } else {
-            guard viewModel.currentQuestionIndex < viewModel.currentSession.count else {
-                return nil
-            }
-            return viewModel.currentSession[viewModel.currentQuestionIndex]
-        }
     }
     
     private func startTimer() {

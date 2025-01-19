@@ -13,7 +13,7 @@ struct ITQuestionDescriptionView: View {
     
     var body: some View {
         VStack(spacing: 32) {
-            if let currentQuestion = getCurrentQuestion() {
+            if let currentQuestion = viewModel.getCurrentQuestion() {
                 Text(currentQuestion.questionDescription)
                     .regularTextStyle(size: 16)
                     .multilineTextAlignment(.leading)
@@ -34,22 +34,6 @@ struct ITQuestionDescriptionView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 isGestureEnabled = true
             }
-        }
-    }
-    
-    //TODO: Should move on viewModel or sessionGenerator
-    private func getCurrentQuestion() -> Question? {
-        if viewModel.isFirstSession {
-            guard let neutralSession = viewModel.neutralSession,
-                  viewModel.currentQuestionIndex < neutralSession.count else {
-                return nil
-            }
-            return neutralSession[viewModel.currentQuestionIndex]
-        } else {
-            guard viewModel.currentQuestionIndex < viewModel.currentSession.count else {
-                return nil
-            }
-            return viewModel.currentSession[viewModel.currentQuestionIndex]
         }
     }
 }
