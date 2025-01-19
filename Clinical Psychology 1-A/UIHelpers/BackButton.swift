@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BackButton: ViewModifier {
     let text: String
+    let dismissAction: (() -> Void)?
     @Environment(\.dismiss) private var dismiss
     
     func body(content: Content) -> some View {
@@ -16,6 +17,7 @@ struct BackButton: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
+                        dismissAction?()
                         dismiss()
                     }) {
                         HStack {

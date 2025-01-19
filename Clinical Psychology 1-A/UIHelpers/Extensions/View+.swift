@@ -71,8 +71,8 @@ extension View {
 
 //MARK: - Back Button Modifier
 extension View {
-    func backButton(text: String) -> some View {
-        self.modifier(BackButton(text: text))
+    func backButton(text: String, dismissAction: (() -> Void)? = nil) -> some View {
+        self.modifier(BackButton(text: text, dismissAction: dismissAction))
     }
 }
 

@@ -26,4 +26,9 @@ class LoginViewModel: ObservableObject {
     func isPasswordEnough() -> Bool {
         return password.count >= 6
     }
+    
+    func clearTextFields() {
+        nickName = ""
+        password = ""
+    }
 }

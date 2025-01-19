@@ -29,4 +29,10 @@ class RegisterViewModel: ObservableObject {
     func isPasswordsMatch() -> Bool {
         return password == repassword
     }
+    
+    func clearTextFields() {
+        nickName = ""
+        password = ""
+        repassword = ""
+    }
 }

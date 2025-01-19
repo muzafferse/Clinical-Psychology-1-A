@@ -48,6 +48,7 @@ struct RegisterView: View {
                         authManager.register(withEmail: viewModel.nickName,
                                              password: viewModel.password) { success, error in
                             if success {
+                                viewModel.clearTextFields()
                                 dismiss()
                             } else if let error = error {
                                 viewModel.alertMessage = error.localizedDescription
@@ -84,7 +85,8 @@ struct RegisterView: View {
         .navigationTitle(AppStrings.appName)
         .navigationBarTitleTextColor(.colorWhite)
         .navigationBarTitleDisplayMode(.large)
-        .backButton(text: AppStrings.registerBackButtonText)
+        .backButton(text: AppStrings.registerBackButtonText,
+                    dismissAction: viewModel.clearTextFields)
     }
 }
 

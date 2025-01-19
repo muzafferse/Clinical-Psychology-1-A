@@ -70,6 +70,7 @@ extension LoginView {
                                password: viewModel.password) { success, error in
                 if success {
                     authManager.authState = .signedIn
+                    viewModel.clearTextFields()
                     appState.selectedTab = .home
                 } else if let error = error {
                     viewModel.alertMessage = error.localizedDescription
@@ -88,6 +89,9 @@ extension LoginView {
         // Register Button
         NavigationLink(destination: RegisterView()) {
             Text(AppStrings.registerButtonText)
+        }
+        .onDisappear {
+            viewModel.clearTextFields()
         }
         .textButtonStyle()
     }
