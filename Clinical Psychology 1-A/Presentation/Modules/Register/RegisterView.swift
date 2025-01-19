@@ -64,6 +64,9 @@ struct RegisterView: View {
                 }
                 .padding(.horizontal, 24)
                 .padding(.top, 60)
+                .onTapGesture {
+                    hideKeyboard()
+                }
             }
             .clipped()
             .scrollDisabled(true)
@@ -71,9 +74,6 @@ struct RegisterView: View {
                 Color(.colorBackground)
                     .ignoresSafeArea()
             )
-        }
-        .onTapGesture {
-            hideKeyboard()
         }
         .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text(AppStrings.registerPopupTitle),
