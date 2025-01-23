@@ -18,6 +18,7 @@ class ITSessionManager {
         self.categories = categories
     }
     
+    //TODO: yarısnın cevabı evet - yarısı hayır
     func generateSession() -> [Question] {
         var sessionQuestions: [Question] = []
         
