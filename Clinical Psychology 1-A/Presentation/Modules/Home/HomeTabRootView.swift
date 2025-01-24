@@ -22,7 +22,6 @@ struct HomeTabRootView: View {
                     .mediumTextStyle(size: 20)
                 
                 Text(AppStrings.welcomeDescription)
-                //TODO: Check for standartization.
                     .regularTextStyle(size: 14)
                     .multilineTextAlignment(.leading)
             }
