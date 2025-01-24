@@ -11,33 +11,62 @@ class ITSessionManager {
     
     //TODO: Check if works well
     private var categories: [InterpretationCategory]
-    private let trialsPerSession = 36
     private let questionsPerType = 3
+    private var yesCount = 0
+    private var noCount = 0
     
     init(categories: [InterpretationCategory]) {
         self.categories = categories
     }
     
-    //TODO: yarısnın cevabı evet - yarısı hayır
     func generateSession() -> [Question] {
-        var sessionQuestions: [Question] = []
+        var session: [Question] = []
+        yesCount = 0
+        noCount = 0
         
-        // Shuffle categories
-        let shuffledCategories = categories.shuffled()
-        
-        for category in shuffledCategories {
+        // Select 3 questions per category
+        for category in categories {
             let shuffledQuestions = category.questions.shuffled()
-            
-            // Select 3 questions per category
-            sessionQuestions.append(contentsOf: shuffledQuestions.prefix(questionsPerType))
+            let selectedQuestions = shuffledQuestions.prefix(questionsPerType)
+            session.append(contentsOf: selectedQuestions)
         }
         
-        // Duplicate the selected questions to meet the required trial count
-        sessionQuestions.append(contentsOf: sessionQuestions)
+        // Check yes no counts
+        yesCount = session.filter { $0.secondQuestionAnswer.rawValue == "EVET" }.count
+        noCount = session.filter { $0.secondQuestionAnswer.rawValue == "HAYIR" }.count
         
-        // Ensure randomized order
-        sessionQuestions.shuffle()
+        // Adjust yes no counts as equal
+        while yesCount != 9 || noCount != 9 {
+            if yesCount > 9 {
+                adjustSession(session: &session, answer: .yes, replacement: .no)
+            } else if noCount > 9 {
+                adjustSession(session: &session, answer: .no, replacement: .yes)
+            }
+        }
         
-        return sessionQuestions.prefix(trialsPerSession).shuffled()
+        //Duplicate session for 36 questions
+        session.append(contentsOf: session)
+        
+        //Shuffle session for randomizing
+        return session.shuffled()
+    }
+    
+    // Answer adjuster helper method
+    private func adjustSession(session: inout [Question], answer: Answer, replacement: Answer) {
+        if let indexToReplace = session.indices.filter({ session[$0].secondQuestionAnswer == answer }).randomElement() {
+            for category in categories {
+                if let replacement = category.questions.first(where: { $0.secondQuestionAnswer == replacement && !session.contains($0) }) {
+                    session[indexToReplace] = replacement
+                    if answer == .yes {
+                        yesCount -= 1
+                        noCount += 1
+                    } else {
+                        noCount -= 1
+                        yesCount += 1
+                    }
+                    break
+                }
+            }
+        }
     }
 }
