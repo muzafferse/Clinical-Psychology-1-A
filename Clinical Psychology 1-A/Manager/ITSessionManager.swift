@@ -9,7 +9,6 @@ import SwiftUI
 
 class ITSessionManager {
     
-    //TODO: Check if works well
     private var categories: [InterpretationCategory]
     private let questionsPerType = 3
     private var yesCount = 0

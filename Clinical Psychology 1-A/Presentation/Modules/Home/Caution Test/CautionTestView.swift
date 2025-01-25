@@ -25,7 +25,10 @@ struct CautionTestView: View {
                     .onAppear {
                         Task {
                             try await Task.sleep(for: 0.5)
-                            selectedStep = .photos
+                            await MainActor.run {
+                                selectedStep = .photos
+                            }
+                            
                         }
                     }
                 
@@ -34,7 +37,9 @@ struct CautionTestView: View {
                     .onAppear {
                         Task {
                             try await Task.sleep(for: 0.5)
-                            selectedStep = .selection
+                            await MainActor.run {
+                                selectedStep = .selection
+                            }
                         }
                     }
                 
