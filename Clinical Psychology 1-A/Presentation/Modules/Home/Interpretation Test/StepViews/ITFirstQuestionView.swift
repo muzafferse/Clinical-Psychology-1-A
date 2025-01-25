@@ -50,7 +50,7 @@ struct ITFirstQuestionView: View {
     private func handleCorrectAnswer() {
         showCompletedSentence = true
         //TODO: Should be 5. Changed for test.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             showCompletedSentence = false
             viewModel.nextStep()
         }

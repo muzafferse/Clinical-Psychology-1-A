@@ -54,9 +54,14 @@ class ITSessionManager {
     // Answer adjuster helper method
     private func adjustSession(session: inout [Question], answer: Answer, replacement: Answer) {
         if let indexToReplace = session.indices.filter({ session[$0].secondQuestionAnswer == answer }).randomElement() {
-            for category in categories {
-                if let replacement = category.questions.first(where: { $0.secondQuestionAnswer == replacement && !session.contains($0) }) {
-                    session[indexToReplace] = replacement
+            let categoryOfRemovedQuestion = categories.first(where: { $0.questions.contains(session[indexToReplace]) })
+
+            if let category = categoryOfRemovedQuestion {
+                let availableQuestions = category.questions.filter {
+                    $0.secondQuestionAnswer == replacement && !session.contains($0)
+                }
+                if let replacementQuestion = availableQuestions.randomElement() {
+                    session[indexToReplace] = replacementQuestion
                     if answer == .yes {
                         yesCount -= 1
                         noCount += 1
@@ -64,7 +69,6 @@ class ITSessionManager {
                         noCount -= 1
                         yesCount += 1
                     }
-                    break
                 }
             }
         }
