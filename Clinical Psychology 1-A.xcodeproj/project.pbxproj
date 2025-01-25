@@ -76,7 +76,6 @@
 		5BBC9AF62BD03E6300170B62 /* Spacer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AF52BD03E6300170B62 /* Spacer+.swift */; };
 		5BBC9AF82BD03E9500170B62 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AF72BD03E9500170B62 /* View+.swift */; };
 		5BBC9AFA2BD03F0200170B62 /* ButtonStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AF92BD03F0200170B62 /* ButtonStyle+.swift */; };
-		5BBC9AFC2BD03F6900170B62 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AFB2BD03F6900170B62 /* Haptics.swift */; };
 		5BBC9B002BD0405500170B62 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AFF2BD0405500170B62 /* TabBarView.swift */; };
 		5BBC9B022BD0416100170B62 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9B012BD0416100170B62 /* BackgroundView.swift */; };
 		5BBC9B042BD0419400170B62 /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9B032BD0419400170B62 /* LoginTextFieldView.swift */; };
@@ -168,7 +167,6 @@
 		5BBC9AF52BD03E6300170B62 /* Spacer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spacer+.swift"; sourceTree = "<group>"; };
 		5BBC9AF72BD03E9500170B62 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		5BBC9AF92BD03F0200170B62 /* ButtonStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+.swift"; sourceTree = "<group>"; };
-		5BBC9AFB2BD03F6900170B62 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		5BBC9AFF2BD0405500170B62 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		5BBC9B012BD0416100170B62 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		5BBC9B032BD0419400170B62 /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
@@ -422,7 +420,6 @@
 			children = (
 				5BBC9AF22BD03DED00170B62 /* Extensions */,
 				5B91EC262CE12E8100B4A8EA /* BackButton.swift */,
-				5BBC9AFB2BD03F6900170B62 /* Haptics.swift */,
 				5B95AB1D2C98C28D00ACA281 /* Strings.swift */,
 			);
 			path = UIHelpers;
@@ -647,7 +644,6 @@
 			files = (
 				5BBC9B0A2BD0427400170B62 /* LoginView.swift in Sources */,
 				5BD528782CA04EAC0091C88B /* ITStep.swift in Sources */,
-				5BBC9AFC2BD03F6900170B62 /* Haptics.swift in Sources */,
 				5BBC9AF12BD03DC400170B62 /* CustomButtonStyle.swift in Sources */,
 				5BBC9AED2BD03D4700170B62 /* AppNavigationDestination.swift in Sources */,
 				5BD5287A2CA053480091C88B /* ITTrainingDescriptionView.swift in Sources */,

@@ -16,17 +16,17 @@ protocol CustomTextFieldStyle {
 }
 
 struct UsernameTextFieldStyle: CustomTextFieldStyle {
-    var leftIcon: Image? = Image(systemName: "person.fill")
-    var leftEmptyIcon: Image? = Image(systemName: "person")
+    var leftIcon: Image? = Image.userIcon
+    var leftEmptyIcon: Image? = Image.userEmptyIcon
     var rightIcon: Image? = nil
     var rightTransparentIcon: Image? = nil
     var isHidden: Bool = false
 }
 
 struct PasswordTextFieldStyle: CustomTextFieldStyle {
-    var leftIcon: Image? = Image(systemName: "lock.fill")
-    var leftEmptyIcon: Image? = Image(systemName: "lock")
-    var rightIcon: Image? = Image(systemName: "eye")
-    var rightTransparentIcon: Image? = Image(systemName: "eye.slash")
+    var leftIcon: Image? = Image.passwordIcon
+    var leftEmptyIcon: Image? = Image.passwordEmptyIcon
+    var rightIcon: Image? = Image.hideIcon
+    var rightTransparentIcon: Image? = Image.showIcon
     var isHidden: Bool = true
 }
