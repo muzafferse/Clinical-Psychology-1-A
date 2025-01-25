@@ -28,7 +28,6 @@ struct CautionTestView: View {
                             await MainActor.run {
                                 selectedStep = .photos
                             }
-                            
                         }
                     }
                 
