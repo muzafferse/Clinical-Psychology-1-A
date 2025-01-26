@@ -90,6 +90,7 @@
 		5BD528752CA04E4A0091C88B /* ITWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528742CA04E4A0091C88B /* ITWelcomeView.swift */; };
 		5BD528782CA04EAC0091C88B /* ITStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528772CA04EAC0091C88B /* ITStep.swift */; };
 		5BD5287A2CA053480091C88B /* ITTrainingDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528792CA053480091C88B /* ITTrainingDescriptionView.swift */; };
+		5BDC2E8A2D457ECF0005A94C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDC2E892D457ECF0005A94C /* LaunchView.swift */; };
 		5BE4D2072C709B9900C50419 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4D2062C709B9900C50419 /* AuthState.swift */; };
 		5BEEFA932C07286C00AF3445 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEFA922C07286B00AF3445 /* DescriptionView.swift */; };
 		5BEEFA972C0738A100AF3445 /* PlusSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEFA962C0738A100AF3445 /* PlusSignView.swift */; };
@@ -181,6 +182,7 @@
 		5BD528742CA04E4A0091C88B /* ITWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITWelcomeView.swift; sourceTree = "<group>"; };
 		5BD528772CA04EAC0091C88B /* ITStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITStep.swift; sourceTree = "<group>"; };
 		5BD528792CA053480091C88B /* ITTrainingDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITTrainingDescriptionView.swift; sourceTree = "<group>"; };
+		5BDC2E892D457ECF0005A94C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		5BE4D2062C709B9900C50419 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		5BEEFA922C07286B00AF3445 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		5BEEFA962C0738A100AF3445 /* PlusSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusSignView.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			children = (
 				5BBC9AB52BD0304200170B62 /* AppView.swift */,
 				5BBC9AFF2BD0405500170B62 /* TabBarView.swift */,
+				5BDC2E892D457ECF0005A94C /* LaunchView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				5B91EC322CE140AE00B4A8EA /* Answer.swift in Sources */,
 				5BB433052C962B10001A1BB9 /* ArrowDirection.swift in Sources */,
 				5B3353C22CE284160055759D /* ITFirstQuestionView.swift in Sources */,
+				5BDC2E8A2D457ECF0005A94C /* LaunchView.swift in Sources */,
 				5B9A4F862C7249AE00F22E6F /* AuthManager.swift in Sources */,
 				5BEEFA972C0738A100AF3445 /* PlusSignView.swift in Sources */,
 				5B8D7A012C73A69900544E49 /* TestStatus.swift in Sources */,

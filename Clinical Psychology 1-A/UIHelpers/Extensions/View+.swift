@@ -13,10 +13,6 @@ extension View {
     }
 }
 
-extension View {
-    func frame(_ size: CGFloat) -> some View { frame(width: size, height: size, alignment: .center) }
-}
-
 // MARK: - Hide keyboard
 extension View {
     func hideKeyboard() {

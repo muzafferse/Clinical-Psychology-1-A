@@ -11,29 +11,35 @@ struct AppView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var authManager: AuthManager
     
+    @State var isLaunchScreenViewPresented = false
+    
     // Use @StateObject to retain ViewModels.
     @StateObject private var homeTabViewModel = HomeTabRootViewModel()
     @StateObject private var settingsTabViewModel = SettingsTabRootViewModel()
     
     var body: some View {
-        if authManager.authState == .loading {
-            ProgressView("Loading...")
-        } else if authManager.authState == .signedIn {
-            VStack {
-                switch self.appState.selectedTab {
-                case .home:
-                    HomeTabView(parentViewModel: homeTabViewModel)
-                        .navigationBarTitleDisplayMode(.large)
-                case .settings:
-                    SettingsTabView(parentViewModel: settingsTabViewModel)
-                        .navigationBarTitleDisplayMode(.large)
+        if isLaunchScreenViewPresented {
+            if authManager.authState == .loading {
+                ProgressView("Loading...")
+            } else if authManager.authState == .signedIn {
+                VStack {
+                    switch self.appState.selectedTab {
+                    case .home:
+                        HomeTabView(parentViewModel: homeTabViewModel)
+                            .navigationBarTitleDisplayMode(.large)
+                    case .settings:
+                        SettingsTabView(parentViewModel: settingsTabViewModel)
+                            .navigationBarTitleDisplayMode(.large)
+                    }
+                    Spacer()
+                    TabBarView(selectedTab: $appState.selectedTab) // Display the tab bar
                 }
-                Spacer()
-                TabBarView(selectedTab: $appState.selectedTab) // Display the tab bar
+                .ignoresSafeArea()
+            } else {
+                LoginView()
             }
-            .ignoresSafeArea()
         } else {
-            LoginView()
+            LaunchView(isPresented: $isLaunchScreenViewPresented)
         }
     }
 }
