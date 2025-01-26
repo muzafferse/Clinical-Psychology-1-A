@@ -10,7 +10,6 @@ import SwiftUI
 struct CautionTestView: View {
     @ObservedObject var viewModel = CautionTestViewModel()
     @State var selectedStep: CTStep = .description
-    @State var trialCount: Int = 0
     
     var body: some View {
         VStack {
