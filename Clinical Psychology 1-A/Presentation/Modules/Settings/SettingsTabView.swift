@@ -21,8 +21,9 @@ struct SettingsTabView: View {
                     switch navDestination {
                     case .dashboardSettings:
                         SettingsTabRootView(viewModel: parentViewModel)
-                    case .contributors:
-                        ContributorsView()
+                    //TODO: Future Work - Contributors
+                    /*case .contributors:
+                        ContributorsView()*/
                     }
                 }
         }

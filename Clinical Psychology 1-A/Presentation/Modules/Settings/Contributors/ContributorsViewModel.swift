@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//TODO: Future Work - Contributors
+/*
 struct Contributor: Identifiable {
     let id: UUID = UUID()
     let name: String
@@ -38,3 +40,4 @@ class ContributorsViewModel: ObservableObject, Identifiable {
                     company: "Dokuz Eylül Üniversitesi")
     ]
 }
+*/

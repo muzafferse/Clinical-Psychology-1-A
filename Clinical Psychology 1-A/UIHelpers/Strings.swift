@@ -40,7 +40,7 @@ struct AppStrings {
     static let homeTitle = "Testler"
     static let guestUser = "Misafir Kullanıcı"
     static let welcomeDescription = "Hoş geldiniz. Uygulamaya başlamadan önce gelin önemli birkaç konuyu tekrar hatırlayalım. Öncelikle sessiz bir ortama geçin. Bulunduğunuz ortamın ne çok sıcak ne de çok soğuk olmamasına dikkat edin. Uygulama sırasında cep telefonunuzun sesini kısın ve diğer uygulamalarınızın bildirimlerini kapatın. Bir başkasının bulunduğunuz ortama aniden girmeyeceğinden emin olun. Yine uygulama sırasında herhangi bir yiyecek ve içecek tüketmeyin. Rahat ve sabit bir sandalyeye sırtınız dik ve ayaklarınız zemine sağlam basacak şekilde ve kollarınızın boşlukta kalmayacağı bir pozisyonda (masa başında) oturun.  Cep telefonunuzun ekranının üst kenarının, gözünüzün hizasında ya da biraz altında olmasına dikkat edin.  Ekran-göz uzaklığınız 40-50 santim aralığında olmalıdır. Ekran ve gözünüz arasında 40-50 cm aralığında bir mesafe olacak şekilde duruşunuzu ayarlayın. Ekran yüzeyinde yansımaların oluşmaması için pencereleri ve yapay ışık kaynaklarını kendinize uygun şekilde konumlandırın.  Hazırsanız aşağıda yer alan butona tıklayın ve uygulamaya başlayın."
-    static let startTestButtonText = "Testlere Başla"
+    static let startTestButtonText = "Başla"
     
     //Caution Test Strings
     static let ctStartDescription = "Bu çalışmada ekranda karşınıza bazı fotoğraf ve fotoğraf çiftleri çıkacak. Lütfen tüm dikkatinizi ekrandaki fotoğraf ve fotoğraf çiftlerine veriniz. Fotoğraflar ekrana gelip çok kısa bir süre ekranda kalacak ve sonra kaybolacak. Fotoğrafların kaybolmasının hemen ardından bir sonraki ekranda karşınıza sağ ok (→) ya da sol ok (←) şekillerinden biri çıkacak. Eğer ekranda karşınıza çıkan şekil sağ ok (→) ise ekranın ortasında karşınıza çıkacak olan bu şekil ile uyumlu olan sağ ok (→) butonuna, karşınıza çıkan şekil sol ok (←) ise bu şekil ile uyumlu olan sol ok (←) butonuna basmanız gerekmektedir. Lütfen ekranda gördüğünüz şekle denk gelen butona mümkün olduğunca hızlı bir şekilde basınız. Bir deneme bittikten sonra diğer denemeye başlamadan önce ekranda kısa bir süre belirecek olan bir artı (+) işareti göreceksiniz. Bu işaret ekranda çok kısa bir süre kalacağı için bütün dikkatinizi bu ekrana vermeniz önemlidir. Hazırsanız çalışmaya başlamak için aşağıdaki BAŞLAT yazılı butona basın."
@@ -79,11 +79,15 @@ struct AppStrings {
     
     // Settings Tab Strings
     static let settingsTitle: String = "Ayarlar"
-    static let contributorsButtonText = "Katkıda Bulunanları Gör"
+    //TODO: Future Work - Contributors
+    //static let contributorsButtonText = "Katkıda Bulunanları Gör"
     static let logoutButtonText = "Çıkış Yap"
     
+    //TODO: Future Work - Contributors
+    /*
     // Contributors Strings
     static let contributorsTitle = "Katkıda Bulunanlar"
     static let contactButtonText = "İletişime Geç"
     static let contributorsBackButtonText = "Ayarlar"
+     */
 }

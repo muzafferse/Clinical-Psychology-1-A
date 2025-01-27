@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//TODO: Future Work - Contributors
+/*
 struct ContributorsView: View {
     @ObservedObject var viewModel = ContributorsViewModel()
     @Environment(\.dismiss) var dismiss
@@ -70,3 +72,4 @@ extension ContributorsView {
 #Preview {
     ContributorsView()
 }
+*/

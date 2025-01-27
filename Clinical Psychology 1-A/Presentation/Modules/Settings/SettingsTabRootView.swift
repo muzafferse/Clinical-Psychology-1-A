@@ -16,6 +16,8 @@ struct SettingsTabRootView: View {
     
     var body: some View {
         VStack {
+            //TODO: Future Work - Contributors
+            /*
             VStack(spacing: 3) {
                 HStack {
                     Button(action: {
@@ -36,6 +38,7 @@ struct SettingsTabRootView: View {
                     .background(.colorInactive)
             }
             .padding(.horizontal, 24)
+             */
             
             Button(action: {
                 Task {
@@ -51,8 +54,9 @@ struct SettingsTabRootView: View {
                 Text(AppStrings.logoutButtonText)
             }
             .primaryActiveButtonStyle()
-            .padding(.top, 24)
-            .padding(.horizontal, 24)
+            //TODO: Future Work - Contributors 24,24
+            .padding(.top, 0)
+            .padding(.horizontal, 48)
             
             Spacer()
         }
