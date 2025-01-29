@@ -10,6 +10,4 @@ import Foundation
 //MARK: - HomeViewModel
 // ViewModel responsible for managing data related to the Home dashboard
 class HomeTabRootViewModel: ObservableObject, Identifiable {
-    var cautionTestStyle: CustomButtonStyle = PrimaryActiveButtonStyle()
-    var interpretationTestStyle: CustomButtonStyle = PrimaryActiveButtonStyle()
 }

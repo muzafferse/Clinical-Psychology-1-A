@@ -74,5 +74,6 @@ struct ITSecondQuestionView: View {
 }
 
 #Preview {
-    ITSecondQuestionView(viewModel: InterpretationTestViewModel(), onCompletion: {_ in })
+    ITSecondQuestionView(viewModel: InterpretationTestViewModel(),
+                         onCompletion: {_ in })
 }
