@@ -54,7 +54,7 @@ class ITSessionManager {
     private func adjustSession(session: inout [Question], answer: Answer, replacement: Answer) {
         if let indexToReplace = session.indices.filter({ session[$0].secondQuestionAnswer == answer }).randomElement() {
             let categoryOfRemovedQuestion = categories.first(where: { $0.questions.contains(session[indexToReplace]) })
-
+            
             if let category = categoryOfRemovedQuestion {
                 let availableQuestions = category.questions.filter {
                     $0.secondQuestionAnswer == replacement && !session.contains($0)
@@ -71,5 +71,14 @@ class ITSessionManager {
                 }
             }
         }
+    }
+    
+    func findCategory(for question: Question) -> String? {
+        for category in categories {
+            if category.questions.contains(where: { $0 == question }) {
+                return category.category.rawValue
+            }
+        }
+        return nil
     }
 }

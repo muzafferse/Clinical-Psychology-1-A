@@ -16,7 +16,7 @@ class InterpretationTestViewModel: ObservableObject {
     @Published var isFirstSession: Bool = true
     @Published var isCorrectAnswer: Bool = false
     
-    private var testSessionGenerator: ITSessionManager?
+    private var itSessionManager: ITSessionManager?
     
     init() {
         generateSession()
@@ -25,7 +25,7 @@ class InterpretationTestViewModel: ObservableObject {
     private func generateSession() {
         if let categories = loadJSON(fileName: "interpretation_all") {
             self.interpretationQuestions = categories
-            self.testSessionGenerator = ITSessionManager(categories: categories)
+            self.itSessionManager = ITSessionManager(categories: categories)
             
             if isFirstSession {
                 if let neutralCategories = loadJSON(fileName: "interpretation_exercise") {
@@ -33,8 +33,8 @@ class InterpretationTestViewModel: ObservableObject {
                 }
             }
             
-            if let generator = testSessionGenerator {
-                self.currentSession = generator.generateSession()
+            if let manager = itSessionManager {
+                self.currentSession = manager.generateSession()
             }
         }
     }
