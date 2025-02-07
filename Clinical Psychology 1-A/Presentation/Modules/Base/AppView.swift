@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AppView: View {
     @EnvironmentObject var appState: AppState
-    @EnvironmentObject var authManager: AuthManager
     
     @State var isLaunchScreenViewPresented = false
     
@@ -19,9 +18,9 @@ struct AppView: View {
     
     var body: some View {
         if isLaunchScreenViewPresented {
-            if authManager.authState == .loading {
+            if AuthManager.shared.authState == .loading {
                 ProgressView("Loading...")
-            } else if authManager.authState == .signedIn {
+            } else if AuthManager.shared.authState == .signedIn {
                 VStack {
                     switch self.appState.selectedTab {
                     case .home:
@@ -47,5 +46,4 @@ struct AppView: View {
 #Preview {
     AppView()
         .environmentObject(AppState())
-        .environmentObject(AuthManager())
 }

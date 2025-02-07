@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RegisterView: View {
     @EnvironmentObject var appState: AppState
-    @EnvironmentObject var authManager: AuthManager
     @ObservedObject var viewModel = RegisterViewModel()
     
     @Environment(\.dismiss) var dismiss
@@ -45,8 +44,8 @@ struct RegisterView: View {
                     
                     // Register Button
                     Button(action: {
-                        authManager.register(withEmail: viewModel.nickName,
-                                             password: viewModel.password) { success, error in
+                        AuthManager.shared.register(withEmail: viewModel.nickName,
+                                                    password: viewModel.password) { success, error in
                             if success {
                                 viewModel.clearTextFields()
                                 dismiss()

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var appState: AppState
-    @EnvironmentObject var authManager: AuthManager
     @ObservedObject var viewModel = LoginViewModel()
     
     var body: some View {
@@ -66,10 +65,10 @@ extension LoginView {
     private var loginButton: some View {
         // Login Button
         Button(action: {
-            authManager.signIn(withEmail: viewModel.nickName,
-                               password: viewModel.password) { success, error in
+            AuthManager.shared.signIn(withEmail: viewModel.nickName,
+                                      password: viewModel.password) { success, error in
                 if success {
-                    authManager.authState = .signedIn
+                    AuthManager.shared.authState = .signedIn
                     viewModel.clearTextFields()
                     appState.selectedTab = .home
                 } else if let error = error {

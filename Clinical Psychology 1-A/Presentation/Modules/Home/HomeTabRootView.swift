@@ -11,13 +11,12 @@ import SwiftUI
 // The main view for displaying the Home dashboard
 struct HomeTabRootView: View {
     @EnvironmentObject var appState: AppState
-    @EnvironmentObject var authManager: AuthManager
     @ObservedObject var viewModel: HomeTabRootViewModel
     
     var body: some View {
         VStack(spacing: 24) {
             VStack(spacing: 32) {
-                let username = authManager.user?.email?.components(separatedBy: "@").first ?? AppStrings.guestUser
+                let username = AuthManager.shared.user?.email?.components(separatedBy: "@").first ?? AppStrings.guestUser
                 Text("Merhaba, \(username)")
                     .mediumTextStyle(size: 20)
                 
@@ -51,5 +50,4 @@ struct HomeTabRootView: View {
 #Preview {
     HomeTabRootView(viewModel: HomeTabRootViewModel())
         .environmentObject(AppState())
-        .environmentObject(AuthManager())
 }
