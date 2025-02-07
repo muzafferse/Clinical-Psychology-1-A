@@ -50,8 +50,7 @@ class AuthManager: ObservableObject {
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
-            }
-            catch let error as NSError {
+            } catch let error as NSError {
                 print("FirebaseAuthError: failed to sign out from Firebase, \(error)")
                 throw error
             }
@@ -78,23 +77,7 @@ class AuthManager: ObservableObject {
                 let authError = AuthError(error: error)
                 completion(false, authError)
             } else if let authResult = authResult {
-                self.saveUserDetails(uid: authResult.user.uid) { success, errorMessage in
-                    completion(success, errorMessage)
-                }
-            }
-        }
-    }
-    
-    private func saveUserDetails(uid: String, completion: @escaping (Bool, AuthError?) -> Void) {
-        let db = Firestore.firestore()
-        db.collection("users").document(uid).setData([
-            "nickName": self.user?.email ?? ""
-        ]) { error in
-            if let error = error as NSError? {
-                let authError = AuthError(error: error)
-                completion(false, authError)
-            } else {
-                print("User details saved successfully")
+                self.user = authResult.user
                 completion(true, nil)
             }
         }

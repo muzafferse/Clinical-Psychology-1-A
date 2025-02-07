@@ -48,6 +48,7 @@ struct RegisterView: View {
                                                     password: viewModel.password) { success, error in
                             if success {
                                 viewModel.clearTextFields()
+                                appState.selectedTab = .home
                                 dismiss()
                             } else if let error = error {
                                 viewModel.alertMessage = error.localizedDescription
