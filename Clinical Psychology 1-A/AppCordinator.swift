@@ -12,6 +12,7 @@ class AppCoordinator: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Handle app Did Finish Launching With Options
         FirebaseGateway.configure()
+        _ = SessionManager.shared
         return true
     }
     
