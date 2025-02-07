@@ -8,9 +8,7 @@
 import SwiftUI
 
 class ITSessionManager {
-    
     private var categories: [InterpretationCategory]
-    private let questionsPerType = 3
     private var yesCount = 0
     private var noCount = 0
     
@@ -26,7 +24,7 @@ class ITSessionManager {
         // Select 3 questions per category
         for category in categories {
             let shuffledQuestions = category.questions.shuffled()
-            let selectedQuestions = shuffledQuestions.prefix(questionsPerType)
+            let selectedQuestions = shuffledQuestions.prefix(Constants.questionsPerType)
             session.append(contentsOf: selectedQuestions)
         }
         
@@ -35,10 +33,10 @@ class ITSessionManager {
         noCount = session.filter { $0.secondQuestionAnswer.rawValue == "HAYIR" }.count
         
         // Adjust yes no counts as equal
-        while yesCount != 9 || noCount != 9 {
-            if yesCount > 9 {
+        while yesCount != Constants.equalityThreshold || noCount != Constants.equalityThreshold {
+            if yesCount > Constants.equalityThreshold {
                 adjustSession(session: &session, answer: .yes, replacement: .no)
-            } else if noCount > 9 {
+            } else if noCount > Constants.equalityThreshold {
                 adjustSession(session: &session, answer: .no, replacement: .yes)
             }
         }
@@ -80,5 +78,10 @@ class ITSessionManager {
             }
         }
         return nil
+    }
+    
+    private enum Constants {
+        static let questionsPerType = 3
+        static let equalityThreshold = 9
     }
 }
