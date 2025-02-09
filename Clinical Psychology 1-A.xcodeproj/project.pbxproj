@@ -48,6 +48,7 @@
 		5BA491D12D216F570035316D /* ITSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA491D02D216F570035316D /* ITSessionManager.swift */; };
 		5BA491D42D2177B80035316D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA491D32D2177B80035316D /* Question.swift */; };
 		5BA491D62D2177E60035316D /* InterpretationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA491D52D2177E60035316D /* InterpretationCategory.swift */; };
+		5BAE05E42D58E4450001AD8E /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE05E32D58E4450001AD8E /* Date+.swift */; };
 		5BB433052C962B10001A1BB9 /* ArrowDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB433042C962B10001A1BB9 /* ArrowDirection.swift */; };
 		5BB433072C962B3F001A1BB9 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB433062C962B3F001A1BB9 /* Position.swift */; };
 		5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */; };
@@ -142,6 +143,7 @@
 		5BA491D02D216F570035316D /* ITSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSessionManager.swift; sourceTree = "<group>"; };
 		5BA491D32D2177B80035316D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5BA491D52D2177E60035316D /* InterpretationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationCategory.swift; sourceTree = "<group>"; };
+		5BAE05E32D58E4450001AD8E /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		5BB433042C962B10001A1BB9 /* ArrowDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowDirection.swift; sourceTree = "<group>"; };
 		5BB433062C962B3F001A1BB9 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		5BBC9AB02BD0304200170B62 /* Clinical Psychology 1-A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clinical Psychology 1-A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -491,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				5BBC9AF92BD03F0200170B62 /* ButtonStyle+.swift */,
+				5BAE05E32D58E4450001AD8E /* Date+.swift */,
 				5B91EC242CE12ACC00B4A8EA /* Image++.swift */,
 				5BBC9AF52BD03E6300170B62 /* Spacer+.swift */,
 				5BBC9AF32BD03E3900170B62 /* UIFont+.swift */,
@@ -722,6 +725,7 @@
 				5BBC9AB62BD0304200170B62 /* AppView.swift in Sources */,
 				5BFDB5282C0E417E00E7607B /* RegisterViewModel.swift in Sources */,
 				5BD528752CA04E4A0091C88B /* ITWelcomeView.swift in Sources */,
+				5BAE05E42D58E4450001AD8E /* Date+.swift in Sources */,
 				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
 				5BB433072C962B3F001A1BB9 /* Position.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* LoginViewModel.swift in Sources */,
