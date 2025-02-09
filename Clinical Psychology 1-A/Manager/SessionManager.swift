@@ -28,39 +28,39 @@ class SessionManager: ObservableObject {
         
         let cautionTestData = sessionData.cautionTestData.map { data in
             return [
-                "testTarihi": data.timeStamp,
-                "fotografCifti": data.photoPairNumber,
-                "notrFotoPozisyonu": data.neutralPhotoPosition,
-                "okbFotoPozisyonu": data.ocdPhotoPosition,
-                "okYonu": data.arrowDirection,
-                "OkPozisyonu": data.arrowPosition,
-                "verilenCevap": data.givenAnswer,
-                "cevapDogruMu": data.isAnswerCorrect,
-                "yanitSüresi": data.responseTime
+                "a. Tarih ve Saat": data.timeStamp,
+                "b. Fotoğraf Çifti No": data.photoPairNumber,
+                "c. Nötr Fotoğraf Yeri": data.neutralPhotoPosition,
+                "d. OKB Fotoğrafı Yeri": data.ocdPhotoPosition,
+                "e. Okun Yönü": data.arrowDirection,
+                "f. Okun Yeri": data.arrowPosition,
+                "g. Verilen Yanıt": data.givenAnswer,
+                "h. Yanıt Doğru Mu": data.isAnswerCorrect,
+                "i. Tepki Süresi (ms)": data.responseTime
             ] as [String : Any]
         }
         
         let interpretationTestData = sessionData.interpretationTestData.map { data in
             return [
-                "testTarihi": data.timeStamp,
-                "soruAciklaması": data.questionDescription,
-                "kategori": data.category,
-                "birinciSoru": data.firstQuestion,
-                "birinciSoruCevap": data.firstQuestionAnswer,
-                "verilenBirinciSoruCevabı": data.givenFirstQuestionAnswer,
-                "birinciSoruYanitSuresi": data.firstQuestionResponseTime,
-                "ikinciSoru": data.secondQuestion,
-                "ikinciSoruCevap": data.secondQuestionAnswer,
-                "verilenIkinciSoruCevabı": data.givenSecondQuestionAnswer,
-                "ikinciSoruCevabıDogruMu": data.isSecondQuestionAnswerCorrect,
-                "geribildirim": data.feedback,
-                "yanitSüresi": data.secondQuestionResponseTime
+                "a. Tarih ve Saat": data.timeStamp,
+                "b. Soru Açıklaması": data.questionDescription,
+                "c. Tür": data.category,
+                "d. Boşluklu Soru": data.firstQuestion,
+                "e. Boşluklu Sorunun Cevabı": data.firstQuestionAnswer,
+                "f. Boşluklu Soruya Verilen Cevap": data.givenFirstQuestionAnswer,
+                "g. Tepki Süresi (Boşluk Doldurma) (ms)": data.firstQuestionResponseTime,
+                "h. Soru": data.secondQuestion,
+                "i. Sorunun Cevabı": data.secondQuestionAnswer,
+                "j. Soruya Verilen Cevap": data.givenSecondQuestionAnswer,
+                "k. Cevabın Doğru Olup Olmadığı": data.isSecondQuestionAnswerCorrect,
+                "l. Geri Bildirim": data.feedback,
+                "m. Tepki Süresi (ms)": data.secondQuestionResponseTime
             ] as [String : Any]
         }
         
         let sessionDataDict: [String: Any] = [
-            "cautionTest": cautionTestData,
-            "interpretationTest": interpretationTestData
+            "Dikkat Yanlılığı": cautionTestData,
+            "Yorumlama Yanlılığı": interpretationTestData
         ]
         
         sessionRef.setData(sessionDataDict) { error in
