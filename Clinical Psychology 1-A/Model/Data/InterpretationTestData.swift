@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct InterpretationTestData: Codable {
-    let timeStamp: Date
+    let timeStamp: String
     let questionDescription: String
     let category: String
     let firstQuestion: String
     let firstQuestionAnswer: String
     var givenFirstQuestionAnswer: String
-    var firstQuestionResponseTime: TimeInterval
+    var firstQuestionResponseTime: Int
     let secondQuestion: String
     let secondQuestionAnswer: String
     var givenSecondQuestionAnswer: String
     var isSecondQuestionAnswerCorrect: String
     var feedback: String
-    var secondQuestionResponseTime: TimeInterval
+    var secondQuestionResponseTime: Int
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CautionTestData: Codable {
-    let timeStamp: Date
+    let timeStamp: String
     let photoPairNumber: Int
     let neutralPhotoPosition: String
     let ocdPhotoPosition: String
@@ -16,5 +16,5 @@ struct CautionTestData: Codable {
     let arrowPosition: String
     let givenAnswer: String
     let isAnswerCorrect: Bool
-    let responseTime: TimeInterval
+    let responseTime: Int
 }
