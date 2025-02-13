@@ -14,11 +14,11 @@ struct SelectionView: View {
     @State private var isButtonDisabled = false
     
     var body: some View {
-        let (_, _, direction, position) = viewModel.currentTrial
+        let trial = viewModel.currentTrial
         ZStack {
             VStack(spacing: 32) {
-                if position == .topNeutral {
-                    arrowFrameView(direction: direction)
+                if trial.position == .topNeutral {
+                    arrowFrameView(direction: trial.direction)
                     
                     Spacer()
                         .frame(width: 256, height: 192)
@@ -26,7 +26,7 @@ struct SelectionView: View {
                     Spacer()
                         .frame(width: 256, height: 192)
                     
-                    arrowFrameView(direction: direction)
+                    arrowFrameView(direction: trial.direction)
                 }
             }
             
@@ -83,5 +83,5 @@ struct SelectionView: View {
 
 #Preview {
     SelectionView(viewModel: CautionTestViewModel(),
-                  onSelection: {})
+                  onSelection: { _,_ in })
 }
