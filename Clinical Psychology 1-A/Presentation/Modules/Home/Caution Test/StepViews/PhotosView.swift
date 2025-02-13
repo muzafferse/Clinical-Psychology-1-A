@@ -11,26 +11,26 @@ struct PhotosView: View {
     let viewModel: CautionTestViewModel
     
     var body: some View {
-        let (ocdPhoto, neutralPhoto, _, position) = viewModel.currentTrial
+        let trial = viewModel.currentTrial
         VStack(spacing: 32) {
-            if position == .topNeutral {
-                neutralPhoto
+            if trial.position == .topNeutral {
+                trial.neutralImage.image
                     .resizable()
                     .scaledToFit()
                     .frame(width: 256, height: 192)
                 
-                ocdPhoto
+                trial.ocdImage.image
                     .resizable()
                     .scaledToFit()
                     .frame(width: 256, height: 192)
                 
             } else {
-                ocdPhoto
+                trial.ocdImage.image
                     .resizable()
                     .scaledToFit()
                     .frame(width: 256, height: 192)
                 
-                neutralPhoto
+                trial.neutralImage.image
                     .resizable()
                     .scaledToFit()
                     .frame(width: 256, height: 192)
