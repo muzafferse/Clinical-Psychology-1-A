@@ -42,7 +42,8 @@ struct CautionTestView: View {
                     }
                 
             case .selection:
-                SelectionView(viewModel: viewModel) {
+                SelectionView(viewModel: viewModel) { givenAnswer , responseTime in
+                    viewModel.updateQuestionData(givenAnswer: givenAnswer, responseTime: responseTime)
                     if viewModel.currentTrialIndex >= viewModel.totalTrials.count - 1 {
                         selectedStep = .finish
                     } else {

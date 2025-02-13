@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SelectionView: View {
     let viewModel: CautionTestViewModel
-    let onSelection: () -> Void
+    let onSelection: (String, Int) -> Void
     
+    @State private var startTime: Date?
     @State private var isButtonDisabled = false
     
     var body: some View {
@@ -30,13 +31,17 @@ struct SelectionView: View {
                 }
             }
             
-            selectionButtonsView(onSelection: onSelection)
+            selectionButtonsView()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
+        .onAppear {
+            startTime = Date()
+            viewModel.initializeCurrentQuestionData()
+        }
     }
     
     private func arrowFrameView(direction: ArrowDirection) -> some View {
@@ -54,11 +59,10 @@ struct SelectionView: View {
         }
     }
     
-    private func selectionButtonsView(onSelection: @escaping () -> Void) -> some View {
+    private func selectionButtonsView() -> some View {
         HStack {
             Button(action: {
-                onSelection()
-                isButtonDisabled = true
+                handleSelection(givenAnswer: .left)
             }, label: {
                 Image.leftArrowIcon
             })
@@ -69,14 +73,21 @@ struct SelectionView: View {
             Spacer()
             
             Button(action: {
-                onSelection()
-                isButtonDisabled = true
+                handleSelection(givenAnswer: .right)
             }, label: {
                 Image.rightArrowIcon
             })
             .frame(width: 64, height: 32)
             .primaryActiveButtonStyle()
             .disabled(isButtonDisabled)
+        }
+    }
+    
+    private func handleSelection(givenAnswer: ArrowDirection) {
+        isButtonDisabled = true
+        if let startTime = startTime {
+            let responseTime = Int(Date().timeIntervalSince(startTime) * 1000)
+            onSelection(givenAnswer.rawValue, responseTime)
         }
     }
 }
