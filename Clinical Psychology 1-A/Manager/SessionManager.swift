@@ -29,7 +29,7 @@ class SessionManager: ObservableObject {
         let cautionTestData = sessionData.cautionTestData.map { data in
             return [
                 "a. Tarih ve Saat": data.timeStamp,
-                "b. Fotoğraf Çifti No": data.photoPairNumber,
+                "b. Fotoğraf Çifti No": data.imagePairNo,
                 "c. Nötr Fotoğraf Yeri": data.neutralPhotoPosition,
                 "d. OKB Fotoğrafı Yeri": data.ocdPhotoPosition,
                 "e. Okun Yönü": data.arrowDirection,

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CautionTestData: Codable {
     let timeStamp: String
-    let photoPairNumber: Int
+    let imagePairNo: String
     let neutralPhotoPosition: String
     let ocdPhotoPosition: String
     let arrowDirection: String
     let arrowPosition: String
-    let givenAnswer: String
-    let isAnswerCorrect: Bool
-    let responseTime: Int
+    var givenAnswer: String
+    var isAnswerCorrect: String
+    var responseTime: Int
 }
