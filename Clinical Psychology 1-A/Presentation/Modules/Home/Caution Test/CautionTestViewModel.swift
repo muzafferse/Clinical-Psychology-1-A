@@ -9,7 +9,11 @@ import SwiftUI
 
 class CautionTestViewModel: ObservableObject {
     @Published var currentTrialIndex = 0
-    @Published var totalTrials: [(Image, Image, ArrowDirection, Position)] = []
+    @Published var totalTrials: [TrialItem] = []
+    
+    var currentTrial: TrialItem {
+        return totalTrials[currentTrialIndex]
+    }
     
     init() {
         for _ in 0..<3 {
@@ -18,22 +22,24 @@ class CautionTestViewModel: ObservableObject {
         }
     }
     
-    func createTrials() -> [(Image, Image, ArrowDirection, Position)] {
-        let ocdPhotos = (1...12).map { Image("OCB-\($0)") }
-        let neutralPhotos = (1...12).map { Image("Neutral-\($0)") }
-        var trialPairs: [(Image, Image, ArrowDirection, Position)] = []
+    private func createTrials() -> [TrialItem] {
+        let ocdPhotos = (1...12).map { CTImage(name: "OCB-\($0)") }
+        let neutralPhotos = (1...12).map { CTImage(name: "Neutral-\($0)") }
+        var trialPairs: [TrialItem] = []
         
         for i in 0..<12 {
             for position in Position.allCases {
                 for direction in ArrowDirection.allCases {
-                    trialPairs.append((ocdPhotos[i], neutralPhotos[i], direction, position))
+                    let trialItem = TrialItem(ocdImage: ocdPhotos[i],
+                                              neutralImage: neutralPhotos[i],
+                                              direction: direction,
+                                              position: position)
+                    trialPairs.append(trialItem)
                 }
             }
         }
         return trialPairs
     }
     
-    var currentTrial: (Image, Image, ArrowDirection, Position) {
-        return totalTrials[currentTrialIndex]
     }
 }
