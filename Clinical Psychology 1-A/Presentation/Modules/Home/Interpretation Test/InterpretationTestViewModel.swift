@@ -124,7 +124,7 @@ extension InterpretationTestViewModel {
         currentQuestionData = InterpretationTestData(
             timeStamp: Date().toDateAndTime(),
             questionDescription: currentQuestion.questionDescription,
-            category: itSessionManager?.findCategory(for: currentQuestion) ?? "",
+            category: itSessionManager?.findCategory(for: currentQuestion) ?? "Nötr",
             firstQuestion: currentQuestion.firstQuestion,
             firstQuestionAnswer: currentQuestion.firstQuestionAnswer,
             givenFirstQuestionAnswer: "",
