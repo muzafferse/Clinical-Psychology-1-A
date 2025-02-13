@@ -7,6 +7,7 @@
 
 import Foundation
 
-enum ArrowDirection: CaseIterable {
-    case left, right
+enum ArrowDirection: String, CaseIterable {
+    case left = "Sol"
+    case right = "Sağ"
 }

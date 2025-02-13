@@ -7,6 +7,16 @@
 
 import Foundation
 
-enum Position: CaseIterable {
-    case topNeutral, bottomNeutral
+enum Position: String, CaseIterable {
+    case topNeutral = "Alt"
+    case bottomNeutral = "Üst"
+    
+    var reversed: Position {
+        switch self {
+        case .topNeutral:
+            return .bottomNeutral
+        case .bottomNeutral:
+            return .topNeutral
+        }
+    }
 }
