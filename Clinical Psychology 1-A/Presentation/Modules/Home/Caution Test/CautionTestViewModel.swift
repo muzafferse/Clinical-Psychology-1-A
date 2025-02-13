@@ -11,6 +11,8 @@ class CautionTestViewModel: ObservableObject {
     @Published var currentTrialIndex = 0
     @Published var totalTrials: [TrialItem] = []
     
+    private var currentQuestionData: CautionTestData?
+    
     var currentTrial: TrialItem {
         return totalTrials[currentTrialIndex]
     }
@@ -40,6 +42,40 @@ class CautionTestViewModel: ObservableObject {
         }
         return trialPairs
     }
+}
+
+//MARK: - Firestore Helpers
+extension CautionTestViewModel {
+    func initializeCurrentQuestionData() {
+        currentQuestionData = CautionTestData(timeStamp: Date().toDateAndTime(),
+                                              imagePairNo: imagePairNumber(),
+                                              neutralPhotoPosition: currentTrial.position.rawValue,
+                                              ocdPhotoPosition: currentTrial.position.reversed.rawValue,
+                                              arrowDirection: currentTrial.direction.rawValue,
+                                              arrowPosition: currentTrial.position.rawValue,
+                                              givenAnswer: "",
+                                              isAnswerCorrect: "",
+                                              responseTime: 0)
+    }
     
+    func updateQuestionData(givenAnswer: String, responseTime: Int) {
+        currentQuestionData?.givenAnswer = givenAnswer
+        currentQuestionData?.isAnswerCorrect = getFeedback(givenAnswer)
+        currentQuestionData?.responseTime = responseTime
+        
+        if let data = currentQuestionData {
+            SessionManager.shared.updateCautionTestData(data)
+        }
+    }
+    
+    private func imagePairNumber() -> String {
+        guard let numberItem = currentTrial.ocdImage.name.split(separator: "-").last else {
+            return ""
+        }
+        return "Çift" + numberItem + "_Müdahale"
+    }
+    
+    private func getFeedback(_ givenAnswer: String) -> String {
+        return currentTrial.direction.rawValue == givenAnswer ? AppStrings.itCorrect : AppStrings.itIncorrect
     }
 }
