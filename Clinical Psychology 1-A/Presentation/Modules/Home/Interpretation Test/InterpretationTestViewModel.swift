@@ -17,6 +17,7 @@ class InterpretationTestViewModel: ObservableObject {
     @Published var isCorrectAnswer: Bool = false
     
     private var itSessionManager: ITSessionManager?
+    private var currentQuestionData: InterpretationTestData?
     
     init() {
         generateSession()
@@ -113,5 +114,47 @@ class InterpretationTestViewModel: ObservableObject {
         case .sessionFinish:
             break
         }
+    }
+}
+
+//MARK: - Firebase Helpers
+extension InterpretationTestViewModel {
+    func initializeCurrentQuestionData() {
+        guard let currentQuestion = getCurrentQuestion() else { return }
+        currentQuestionData = InterpretationTestData(
+            timeStamp: Date().toDateAndTime(),
+            questionDescription: currentQuestion.questionDescription,
+            category: itSessionManager?.findCategory(for: currentQuestion) ?? "",
+            firstQuestion: currentQuestion.firstQuestion,
+            firstQuestionAnswer: currentQuestion.firstQuestionAnswer,
+            givenFirstQuestionAnswer: "",
+            firstQuestionResponseTime: 0,
+            secondQuestion: currentQuestion.secondQuestion,
+            secondQuestionAnswer: currentQuestion.secondQuestionAnswer.rawValue,
+            givenSecondQuestionAnswer: "",
+            isSecondQuestionAnswerCorrect: "",
+            feedback: "",
+            secondQuestionResponseTime: 0
+        )
+    }
+    
+    func updateFirstQuestionData(givenAnswer: String, responseTime: Int) {
+        currentQuestionData?.givenFirstQuestionAnswer = givenAnswer
+        currentQuestionData?.firstQuestionResponseTime = responseTime
+    }
+    
+    func updateSecondQuestionData(givenAnswer: String, isCorrect: Bool, responseTime: Int) {
+        currentQuestionData?.givenSecondQuestionAnswer = givenAnswer
+        currentQuestionData?.isSecondQuestionAnswerCorrect = getFeedback(isCorrect)
+        currentQuestionData?.feedback = getFeedback(isCorrect)
+        currentQuestionData?.secondQuestionResponseTime = responseTime
+        
+        if let data = currentQuestionData {
+            SessionManager.shared.updateInterpretationTestData(data)
+        }
+    }
+    
+    private func getFeedback(_ isCorrect: Bool) -> String {
+        return isCorrect ? AppStrings.itCorrect : AppStrings.itIncorrect
     }
 }

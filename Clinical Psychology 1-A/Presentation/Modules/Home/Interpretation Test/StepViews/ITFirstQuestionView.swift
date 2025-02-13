@@ -12,6 +12,7 @@ struct ITFirstQuestionView: View {
     @Binding var answer: String
     
     @State private var showCompletedSentence: Bool = false
+    @State private var startTime: Date?
     
     private var completedSentence: String {
         if let currentQuestion = viewModel.getCurrentQuestion() {
@@ -45,10 +46,18 @@ struct ITFirstQuestionView: View {
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
+        .onAppear {
+            startTime = Date()
+            viewModel.initializeCurrentQuestionData()
+        }
     }
     
     private func handleCorrectAnswer() {
         showCompletedSentence = true
+        if let startTime = startTime {
+            let responseTime = Int(Date().timeIntervalSince(startTime) * 1000)
+            viewModel.updateFirstQuestionData(givenAnswer: answer, responseTime: responseTime)
+        }
         //TODO: Should be 5. Changed for test.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             showCompletedSentence = false
