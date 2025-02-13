@@ -28,9 +28,8 @@ struct HomeTabRootView: View {
             Spacer(minLength: 0)
             
             Button {
-                //TODO: For changing start
-                //self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
-                self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
+                //MARK: - Starting Test
+                self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
             } label: {
                 Text(AppStrings.startTestButtonText)
             }
