@@ -9,12 +9,10 @@ import Foundation
 
 enum ITStep {
     case welcomeMessage
-    case trainingDescription
     case sessionDescription
     case questionDescription
     case firstQuestion
     case secondQuestion
     case secondQuestionResult
-    case trainingFinish
     case sessionFinish
 }
