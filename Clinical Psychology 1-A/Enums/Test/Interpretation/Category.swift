@@ -8,7 +8,6 @@
 import Foundation
 
 enum Category: String, Codable {
-    case neutral = "Nötr"
     case exaggeratedThreat = "Abartılı Tehdit Algısı"
     case exaggeratedResponsibility = "Abartılı Sorumluluk"
     case perfectionism = "Mükemmeliyetçilik"
