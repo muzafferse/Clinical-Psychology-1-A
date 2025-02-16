@@ -526,12 +526,10 @@
 			children = (
 				5BD528742CA04E4A0091C88B /* ITWelcomeView.swift */,
 				5B91EC2B2CE13C7100B4A8EA /* ITQuestionDescriptionView.swift */,
-				5BD528792CA053480091C88B /* ITDemoDescriptionView.swift */,
 				5B3353C12CE284160055759D /* ITFirstQuestionView.swift */,
 				5B3353C72CE291F00055759D /* ITSecondQuestionView.swift */,
 				5B1BE4782CE66A39000AC960 /* ITSecondQuestionResultView.swift */,
 				5B6E64542D3405DE00816A35 /* ITSessionDescriptionView.swift */,
-				5B6E64522D3405C000816A35 /* ITDemoFinishView.swift */,
 				5B2A8F1A2D356BF0007A36CA /* ITSessionFinishView.swift */,
 			);
 			path = StepViews;
@@ -540,6 +538,8 @@
 		5BD9D1752D626358003BDB67 /* Demo Mode */ = {
 			isa = PBXGroup;
 			children = (
+				5BD528792CA053480091C88B /* ITDemoDescriptionView.swift */,
+				5B6E64522D3405C000816A35 /* ITDemoFinishView.swift */,
 			);
 			path = "Demo Mode";
 			sourceTree = "<group>";
