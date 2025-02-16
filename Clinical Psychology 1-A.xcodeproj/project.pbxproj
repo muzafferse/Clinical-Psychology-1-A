@@ -45,7 +45,7 @@
 		5B9A4F882C726D4F00F22E6F /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A4F872C726D4F00F22E6F /* AuthError.swift */; };
 		5B9CB60A2BF53FDB00055481 /* InterpretationTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */; };
 		5B9CB60C2BF53FE700055481 /* InterpretationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CB60B2BF53FE700055481 /* InterpretationTestView.swift */; };
-		5BA491CB2D2069ED0035316D /* interpretation_exercise.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BA491CA2D2069ED0035316D /* interpretation_exercise.json */; };
+		5BA491CB2D2069ED0035316D /* interpretation_demo.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BA491CA2D2069ED0035316D /* interpretation_demo.json */; };
 		5BA491CE2D2078C90035316D /* interpretation_all.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BA491CD2D2078C90035316D /* interpretation_all.json */; };
 		5BA491D12D216F570035316D /* ITSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA491D02D216F570035316D /* ITSessionManager.swift */; };
 		5BA491D42D2177B80035316D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA491D32D2177B80035316D /* Question.swift */; };
@@ -142,7 +142,7 @@
 		5B9A4F872C726D4F00F22E6F /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		5B9CB6092BF53FDB00055481 /* InterpretationTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestViewModel.swift; sourceTree = "<group>"; };
 		5B9CB60B2BF53FE700055481 /* InterpretationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretationTestView.swift; sourceTree = "<group>"; };
-		5BA491CA2D2069ED0035316D /* interpretation_exercise.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = interpretation_exercise.json; sourceTree = "<group>"; };
+		5BA491CA2D2069ED0035316D /* interpretation_demo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = interpretation_demo.json; sourceTree = "<group>"; };
 		5BA491CD2D2078C90035316D /* interpretation_all.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = interpretation_all.json; sourceTree = "<group>"; };
 		5BA491D02D216F570035316D /* ITSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSessionManager.swift; sourceTree = "<group>"; };
 		5BA491D32D2177B80035316D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				5BA491CD2D2078C90035316D /* interpretation_all.json */,
-				5BA491CA2D2069ED0035316D /* interpretation_exercise.json */,
+				5BA491CA2D2069ED0035316D /* interpretation_demo.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -659,7 +659,7 @@
 				5BBC9ABB2BD0304700170B62 /* Preview Assets.xcassets in Resources */,
 				5BBC9AD82BD033ED00170B62 /* Roboto-Italic.ttf in Resources */,
 				5BBC9B0C2BD059AD00170B62 /* GoogleService-Info.plist in Resources */,
-				5BA491CB2D2069ED0035316D /* interpretation_exercise.json in Resources */,
+				5BA491CB2D2069ED0035316D /* interpretation_demo.json in Resources */,
 				5BBC9AE22BD033ED00170B62 /* Roboto-MediumItalic.ttf in Resources */,
 				5BBC9ADB2BD033ED00170B62 /* Roboto-Bold.ttf in Resources */,
 				5BBC9AE02BD033ED00170B62 /* Roboto-Light.ttf in Resources */,
