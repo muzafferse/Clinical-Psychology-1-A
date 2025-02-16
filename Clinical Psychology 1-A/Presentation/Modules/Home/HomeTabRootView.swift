@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: - HomeView
+// MARK: - HomeView
 // The main view for displaying the Home dashboard
 struct HomeTabRootView: View {
     @EnvironmentObject var appState: AppState
@@ -28,7 +28,7 @@ struct HomeTabRootView: View {
             Spacer(minLength: 0)
             
             Button {
-                //MARK: - Starting Test
+                // MARK: - Starting Test
                 self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
             } label: {
                 Text(AppStrings.startTestButtonText)

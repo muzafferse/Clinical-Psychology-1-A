@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK: - HomeViewModel
+// MARK: - HomeViewModel
 // ViewModel responsible for managing data related to the Home dashboard
 class HomeTabRootViewModel: ObservableObject, Identifiable {
 }

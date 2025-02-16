@@ -44,7 +44,7 @@ class CautionTestViewModel: ObservableObject {
     }
 }
 
-//MARK: - Firestore Helpers
+// MARK: - Firestore Helpers
 extension CautionTestViewModel {
     func initializeCurrentQuestionData() {
         currentQuestionData = CautionTestData(timeStamp: Date().toDateAndTime(),

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: - SettingsView
+// MARK: - SettingsView
 // The main view for displaying the Settings dashboard
 struct SettingsTabRootView: View {
     @EnvironmentObject var appState: AppState
@@ -39,6 +39,7 @@ struct SettingsTabRootView: View {
              .padding(.horizontal, 24)
              */
             
+            // MARK: - Sign Out
             Button(action: {
                 Task {
                     do {

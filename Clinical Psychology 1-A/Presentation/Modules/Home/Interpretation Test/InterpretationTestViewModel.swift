@@ -117,7 +117,7 @@ class InterpretationTestViewModel: ObservableObject {
     }
 }
 
-//MARK: - Firestore Helpers
+// MARK: - Firestore Helpers
 extension InterpretationTestViewModel {
     func initializeCurrentQuestionData() {
         guard let currentQuestion = getCurrentQuestion() else { return }

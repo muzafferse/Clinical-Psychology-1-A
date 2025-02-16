@@ -73,7 +73,7 @@ class SessionManager: ObservableObject {
     }
 }
 
-//MARK: - Init Helpers
+// MARK: - Init Helpers
 extension SessionManager {
     private func updateNickName() async {
         self.nickName = await AuthManager.shared.user?.email?.replacingOccurrences(of: "@gmail.com", with: "") ?? "Guest"
@@ -112,7 +112,7 @@ extension SessionManager {
     }
 }
 
-//MARK: - Data Helpers
+// MARK: - Data Helpers
 extension SessionManager {
     func updateCautionTestData(_ data: CautionTestData) {
         sessionData.cautionTestData.append(data)

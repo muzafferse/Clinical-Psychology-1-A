@@ -65,14 +65,14 @@ extension View {
     }
 }
 
-//MARK: - Back Button Modifier
+// MARK: - Back Button Modifier
 extension View {
     func backButton(text: String, dismissAction: (() -> Void)? = nil) -> some View {
         self.modifier(BackButton(text: text, dismissAction: dismissAction))
     }
 }
 
-//MARK: - Text Modifiers
+// MARK: - Text Modifiers
 struct RegularText: ViewModifier {
     let size: CGFloat
     

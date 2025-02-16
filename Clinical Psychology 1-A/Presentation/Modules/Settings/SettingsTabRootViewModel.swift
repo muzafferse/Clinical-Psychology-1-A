@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-//MARK: - SettingsViewModel
+// MARK: - SettingsViewModel
 // ViewModel responsible for managing data related to the Settings dashboard
 class SettingsTabRootViewModel: ObservableObject, Identifiable {
     
