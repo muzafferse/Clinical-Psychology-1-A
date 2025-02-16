@@ -46,7 +46,7 @@ struct InterpretationTestView: View {
                 ITSecondQuestionResultView(viewModel: viewModel)
                 
             case .trainingFinish:
-                ITTrainingFinishView() {
+                ITDemoFinishView() {
                     viewModel.nextStep()
                 }
                 

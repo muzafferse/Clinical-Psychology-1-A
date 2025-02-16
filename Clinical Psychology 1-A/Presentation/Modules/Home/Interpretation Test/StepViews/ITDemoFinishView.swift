@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ITTrainingFinishView: View {
+struct ITDemoFinishView: View {
     let onNext: () -> Void
     
     var body: some View {
@@ -35,5 +35,5 @@ struct ITTrainingFinishView: View {
 }
 
 #Preview {
-    ITTrainingFinishView(onNext: {})
+    ITDemoFinishView(onNext: {})
 }
