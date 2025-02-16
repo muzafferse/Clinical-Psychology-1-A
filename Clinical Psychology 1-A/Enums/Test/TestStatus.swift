@@ -10,5 +10,6 @@ import Foundation
 enum TestStatus {
     case none
     case cautionTest
+    case interpretationDemoTest
     case interpretationTest
 }
