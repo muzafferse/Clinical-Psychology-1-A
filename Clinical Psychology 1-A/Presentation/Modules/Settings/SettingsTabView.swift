@@ -21,9 +21,18 @@ struct SettingsTabView: View {
                     switch navDestination {
                     case .dashboardSettings:
                         SettingsTabRootView(viewModel: parentViewModel)
-                    //TODO: Future Work - Contributors
-                    /*case .contributors:
-                        ContributorsView()*/
+                    case .interpretationDemo:
+                        ITDemoView()
+                            .onAppear(perform: {
+                                appState.testStatus = .interpretationDemoTest
+                            })
+                            .onDisappear(perform: {
+                                appState.testStatus = .none
+                            })
+                        //TODO: Future Work - Contributors
+                        /*case .contributors:
+                         ContributorsView()
+                         */
                     }
                 }
         }

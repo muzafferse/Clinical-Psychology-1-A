@@ -1,16 +1,15 @@
 //
-//  ITSecondQuestionView.swift
+//  ITDemoSecondQuestionView.swift
 //  Clinical Psychology 1-A
 //
-//  Created by Muzaffer Sevili on 11.11.2024.
+//  Created by Muzaffer Sevili on 16.02.2025.
 //
 
 import SwiftUI
 
-struct ITSecondQuestionView: View {
-    let viewModel: InterpretationTestViewModel
+struct ITDemoSecondQuestionView: View {
+    let viewModel: ITDemoViewModel
     @State private var isButtonDisabled = false
-    @State private var startTime: Date?
     var onCompletion: ((Bool) -> Void)
     
     var body: some View {
@@ -22,7 +21,7 @@ struct ITSecondQuestionView: View {
                 
                 HStack(spacing: 96) {
                     Button(action: {
-                        handleSelection(isCorrect: currentQuestion.secondQuestionAnswer == .yes, givenAnswer: .yes)
+                        handleSelection(isCorrect: currentQuestion.secondQuestionAnswer == .yes)
                     }, label: {
                         Text(AppStrings.itYes)
                     })
@@ -31,7 +30,7 @@ struct ITSecondQuestionView: View {
                     .disabled(isButtonDisabled)
                     
                     Button(action: {
-                        handleSelection(isCorrect: currentQuestion.secondQuestionAnswer == .no, givenAnswer: .no)
+                        handleSelection(isCorrect: currentQuestion.secondQuestionAnswer == .no)
                     }, label: {
                         Text(AppStrings.itNo)
                     })
@@ -47,31 +46,21 @@ struct ITSecondQuestionView: View {
             Color(.colorBackground)
                 .ignoresSafeArea()
         )
-        .onAppear {
-            startTime = Date()
-            //100ms sapma olabiliyor
-            DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
-                if !isButtonDisabled {
-                    if let currentQuestion = viewModel.getCurrentQuestion() {
-                        let autoGivenAnswer: Answer = currentQuestion.secondQuestionAnswer == .yes ? .no : .yes
-                        handleSelection(isCorrect: false, givenAnswer: autoGivenAnswer)
-                    }
-                }
+        .onReceive(Timer.publish(every: 20, on: .main, in: .common).autoconnect()) { _ in
+            if !isButtonDisabled {
+                handleSelection(isCorrect: false)
             }
         }
     }
     
-    private func handleSelection(isCorrect: Bool, givenAnswer: Answer) {
+    private func handleSelection(isCorrect: Bool) {
+        guard !isButtonDisabled else { return }
         isButtonDisabled = true
-        if let startTime = startTime {
-            let responseTime = Int(Date().timeIntervalSince(startTime) * 1000)
-            viewModel.updateSecondQuestionData(givenAnswer: givenAnswer.rawValue, isCorrect: isCorrect, responseTime: responseTime)
-        }
         onCompletion(isCorrect)
     }
 }
 
 #Preview {
-    ITSecondQuestionView(viewModel: InterpretationTestViewModel(),
-                         onCompletion: {_ in })
+    ITDemoSecondQuestionView(viewModel: ITDemoViewModel(),
+                             onCompletion: { _ in })
 }

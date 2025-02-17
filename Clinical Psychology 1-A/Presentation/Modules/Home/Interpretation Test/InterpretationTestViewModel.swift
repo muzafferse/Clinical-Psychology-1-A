@@ -8,31 +8,23 @@
 import SwiftUI
 
 class InterpretationTestViewModel: ObservableObject {
-    @Published var interpretationQuestions: [InterpretationCategory] = []
+    @Published var questions: [InterpretationCategory] = []
     @Published var currentSession: [Question] = []
-    @Published var neutralSession: [Question]?
     @Published var currentStep: ITStep = .welcomeMessage
-    @Published var currentQuestionIndex: Int = 0
-    @Published var isFirstSession: Bool = true
+    @Published var questionIndex: Int = 0
     @Published var isCorrectAnswer: Bool = false
     
     private var itSessionManager: ITSessionManager?
-    private var currentQuestionData: InterpretationTestData?
+    private var questionData: InterpretationTestData?
     
     init() {
         generateSession()
     }
     
     private func generateSession() {
-        if let categories = loadJSON(fileName: "interpretation_all") {
-            self.interpretationQuestions = categories
+        if let categories = loadJSON() {
+            self.questions = categories
             self.itSessionManager = ITSessionManager(categories: categories)
-            
-            if isFirstSession {
-                if let neutralCategories = loadJSON(fileName: "interpretation_exercise") {
-                    self.neutralSession = neutralCategories.first?.questions ?? []
-                }
-            }
             
             if let manager = itSessionManager {
                 self.currentSession = manager.generateSession()
@@ -40,29 +32,21 @@ class InterpretationTestViewModel: ObservableObject {
         }
     }
     
-    private func loadJSON(fileName: String) -> [InterpretationCategory]? {
-        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
+    private func loadJSON() -> [InterpretationCategory]? {
+        guard let url = Bundle.main.url(forResource: "interpretation_all", withExtension: "json"),
               let data = try? Data(contentsOf: url),
               let categories = try? JSONDecoder().decode([InterpretationCategory].self, from: data) else {
-            print("JSON dosyası yüklenemedi: \(fileName)")
+            print("JSON dosyası yüklenemedi: interpretation_all")
             return nil
         }
         return categories
     }
     
     func getCurrentQuestion() -> Question? {
-        if isFirstSession {
-            guard let neutralSession = neutralSession,
-                  currentQuestionIndex < neutralSession.count else {
-                return nil
-            }
-            return neutralSession[currentQuestionIndex]
-        } else {
-            guard currentQuestionIndex < currentSession.count else {
-                return nil
-            }
-            return currentSession[currentQuestionIndex]
+        guard questionIndex < currentSession.count else {
+            return nil
         }
+        return currentSession[questionIndex]
     }
     
     func updateAnswer(isCorrect: Bool) {
@@ -72,9 +56,9 @@ class InterpretationTestViewModel: ObservableObject {
     func nextStep() {
         switch currentStep {
         case .welcomeMessage:
-            currentStep = isFirstSession ? .trainingDescription : .sessionDescription
+            currentStep = .sessionDescription
             
-        case .trainingDescription:
+        case .sessionDescription:
             currentStep = .questionDescription
             
         case .questionDescription:
@@ -87,29 +71,12 @@ class InterpretationTestViewModel: ObservableObject {
             currentStep = .secondQuestionResult
             
         case .secondQuestionResult:
-            if isFirstSession {
-                if currentQuestionIndex < 4 {
-                    currentQuestionIndex += 1
-                    currentStep = .questionDescription
-                } else {
-                    currentStep = .trainingFinish
-                    currentQuestionIndex = 0
-                }
+            if questionIndex < currentSession.count - 1 {
+                questionIndex += 1
+                currentStep = .questionDescription
             } else {
-                if currentQuestionIndex < currentSession.count - 1 {
-                    currentQuestionIndex += 1
-                    currentStep = .questionDescription
-                } else {
-                    currentStep = .sessionFinish
-                }
+                currentStep = .sessionFinish
             }
-            
-        case .trainingFinish:
-            isFirstSession = false
-            currentStep = .sessionDescription
-            
-        case .sessionDescription:
-            currentStep = .questionDescription
             
         case .sessionFinish:
             break
@@ -121,10 +88,10 @@ class InterpretationTestViewModel: ObservableObject {
 extension InterpretationTestViewModel {
     func initializeCurrentQuestionData() {
         guard let currentQuestion = getCurrentQuestion() else { return }
-        currentQuestionData = InterpretationTestData(
+        questionData = InterpretationTestData(
             timeStamp: Date().toDateAndTime(),
             questionDescription: currentQuestion.questionDescription,
-            category: itSessionManager?.findCategory(for: currentQuestion) ?? "Nötr",
+            category: itSessionManager?.findCategory(for: currentQuestion) ?? currentQuestion.firstQuestion,
             firstQuestion: currentQuestion.firstQuestion,
             firstQuestionAnswer: currentQuestion.firstQuestionAnswer,
             givenFirstQuestionAnswer: "",
@@ -139,17 +106,17 @@ extension InterpretationTestViewModel {
     }
     
     func updateFirstQuestionData(givenAnswer: String, responseTime: Int) {
-        currentQuestionData?.givenFirstQuestionAnswer = givenAnswer
-        currentQuestionData?.firstQuestionResponseTime = responseTime
+        questionData?.givenFirstQuestionAnswer = givenAnswer
+        questionData?.firstQuestionResponseTime = responseTime
     }
     
     func updateSecondQuestionData(givenAnswer: String, isCorrect: Bool, responseTime: Int) {
-        currentQuestionData?.givenSecondQuestionAnswer = givenAnswer
-        currentQuestionData?.isSecondQuestionAnswerCorrect = getFeedback(isCorrect)
-        currentQuestionData?.feedback = getFeedback(isCorrect)
-        currentQuestionData?.secondQuestionResponseTime = responseTime
+        questionData?.givenSecondQuestionAnswer = givenAnswer
+        questionData?.isSecondQuestionAnswerCorrect = getFeedback(isCorrect)
+        questionData?.feedback = getFeedback(isCorrect)
+        questionData?.secondQuestionResponseTime = responseTime
         
-        if let data = currentQuestionData {
+        if let data = questionData {
             SessionManager.shared.updateInterpretationTestData(data)
         }
     }

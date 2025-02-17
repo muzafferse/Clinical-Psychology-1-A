@@ -14,14 +14,14 @@ struct ITDemoDescriptionView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(AppStrings.itTrainingDescription)
+            Text(AppStrings.itDemoModeDescription)
                 .regularTextStyle(size: 16)
                 .multilineTextAlignment(.leading)
             
             Spacer()
             
             Button(action: onNext) {
-                Text(AppStrings.itTrainingButtonText)
+                Text(AppStrings.itDemoModeButtonText)
             }
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)

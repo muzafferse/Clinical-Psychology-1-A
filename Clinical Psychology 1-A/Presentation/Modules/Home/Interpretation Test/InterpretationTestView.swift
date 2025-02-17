@@ -20,11 +20,6 @@ struct InterpretationTestView: View {
                     viewModel.nextStep()
                 }
                 
-            case .trainingDescription:
-                ITTrainingDescriptionView() {
-                    viewModel.nextStep()
-                }
-                
             case .sessionDescription:
                 ITSessionDescriptionView() {
                     viewModel.nextStep()
@@ -44,11 +39,6 @@ struct InterpretationTestView: View {
                 
             case .secondQuestionResult:
                 ITSecondQuestionResultView(viewModel: viewModel)
-                
-            case .trainingFinish:
-                ITDemoFinishView() {
-                    viewModel.nextStep()
-                }
                 
             case .sessionFinish:
                 ITSessionFinishView() {

@@ -14,14 +14,14 @@ struct ITDemoFinishView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            Text(AppStrings.itTrainingFinishDescription)
+            Text(AppStrings.itDemoModeFinishDescription)
                 .regularTextStyle(size: 16)
                 .multilineTextAlignment(.leading)
             
             Spacer()
             
             Button(action: onNext) {
-                Text(AppStrings.itTrainingFinishButtonText)
+                Text(AppStrings.itDemoModeFinishButtonText)
             }
             .primaryActiveButtonStyle()
             .padding(.bottom, 36)

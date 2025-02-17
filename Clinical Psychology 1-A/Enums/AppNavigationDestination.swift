@@ -17,6 +17,7 @@ enum HomeNavDestination {
 // Enum representing different navigation destinations within the settings section.
 enum SettingsNavDestination {
     case dashboardSettings
+    case interpretationDemo
     //TODO: Future Work - Contributors
     //case contributors
 }

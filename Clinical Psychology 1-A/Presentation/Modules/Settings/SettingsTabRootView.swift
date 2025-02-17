@@ -39,6 +39,15 @@ struct SettingsTabRootView: View {
              .padding(.horizontal, 24)
              */
             
+            // MARK: - Demo Mode
+            Button(action: {
+                self.appState.settingsNavigation.append(SettingsNavDestination.interpretationDemo)
+            }) {
+                Text(AppStrings.demoModeButtonText)
+            }
+            .primaryActiveButtonStyle()
+            .padding(.all, 24)
+            
             // MARK: - Sign Out
             Button(action: {
                 Task {
@@ -54,9 +63,7 @@ struct SettingsTabRootView: View {
                 Text(AppStrings.logoutButtonText)
             }
             .primaryActiveButtonStyle()
-            //TODO: Future Work - Contributors 24,24
-            .padding(.top, 0)
-            .padding(.horizontal, 48)
+            .padding(.horizontal, 24)
             
             Spacer()
         }

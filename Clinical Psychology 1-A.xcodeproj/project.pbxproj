@@ -93,6 +93,13 @@
 		5BD528752CA04E4A0091C88B /* ITWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528742CA04E4A0091C88B /* ITWelcomeView.swift */; };
 		5BD528782CA04EAC0091C88B /* ITStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528772CA04EAC0091C88B /* ITStep.swift */; };
 		5BD5287A2CA053480091C88B /* ITDemoDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528792CA053480091C88B /* ITDemoDescriptionView.swift */; };
+		5BD9D1772D6266FD003BDB67 /* ITDemoStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D1762D6266FD003BDB67 /* ITDemoStep.swift */; };
+		5BD9D17A2D626889003BDB67 /* ITDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D1792D626889003BDB67 /* ITDemoView.swift */; };
+		5BD9D17D2D6268AF003BDB67 /* ITDemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D17C2D6268AF003BDB67 /* ITDemoViewModel.swift */; };
+		5BD9D17F2D626A6A003BDB67 /* ITDemoQuestionDescView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D17E2D626A6A003BDB67 /* ITDemoQuestionDescView.swift */; };
+		5BD9D1812D626AD1003BDB67 /* ITDemoFirstQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D1802D626AD1003BDB67 /* ITDemoFirstQuestionView.swift */; };
+		5BD9D1832D626B9E003BDB67 /* ITDemoSecondQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D1822D626B9E003BDB67 /* ITDemoSecondQuestionView.swift */; };
+		5BD9D1852D626C68003BDB67 /* ITDemoSQResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D1842D626C68003BDB67 /* ITDemoSQResultView.swift */; };
 		5BDC2E8A2D457ECF0005A94C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDC2E892D457ECF0005A94C /* LaunchView.swift */; };
 		5BE4D2072C709B9900C50419 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4D2062C709B9900C50419 /* AuthState.swift */; };
 		5BEEFA932C07286C00AF3445 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEFA922C07286B00AF3445 /* DescriptionView.swift */; };
@@ -192,6 +199,13 @@
 		5BD528742CA04E4A0091C88B /* ITWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITWelcomeView.swift; sourceTree = "<group>"; };
 		5BD528772CA04EAC0091C88B /* ITStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITStep.swift; sourceTree = "<group>"; };
 		5BD528792CA053480091C88B /* ITDemoDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoDescriptionView.swift; sourceTree = "<group>"; };
+		5BD9D1762D6266FD003BDB67 /* ITDemoStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoStep.swift; sourceTree = "<group>"; };
+		5BD9D1792D626889003BDB67 /* ITDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoView.swift; sourceTree = "<group>"; };
+		5BD9D17C2D6268AF003BDB67 /* ITDemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoViewModel.swift; sourceTree = "<group>"; };
+		5BD9D17E2D626A6A003BDB67 /* ITDemoQuestionDescView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoQuestionDescView.swift; sourceTree = "<group>"; };
+		5BD9D1802D626AD1003BDB67 /* ITDemoFirstQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoFirstQuestionView.swift; sourceTree = "<group>"; };
+		5BD9D1822D626B9E003BDB67 /* ITDemoSecondQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoSecondQuestionView.swift; sourceTree = "<group>"; };
+		5BD9D1842D626C68003BDB67 /* ITDemoSQResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoSQResultView.swift; sourceTree = "<group>"; };
 		5BDC2E892D457ECF0005A94C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		5BE4D2062C709B9900C50419 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		5BEEFA922C07286B00AF3445 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
@@ -230,6 +244,7 @@
 		5B4625692BD94EEB009E3EEE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				5BD9D1752D626358003BDB67 /* Demo Mode */,
 				5BEEFA9F2C07457400AF3445 /* Contributors */,
 				5B9220FC2BDE8F1B00F96222 /* SettingsTabView.swift */,
 				5B9220FA2BDE882500F96222 /* SettingsTabRootView.swift */,
@@ -252,6 +267,7 @@
 			children = (
 				5B91EC2E2CE13FCF00B4A8EA /* Caution */,
 				5B91EC2D2CE13FBF00B4A8EA /* Interpretation */,
+				5BD9D1782D626760003BDB67 /* Interpretation Demo */,
 				5B8D7A002C73A69900544E49 /* TestStatus.swift */,
 			);
 			path = Test;
@@ -525,11 +541,11 @@
 			isa = PBXGroup;
 			children = (
 				5BD528742CA04E4A0091C88B /* ITWelcomeView.swift */,
+				5B6E64542D3405DE00816A35 /* ITSessionDescriptionView.swift */,
 				5B91EC2B2CE13C7100B4A8EA /* ITQuestionDescriptionView.swift */,
 				5B3353C12CE284160055759D /* ITFirstQuestionView.swift */,
 				5B3353C72CE291F00055759D /* ITSecondQuestionView.swift */,
 				5B1BE4782CE66A39000AC960 /* ITSecondQuestionResultView.swift */,
-				5B6E64542D3405DE00816A35 /* ITSessionDescriptionView.swift */,
 				5B2A8F1A2D356BF0007A36CA /* ITSessionFinishView.swift */,
 			);
 			path = StepViews;
@@ -538,10 +554,32 @@
 		5BD9D1752D626358003BDB67 /* Demo Mode */ = {
 			isa = PBXGroup;
 			children = (
-				5BD528792CA053480091C88B /* ITDemoDescriptionView.swift */,
-				5B6E64522D3405C000816A35 /* ITDemoFinishView.swift */,
+				5BD9D17B2D626891003BDB67 /* Step Views */,
+				5BD9D1792D626889003BDB67 /* ITDemoView.swift */,
+				5BD9D17C2D6268AF003BDB67 /* ITDemoViewModel.swift */,
 			);
 			path = "Demo Mode";
+			sourceTree = "<group>";
+		};
+		5BD9D1782D626760003BDB67 /* Interpretation Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9D1762D6266FD003BDB67 /* ITDemoStep.swift */,
+			);
+			path = "Interpretation Demo";
+			sourceTree = "<group>";
+		};
+		5BD9D17B2D626891003BDB67 /* Step Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BD528792CA053480091C88B /* ITDemoDescriptionView.swift */,
+				5BD9D17E2D626A6A003BDB67 /* ITDemoQuestionDescView.swift */,
+				5BD9D1802D626AD1003BDB67 /* ITDemoFirstQuestionView.swift */,
+				5BD9D1822D626B9E003BDB67 /* ITDemoSecondQuestionView.swift */,
+				5BD9D1842D626C68003BDB67 /* ITDemoSQResultView.swift */,
+				5B6E64522D3405C000816A35 /* ITDemoFinishView.swift */,
+			);
+			path = "Step Views";
 			sourceTree = "<group>";
 		};
 		5BEEFA9A2C07391E00AF3445 /* StepViews */ = {
@@ -559,7 +597,6 @@
 		5BEEFA9F2C07457400AF3445 /* Contributors */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9D1752D626358003BDB67 /* Demo Mode */,
 				5BEEFAA02C0745B200AF3445 /* ContributorsView.swift */,
 				5BEEFAA22C0745C000AF3445 /* ContributorsViewModel.swift */,
 			);
@@ -690,8 +727,10 @@
 				5BBC9B062BD041D800170B62 /* CustomButtonView.swift in Sources */,
 				5B2490882C0E5BFD0052F8BB /* PasswordInputFieldView.swift in Sources */,
 				5B6E64552D3405DE00816A35 /* ITSessionDescriptionView.swift in Sources */,
+				5BD9D17F2D626A6A003BDB67 /* ITDemoQuestionDescView.swift in Sources */,
 				5BEEFAA12C0745B200AF3445 /* ContributorsView.swift in Sources */,
 				5BBC9B482BD0601100170B62 /* HomeTabView.swift in Sources */,
+				5BD9D1832D626B9E003BDB67 /* ITDemoSecondQuestionView.swift in Sources */,
 				5B91EC272CE12E8100B4A8EA /* BackButton.swift in Sources */,
 				5B9CB60A2BF53FDB00055481 /* InterpretationTestViewModel.swift in Sources */,
 				5B3353C82CE291F00055759D /* ITSecondQuestionView.swift in Sources */,
@@ -699,6 +738,7 @@
 				5BBC9AF62BD03E6300170B62 /* Spacer+.swift in Sources */,
 				5B91EC302CE13FF300B4A8EA /* Category.swift in Sources */,
 				5BBC9AF42BD03E3900170B62 /* UIFont+.swift in Sources */,
+				5BD9D17A2D626889003BDB67 /* ITDemoView.swift in Sources */,
 				5B3A37412C7CD9FA0005FAE9 /* FontStyle.swift in Sources */,
 				5B9220F92BDE85E100F96222 /* SettingsTabRootViewModel.swift in Sources */,
 				5BE4D2072C709B9900C50419 /* AuthState.swift in Sources */,
@@ -739,9 +779,11 @@
 				5BFB6E9B2D47DD4C0086D4AA /* SessionData.swift in Sources */,
 				5BBC9AB62BD0304200170B62 /* AppView.swift in Sources */,
 				5BFDB5282C0E417E00E7607B /* RegisterViewModel.swift in Sources */,
+				5BD9D1772D6266FD003BDB67 /* ITDemoStep.swift in Sources */,
 				5BD528752CA04E4A0091C88B /* ITWelcomeView.swift in Sources */,
 				5BAE05E42D58E4450001AD8E /* Date+.swift in Sources */,
 				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
+				5BD9D17D2D6268AF003BDB67 /* ITDemoViewModel.swift in Sources */,
 				5BB433072C962B3F001A1BB9 /* Position.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* LoginViewModel.swift in Sources */,
 				5B83F02C2C8E3AA5001D52BA /* Task++.swift in Sources */,
@@ -751,6 +793,8 @@
 				5B91EC252CE12ACC00B4A8EA /* Image++.swift in Sources */,
 				5B4228862D5E62F400C1C261 /* CTImage.swift in Sources */,
 				5B95AB1E2C98C28D00ACA281 /* Strings.swift in Sources */,
+				5BD9D1812D626AD1003BDB67 /* ITDemoFirstQuestionView.swift in Sources */,
+				5BD9D1852D626C68003BDB67 /* ITDemoSQResultView.swift in Sources */,
 				5BA491D62D2177E60035316D /* InterpretationCategory.swift in Sources */,
 				5BA491D12D216F570035316D /* ITSessionManager.swift in Sources */,
 				5BBC9AEB2BD03D1600170B62 /* AppTab.swift in Sources */,
