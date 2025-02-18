@@ -18,7 +18,7 @@ class CautionTestViewModel: ObservableObject {
     }
     
     init() {
-        for _ in 0..<3 {
+        for _ in 0..<2 {
             let shuffledTrials = createTrials().shuffled()
             totalTrials.append(contentsOf: shuffledTrials)
         }
