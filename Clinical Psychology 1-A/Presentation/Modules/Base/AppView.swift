@@ -31,7 +31,7 @@ struct AppView: View {
                             .navigationBarTitleDisplayMode(.large)
                     }
                     Spacer()
-                    TabBarView(selectedTab: $appState.selectedTab) // Display the tab bar
+                    TabBarView(selectedTab: $appState.selectedTab)
                 }
                 .ignoresSafeArea()
             } else {
@@ -39,6 +39,9 @@ struct AppView: View {
             }
         } else {
             LaunchView(isPresented: $isLaunchScreenViewPresented)
+                .onAppear {
+                    AuthManager.shared.refreshUser()
+                }
         }
     }
 }

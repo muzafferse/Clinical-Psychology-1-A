@@ -37,13 +37,7 @@ class AuthManager: ObservableObject {
     
     func updateState(user: User?) {
         self.user = user
-        let isAuthenticatedUser = user != nil
-        
-        if isAuthenticatedUser {
-            self.authState = .signedIn
-        } else {
-            self.authState = .signedOut
-        }
+        self.authState = user != nil ? .signedIn : .signedOut
     }
     
     func signOut() async throws {
@@ -81,5 +75,15 @@ class AuthManager: ObservableObject {
                 completion(true, nil)
             }
         }
+    }
+    
+    func refreshUser() {
+        Auth.auth().currentUser?.reload(completion: { error in
+            if let error = error {
+                print("Reload error: \(error)")
+            } else {
+                self.updateState(user: Auth.auth().currentUser)
+            }
+        })
     }
 }
