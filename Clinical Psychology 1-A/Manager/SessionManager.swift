@@ -24,7 +24,8 @@ class SessionManager: ObservableObject {
     }
     
     func saveSessionData() {
-        let sessionRef = db.collection("1A").document(nickName).collection("sessions").document("session-\(sessionData.sessionNumber)")
+        let userDocRef = db.collection("1A").document(nickName)
+        let sessionKey = "Oturum-\(sessionData.sessionNumber)"
         
         let cautionTestData = sessionData.cautionTestData.map { data in
             return [
@@ -59,17 +60,21 @@ class SessionManager: ObservableObject {
         }
         
         let sessionDataDict: [String: Any] = [
-            "Dikkat Yanlılığı": cautionTestData,
-            "Yorumlama Yanlılığı": interpretationTestData
+            sessionKey: [
+                "Dikkat Yanlılığı": cautionTestData,
+                "Yorumlama Yanlılığı": interpretationTestData
+            ]
         ]
         
-        sessionRef.setData(sessionDataDict) { error in
+        userDocRef.setData(sessionDataDict, merge: true) { error in
             if let error = error {
                 print("Error saving session data: \(error.localizedDescription)")
             } else {
                 print("Session data successfully saved!")
             }
         }
+        
+        self.createNewSession()
     }
 }
 
@@ -122,8 +127,11 @@ extension SessionManager {
         sessionData.interpretationTestData.append(data)
     }
     
-    func clearSessionData() {
+    func createNewSession() {
         sessionData.cautionTestData.removeAll()
         sessionData.interpretationTestData.removeAll()
+        determineNextSessionNumber { [weak self] nextSessionNumber in
+            self?.sessionData = SessionData(sessionNumber: nextSessionNumber)
+        }
     }
 }
