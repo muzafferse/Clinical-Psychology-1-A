@@ -30,8 +30,7 @@ struct ITQuestionDescriptionView: View {
             }
         }
         .onAppear {
-            //TODO: Should be 10. Changed for test.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
                 isGestureEnabled = true
             }
         }

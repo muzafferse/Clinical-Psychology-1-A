@@ -22,8 +22,7 @@ struct ITSecondQuestionResultView: View {
                 .ignoresSafeArea()
         )
         .onAppear {
-            //TODO: Should be 2.5. Changed for test.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 viewModel.nextStep()
             }
         }

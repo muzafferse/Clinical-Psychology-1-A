@@ -58,8 +58,7 @@ struct ITFirstQuestionView: View {
             let responseTime = Int(Date().timeIntervalSince(startTime) * 1000)
             viewModel.updateFirstQuestionData(givenAnswer: answer, responseTime: responseTime)
         }
-        //TODO: Should be 5. Changed for test.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             showCompletedSentence = false
             viewModel.nextStep()
         }
