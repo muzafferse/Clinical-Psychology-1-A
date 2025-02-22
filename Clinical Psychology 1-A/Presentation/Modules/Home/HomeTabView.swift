@@ -11,6 +11,7 @@ struct HomeTabView: View {
     @EnvironmentObject var appState: AppState
     // Create a ObservedObject for the root view model of the Home tab
     @ObservedObject var parentViewModel: HomeTabRootViewModel
+    var sessionManager = SessionManager.shared
     
     var body: some View {
         // Use the NavigationStack to manage navigation within the Home tab
