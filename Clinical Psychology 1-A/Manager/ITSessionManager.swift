@@ -80,7 +80,7 @@ class ITSessionManager {
         return nil
     }
     
-    //TODO: Change parameters with 1 - 3 for decrease question number.
+    // MARK: - Change parameters with 1 - 3 for decrease question number.
     private enum Constants {
         static let questionsPerType = 3
         static let equalityThreshold = 9
