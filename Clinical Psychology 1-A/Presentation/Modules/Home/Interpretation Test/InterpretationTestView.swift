@@ -43,7 +43,6 @@ struct InterpretationTestView: View {
             case .sessionFinish:
                 ITSessionFinishView() {
                     SessionManager.shared.saveSessionData()
-                    SessionManager.shared.clearSessionData()
                     appState.homeNavigation = .init()
                 }
             }
