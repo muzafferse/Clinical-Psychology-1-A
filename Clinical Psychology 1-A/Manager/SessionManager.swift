@@ -92,26 +92,28 @@ extension SessionManager {
     }
     
     func determineNextSessionNumber(completion: @escaping (Int) -> Void) {
-        let userRef = db.collection("1A").document(nickName)
-        userRef.getDocument { document, error in
+        let userDocRef = db.collection("1A").document(nickName)
+        
+        userDocRef.getDocument { document, error in
             if let error = error {
-                print("Error getting document: \(error)")
+                print("Error getting sessions: \(error.localizedDescription)")
             } else if let document = document, document.exists {
-                let sessionNumbers = document.data()?.keys.compactMap { key in
-                    Int(key.replacingOccurrences(of: "session-", with: ""))
-                } ?? []
+                let data = document.data() ?? [:]
+                let sessionNumbers = data.keys.compactMap { key -> Int? in
+                    if key.hasPrefix("Oturum-") {
+                        return Int(key.replacingOccurrences(of: "Oturum-", with: ""))
+                    }
+                    return nil
+                }
                 let nextSessionNumber = (sessionNumbers.max() ?? 0) + 1
                 completion(nextSessionNumber)
             } else {
-                userRef.setData(["session-1": [:]]) { error in
+                userDocRef.setData([:]) { error in
                     if let error = error {
                         print("Error creating document: \(error.localizedDescription)")
-                    } else {
-                        print("Document created with initial session.")
                     }
                     completion(1)
                 }
-                completion(1)
             }
         }
     }
