@@ -12,7 +12,7 @@ import FirebaseAuth
 class SessionManager: ObservableObject {
     static let shared = SessionManager()
     
-    var nickName: String = "Guest"
+    var nickName: String = "Misafir Kullanıcı"
     @Published var sessionData: SessionData
     private let db = Firestore.firestore()
     
@@ -81,7 +81,7 @@ class SessionManager: ObservableObject {
 // MARK: - Init Helpers
 extension SessionManager {
     private func updateNickName() async {
-        self.nickName = await AuthManager.shared.user?.email?.replacingOccurrences(of: "@gmail.com", with: "") ?? "Guest"
+        self.nickName = await AuthManager.shared.user?.email?.replacingOccurrences(of: "@gmail.com", with: "") ?? "Misafir Kullanıcı"
     }
     
     private func initializeSession() async {
