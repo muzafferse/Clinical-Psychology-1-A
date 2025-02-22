@@ -21,6 +21,7 @@ struct AnswerTextFieldView: View {
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
                 .focused($isFocused)
+                .keyboardType(.alphabet)
                 .onAppear {
                     isFocused = true
                 }
