@@ -1,37 +1,37 @@
 [
     {
-        "questionDescription": "Arkadaşlarınızla uzun zamandır beklediğiniz bir filme gitmeye karar veriyorsunuz. Sinema salonunun önüne geldiğinizde uzun bir kuyruk olduğunu görüyorsunuz. Bu kuyruk yüzünden…",
-        "firstQuestion": "filme g_ç kalıyorsunuz.",
-        "firstQuestionAnswer": "e",
-        "secondQuestion": "Filme zamanında girdiniz mi?",
-        "secondQuestionAnswer": "HAYIR"
-    },
-    {
-        "questionDescription": "Öğle vaktinde boş zamanınız olduğu için markete gidiyorsunuz. İhtiyacınız olan her şeyi aldığınızı düşünüyorsunuz. Eve geldiğinizde…",
-        "firstQuestion": "s_t almayı unuttuğunuzu fark ediyorsunuz.",
-        "firstQuestionAnswer": "ü",
-        "secondQuestion": "Süt almayı unuttunuz mu?",
-        "secondQuestionAnswer": "EVET"
-    },
-    {
-        "questionDescription": "Bütün gece geç saate kadar bir sunum hazırlıyorsunuz. Nihayet sunumunu bitiriyorsunuz ve çıktısını almak için yazıcıyı çalıştırıyorsunuz. Ama…",
-        "firstQuestion": "yazıcıda yeterince kağ_t olmadığını görüyorsunuz.",
-        "firstQuestionAnswer": "ı",
-        "secondQuestion": "Kartuşunuz bittiği için çıktı alamadınız mı?",
-        "secondQuestionAnswer": "HAYIR"
-    },
-    {
-        "questionDescription": "Çok beğendiğiniz mavi ceketi almak için mağazaya giriyorsunuz. Ödemeyi yapmak için kasaya geldiğinizde kredi kartınızda yeterli para olmadığını öğreniyorsunuz. Ceketi almak için…",
-        "firstQuestion": "n_kit para verip mağazadan ayrılıyorsunuz.",
+        "questionDescription": "İşten çıkıp eve gitmek için arabanıza biniyorsunuz. Arabayı çalıştırdığınızda benzin uyarı ışığı yanıyor. Benzin istasyonuna geldiğinizde…",
+        "firstQuestion": "çok kal_balık olduğunu görüyorsunuz.",
         "firstQuestionAnswer": "a",
-        "secondQuestion": "Ceketi nakit para ile mi aldınız?",
+        "secondQuestion": "Benzin istasyonu tenha mıydı?",
+        "secondQuestionAnswer": "HAYIR"
+    },
+    {
+        "questionDescription": "Uçakta koltuk numaranızı bulmaya çalışırken sizin koltuğunuzda başka birinin oturduğunu görüyorsunuz. Oturan kişiye durumu anlatınca…",
+        "firstQuestion": "sizden öz_r diliyor.",
+        "firstQuestionAnswer": "ü",
+        "secondQuestion": "Sizin koltuğunuzda başka biri mi oturuyordu?",
         "secondQuestionAnswer": "EVET"
     },
     {
-        "questionDescription": "Akşam iş çıkışında arkadaşınızla buluşmaya karar veriyorsunuz. Buluşmak üzere anlaştığınız yere geliyorsunuz. O sırada arkadaşınız sizi arıyor ve…",
-        "firstQuestion": "ac_l bir işi çıktığı için gelemeyeceğini söylüyor.",
+        "questionDescription": "Mutfakta bir şeyler hazırlarken apartmandan bazı seslerin geldiğini duyuyorsunuz. Kapı deliğinden baktığınızda karşı daireye yeni birilerinin taşındığını görüyorsunuz ve…",
+        "firstQuestion": "onlara k_rabiye ikram ediyorsunuz.",
+        "firstQuestionAnswer": "u",
+        "secondQuestion": "Yeni komşularınıza kek mi ikram ettiniz?",
+        "secondQuestionAnswer": "HAYIR"
+    },
+    {
+        "questionDescription": "Sahil kenarında koşu yaparken uzun zamandır görüşmediğiniz bir arkadaşınıza rastlıyorsunuz. Arkadaşınızla bir süre ayaküstü sohbet ettikten sonra…",
+        "firstQuestion": "onu k_hve içmeye davet ediyorsunuz.",
+        "firstQuestionAnswer": "a",
+        "secondQuestion": "Arkadaşınızı kahve içmeye mi davet ettiniz?",
+        "secondQuestionAnswer": "EVET"
+    },
+    {
+        "questionDescription": "Film izlerken elektrikler kesiliyor. Birkaç tane mum yakıyorsunuz ve kitap okumaya başlıyorsunuz. Elektrikler yeniden geldiğinde…",
+        "firstQuestion": "k_tap okumaya devam ediyorsunuz.",
         "firstQuestionAnswer": "i",
-        "secondQuestion": "Arkadaşınızla buluştunuz mu?",
+        "secondQuestion": "Film izlemeye devam mı ettiniz?",
         "secondQuestionAnswer": "HAYIR"
     }
 ]
