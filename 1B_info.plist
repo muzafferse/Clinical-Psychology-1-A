@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UILaunchScreen</key>
-	<true/>
 	<key>NSApplicationCrashOnExceptions</key>
 	<string>YES</string>
 	<key>UIAppFonts</key>
@@ -21,5 +19,7 @@
 		<string>Roboto-Thin.ttf</string>
 		<string>Roboto-ThinItalic.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<true/>
 </dict>
 </plist>
