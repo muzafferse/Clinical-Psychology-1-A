@@ -305,7 +305,7 @@
 		5BBC9B492BD0604800170B62 /* HomeTabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabRootView.swift; sourceTree = "<group>"; };
 		5BBC9B4B2BD0608100170B62 /* HomeTabRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabRootViewModel.swift; sourceTree = "<group>"; };
 		5BCD48402D6E5E9F0053E848 /* Clinical Psychology 1-B.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clinical Psychology 1-B.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BCD48412D6E5E9F0053E848 /* 1B_info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = 1B_info.plist; path = "/Users/muzaffersevili/Desktop/Finish Projects/Clinical Psychology 1-A/1B_info.plist"; sourceTree = "<absolute>"; };
+		5BCD48412D6E5E9F0053E848 /* 1B_info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = 1B_info.plist; sourceTree = SOURCE_ROOT; };
 		5BD528742CA04E4A0091C88B /* ITWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITWelcomeView.swift; sourceTree = "<group>"; };
 		5BD528772CA04EAC0091C88B /* ITStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITStep.swift; sourceTree = "<group>"; };
 		5BD528792CA053480091C88B /* ITDemoDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITDemoDescriptionView.swift; sourceTree = "<group>"; };
@@ -483,7 +483,6 @@
 			isa = PBXGroup;
 			children = (
 				5BBC9AB22BD0304200170B62 /* Clinical Psychology 1-A */,
-				5BCD48412D6E5E9F0053E848 /* 1B_info.plist */,
 				5BBC9AB12BD0304200170B62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -502,6 +501,7 @@
 			children = (
 				5BBC9B0B2BD059AD00170B62 /* GoogleService-Info.plist */,
 				5BBC9AC12BD0311E00170B62 /* 1A_info.plist */,
+				5BCD48412D6E5E9F0053E848 /* 1B_info.plist */,
 				5BBC9AC92BD0332D00170B62 /* AppState */,
 				5BA491CC2D206A110035316D /* Data */,
 				5BBC9AC82BD0331C00170B62 /* Enums */,
