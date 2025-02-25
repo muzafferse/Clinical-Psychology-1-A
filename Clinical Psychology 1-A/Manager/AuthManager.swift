@@ -59,6 +59,7 @@ class AuthManager: ObservableObject {
                 completion(false, authError)
             } else {
                 self.updateState(user: authResult?.user)
+                NotificationCenter.default.post(name: .didLogin, object: nil)
                 completion(true, nil)
             }
         }

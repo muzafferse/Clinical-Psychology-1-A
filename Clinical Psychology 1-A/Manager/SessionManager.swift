@@ -9,6 +9,10 @@ import SwiftUICore
 import FirebaseFirestore
 import FirebaseAuth
 
+extension Notification.Name {
+    static let didLogin = Notification.Name("didLogin")
+}
+
 class SessionManager: ObservableObject {
     static let shared = SessionManager()
     
@@ -16,12 +20,27 @@ class SessionManager: ObservableObject {
     @Published var sessionData: SessionData
     private let db = Firestore.firestore()
     
+    private var loginObserver: NSObjectProtocol?
+    
     private init() {
         self.sessionData = SessionData()
         Task {
             await initializeSession()
         }
+        
+        loginObserver = NotificationCenter.default.addObserver(forName: .didLogin, object: nil, queue: .main) { [weak self] _ in
+            Task {
+                self?.sessionData = SessionData()
+                await self?.initializeSession()
+            }
+        }
     }
+    
+    deinit {
+            if let loginObserver = loginObserver {
+                NotificationCenter.default.removeObserver(loginObserver)
+            }
+        }
     
     func saveSessionData() {
         let userDocRef = db.collection("1A").document(nickName)
@@ -86,6 +105,7 @@ extension SessionManager {
     
     private func initializeSession() async {
         await updateNickName()
+        print(nickName)
         determineNextSessionNumber { [weak self] nextSessionNumber in
             self?.sessionData = SessionData(sessionNumber: nextSessionNumber)
         }
