@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5BBC9AAF2BD0304200170B62"
-               BuildableName = "Clinical Psychology 1.app"
-               BlueprintName = "Clinical Psychology 1"
+               BuildableName = "Clinical Psychology 1-A.app"
+               BlueprintName = "Clinical Psychology 1-A"
                ReferencedContainer = "container:Clinical Psychology 1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BBC9AAF2BD0304200170B62"
-            BuildableName = "Clinical Psychology 1.app"
-            BlueprintName = "Clinical Psychology 1"
+            BuildableName = "Clinical Psychology 1-A.app"
+            BlueprintName = "Clinical Psychology 1-A"
             ReferencedContainer = "container:Clinical Psychology 1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BBC9AAF2BD0304200170B62"
-            BuildableName = "Clinical Psychology 1.app"
-            BlueprintName = "Clinical Psychology 1"
+            BuildableName = "Clinical Psychology 1-A.app"
+            BlueprintName = "Clinical Psychology 1-A"
             ReferencedContainer = "container:Clinical Psychology 1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
