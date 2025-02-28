@@ -482,7 +482,7 @@
 		5BBC9AA72BD0304200170B62 = {
 			isa = PBXGroup;
 			children = (
-				5BBC9AB22BD0304200170B62 /* Clinical Psychology 1-A */,
+				5BBC9AB22BD0304200170B62 /* Clinical Psychology */,
 				5BBC9AB12BD0304200170B62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -496,7 +496,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5BBC9AB22BD0304200170B62 /* Clinical Psychology 1-A */ = {
+		5BBC9AB22BD0304200170B62 /* Clinical Psychology */ = {
 			isa = PBXGroup;
 			children = (
 				5BBC9B0B2BD059AD00170B62 /* GoogleService-Info.plist */,
@@ -514,7 +514,7 @@
 				5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */,
 				5BBC9B442BD05B1900170B62 /* FirebaseGateway.swift */,
 			);
-			path = "Clinical Psychology 1-A";
+			path = "Clinical Psychology";
 			sourceTree = "<group>";
 		};
 		5BBC9AB92BD0304700170B62 /* Preview Content */ = {
@@ -1203,7 +1203,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Clinical Psychology 1-A/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Clinical Psychology/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 62788MV7K6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1239,7 +1239,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Clinical Psychology 1-A/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Clinical Psychology/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 62788MV7K6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
