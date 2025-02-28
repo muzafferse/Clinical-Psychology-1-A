@@ -799,7 +799,7 @@
 				5BCD47CC2D6E5E9F0053E848 /* FirebaseRemoteConfig */,
 				5BCD47CD2D6E5E9F0053E848 /* FirebaseStorage */,
 			);
-			productName = "Clinical Psychology 1-A";
+			productName = "Clinical Psychology 1-B";
 			productReference = 5BCD48402D6E5E9F0053E848 /* Clinical Psychology 1-B.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -1274,7 +1274,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Clinical Psychology 1-A/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Clinical Psychology/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 62788MV7K6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1310,7 +1310,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Clinical Psychology 1-A/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Clinical Psychology/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 62788MV7K6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
