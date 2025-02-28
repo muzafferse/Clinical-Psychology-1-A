@@ -12,7 +12,7 @@ struct LaunchView: View {
     
     var body: some View {
         VStack {
-            Image(.splash)
+            Image(splashImage)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.colorBackground
@@ -27,6 +27,14 @@ struct LaunchView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             isPresented = true
         }
+    }
+    
+    private var splashImage: ImageResource {
+        #if CLINIC1A
+        .splash
+#else
+        .splash1B
+#endif
     }
 }
 
