@@ -1,6 +1,6 @@
 //
 //  AuthManager.swift
-//  Clinical Psychology 1-A
+//  Clinical Psychology 1
 //
 //  Created by Muzaffer Sevili on 18.08.2024.
 //

@@ -1,6 +1,6 @@
 //
 //  ITTrainingFinishView.swift
-//  Clinical Psychology 1-A
+//  Clinical Psychology 1
 //
 //  Created by Muzaffer Sevili on 12.01.2025.
 //

@@ -1,6 +1,6 @@
 //
 //  CautionTestView.swift
-//  Clinical Psychology 1-A
+//  Clinical Psychology 1
 //
 //  Created by Muzaffer Sevili on 28.04.2024.
 //

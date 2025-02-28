@@ -1,6 +1,6 @@
 //
 //  CTStep.swift
-//  Clinical Psychology 1-A
+//  Clinical Psychology 1
 //
 //  Created by Muzaffer Sevili on 26.08.2024.
 //

@@ -1,6 +1,6 @@
 //
 //  Answer.swift
-//  Clinical Psychology 1-A
+//  Clinical Psychology 1
 //
 //  Created by Muzaffer Sevili on 10.11.2024.
 //
