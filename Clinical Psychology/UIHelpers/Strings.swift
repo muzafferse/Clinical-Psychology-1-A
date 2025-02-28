@@ -9,7 +9,7 @@ import Foundation
 
 struct AppStrings {
     // General Strings
-    static let appName = "Klinik Psikoloji 1-A"
+    static let appName = "Klinik Psikoloji \(appPostfix)"
     
     // Login & Register Strings
     static let nickName = "Rumuz"
@@ -91,4 +91,12 @@ struct AppStrings {
     static let contactButtonText = "İletişime Geç"
     static let contributorsBackButtonText = "Ayarlar"
      */
+    
+    static var appPostfix: String {
+#if CLINIC1A
+        "1-A"
+#else
+        "1-B"
+#endif
+    }
 }
