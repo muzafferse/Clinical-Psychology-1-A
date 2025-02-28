@@ -53,7 +53,7 @@
 		5BAE05E42D58E4450001AD8E /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE05E32D58E4450001AD8E /* Date+.swift */; };
 		5BB433052C962B10001A1BB9 /* ArrowDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB433042C962B10001A1BB9 /* ArrowDirection.swift */; };
 		5BB433072C962B3F001A1BB9 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB433062C962B3F001A1BB9 /* Position.swift */; };
-		5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */; };
+		5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_App.swift */; };
 		5BBC9AB62BD0304200170B62 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB52BD0304200170B62 /* AppView.swift */; };
 		5BBC9AB82BD0304700170B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB72BD0304700170B62 /* Assets.xcassets */; };
 		5BBC9ABB2BD0304700170B62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC9ABA2BD0304700170B62 /* Preview Assets.xcassets */; };
@@ -153,7 +153,7 @@
 		5BCD480B2D6E5E9F0053E848 /* ITDemoStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D1762D6266FD003BDB67 /* ITDemoStep.swift */; };
 		5BCD480C2D6E5E9F0053E848 /* ITWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD528742CA04E4A0091C88B /* ITWelcomeView.swift */; };
 		5BCD480D2D6E5E9F0053E848 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE05E32D58E4450001AD8E /* Date+.swift */; };
-		5BCD480E2D6E5E9F0053E848 /* Clinical_Psychology_1_AApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */; };
+		5BCD480E2D6E5E9F0053E848 /* Clinical_Psychology_1_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_App.swift */; };
 		5BCD480F2D6E5E9F0053E848 /* ITDemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD9D17C2D6268AF003BDB67 /* ITDemoViewModel.swift */; };
 		5BCD48102D6E5E9F0053E848 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB433062C962B3F001A1BB9 /* Position.swift */; };
 		5BCD48112D6E5E9F0053E848 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC9B072BD0424000170B62 /* LoginViewModel.swift */; };
@@ -266,7 +266,7 @@
 		5BB433042C962B10001A1BB9 /* ArrowDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowDirection.swift; sourceTree = "<group>"; };
 		5BB433062C962B3F001A1BB9 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		5BBC9AB02BD0304200170B62 /* Clinical Psychology 1-A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clinical Psychology 1-A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinical_Psychology_1_AApp.swift; sourceTree = "<group>"; };
+		5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinical_Psychology_1_App.swift; sourceTree = "<group>"; };
 		5BBC9AB52BD0304200170B62 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		5BBC9AB72BD0304700170B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BBC9ABA2BD0304700170B62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -511,7 +511,7 @@
 				5BBC9AC72BD0330C00170B62 /* UIHelpers */,
 				5BBC9ACA2BD0333F00170B62 /* Resources */,
 				5BBC9AE42BD03BBB00170B62 /* AppCordinator.swift */,
-				5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_AApp.swift */,
+				5BBC9AB32BD0304200170B62 /* Clinical_Psychology_1_App.swift */,
 				5BBC9B442BD05B1900170B62 /* FirebaseGateway.swift */,
 			);
 			path = "Clinical Psychology";
@@ -959,7 +959,7 @@
 				5BD9D1772D6266FD003BDB67 /* ITDemoStep.swift in Sources */,
 				5BD528752CA04E4A0091C88B /* ITWelcomeView.swift in Sources */,
 				5BAE05E42D58E4450001AD8E /* Date+.swift in Sources */,
-				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_AApp.swift in Sources */,
+				5BBC9AB42BD0304200170B62 /* Clinical_Psychology_1_App.swift in Sources */,
 				5BD9D17D2D6268AF003BDB67 /* ITDemoViewModel.swift in Sources */,
 				5BB433072C962B3F001A1BB9 /* Position.swift in Sources */,
 				5BBC9B082BD0424000170B62 /* LoginViewModel.swift in Sources */,
@@ -1050,7 +1050,7 @@
 				5BCD480B2D6E5E9F0053E848 /* ITDemoStep.swift in Sources */,
 				5BCD480C2D6E5E9F0053E848 /* ITWelcomeView.swift in Sources */,
 				5BCD480D2D6E5E9F0053E848 /* Date+.swift in Sources */,
-				5BCD480E2D6E5E9F0053E848 /* Clinical_Psychology_1_AApp.swift in Sources */,
+				5BCD480E2D6E5E9F0053E848 /* Clinical_Psychology_1_App.swift in Sources */,
 				5BCD480F2D6E5E9F0053E848 /* ITDemoViewModel.swift in Sources */,
 				5BCD48102D6E5E9F0053E848 /* Position.swift in Sources */,
 				5BCD48112D6E5E9F0053E848 /* LoginViewModel.swift in Sources */,

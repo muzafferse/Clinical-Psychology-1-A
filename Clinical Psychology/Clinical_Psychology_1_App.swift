@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Clinical_Psychology_1_AApp: App {
+struct Clinical_Psychology_1_App: App {
     @UIApplicationDelegateAdaptor(AppCoordinator.self) var appCoordinator
     @StateObject private var appState = AppState()
     
