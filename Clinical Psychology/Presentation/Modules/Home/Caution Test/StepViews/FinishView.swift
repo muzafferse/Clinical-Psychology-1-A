@@ -22,7 +22,12 @@ struct FinishView: View {
             Spacer()
             
             Button(action: {
+                #if CLINIC1A
                 self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
+                #elseif CLINIC1B
+                SessionManager.shared.saveSessionData()
+                appState.homeNavigation = .init()
+                #endif
             }, label: {
                 Text(AppStrings.ctFinishButtonText)
             })
