@@ -12,13 +12,6 @@ class AppCoordinator: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Handle app Did Finish Launching With Options
         FirebaseGateway.configure()
-#if CLINIC1A
-        print("CLINIC1A")
-#elseif CLINIC1B
-        print("CLINIC1B")
-#else
-        print("OTHERS")
-#endif
         return true
     }
     
