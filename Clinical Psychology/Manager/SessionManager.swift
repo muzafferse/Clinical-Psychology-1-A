@@ -86,10 +86,7 @@ class SessionManager: ObservableObject {
         }
         
         let sessionDataDict: [String: Any] = [
-            sessionKey: [
-                "Dikkat Yanlılığı": cautionTestData,
-                "Yorumlama Yanlılığı": interpretationTestData
-            ]
+            sessionKey: createSessionValue(caution: cautionTestData, interpretation: interpretationTestData)
         ]
         
         userDocRef.setData(sessionDataDict, merge: true) { error in
@@ -142,6 +139,21 @@ extension SessionManager {
                 }
             }
         }
+    }
+    
+    private func createSessionValue(caution: [[String : Any]],
+                                    interpretation: [[String : Any]]) -> [String: Any] {
+        #if CLINIC1A
+        return [
+            "a. Dikkat Yanlılığı": caution,
+            "b. Yorumlama Yanlılığı": interpretation
+        ]
+        #else
+        return [
+            "a. Yorumlama Yanlılığı": interpretation,
+            "b. Dikkat Yanlılığı": caution
+        ]
+        #endif
     }
 }
 
