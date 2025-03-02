@@ -71,7 +71,7 @@ struct ITSecondQuestionView: View {
         isButtonDisabled = true
         if let startTime = startTime {
             let responseTime = Int(Date().timeIntervalSince(startTime) * 1000)
-            viewModel.updateSecondQuestionData(givenAnswer: "", isCorrect: false, responseTime: responseTime)
+            viewModel.updateSecondQuestionData(givenAnswer: "BOŞ", isCorrect: false, responseTime: responseTime)
         }
         onCompletion(false)
     }
