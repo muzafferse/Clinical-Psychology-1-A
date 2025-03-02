@@ -45,16 +45,27 @@ struct AppStrings {
     //Caution Test Strings
     static let ctStartDescription = "Bu çalışmada ekranda karşınıza bazı fotoğraf ve fotoğraf çiftleri çıkacak. Lütfen tüm dikkatinizi ekrandaki fotoğraf ve fotoğraf çiftlerine veriniz. Fotoğraflar ekrana gelip çok kısa bir süre ekranda kalacak ve sonra kaybolacak. Fotoğrafların kaybolmasının hemen ardından bir sonraki ekranda karşınıza sağ ok (→) ya da sol ok (←) şekillerinden biri çıkacak. Eğer ekranda karşınıza çıkan şekil sağ ok (→) ise ekranın ortasında karşınıza çıkacak olan bu şekil ile uyumlu olan sağ ok (→) butonuna, karşınıza çıkan şekil sol ok (←) ise bu şekil ile uyumlu olan sol ok (←) butonuna basmanız gerekmektedir. Lütfen ekranda gördüğünüz şekle denk gelen butona mümkün olduğunca hızlı bir şekilde basınız. Bir deneme bittikten sonra diğer denemeye başlamadan önce ekranda kısa bir süre belirecek olan bir artı (+) işareti göreceksiniz. Bu işaret ekranda çok kısa bir süre kalacağı için bütün dikkatinizi bu ekrana vermeniz önemlidir. Hazırsanız çalışmaya başlamak için aşağıdaki BAŞLAT yazılı butona basın."
     static let ctStartButtonText = "BAŞLAT"
+    #if CLINIC1A
     static let ctFinishDescription = "Çalışma bitti. Sonlandırmak ve diğer adıma geçmek için aşağıdaki BİTİR VE DİĞER ADIMA GEÇ yazılı butona basın."
     static let ctFinishButtonText = "BİTİR VE DİĞER ADIMA GEÇ"
+    #else
+    static let ctFinishDescription = "Çalışma bitti. Sonlandırmak için aşağıdaki BİTİR yazılı butona basın."
+    static let ctFinishButtonText = "BİTİR"
+    #endif
+    
     
     // Interpretation Test Strings
     static let itWelcomeMessage = "Bu çalışmada karşınıza bazı senaryolar çıkacaktır. Bu senaryolara yönelik sizden bir dizi soruyu cevaplamanız istenecektir. Lütfen her bir senaryoyu dikkatli bir şekilde okuyunuz ve kendinizi o durum içinde hayal ediniz. Her bir senaryonun sonunda karşınıza bir harfi eksik olan kelimeler çıkacaktır. Lütfen elinizden gelenin en iyisini yaparak kelimeyi tamamlayınız. Kelimeyi tamamlayabilmek için, cep telefonunuzun klavyesini kullanarak eksik olduğunu düşündüğünüz harfe denk gelen tuşa basınız. Doğru harfe basıp kelimeyi tamamlamadan bir sonraki aşamaya geçemeyeceksiniz. Kelimeyi doğru bir şekilde tamamladıktan sonra sizden kendinizi hayal ettiğiniz durum ile ilgili bir soruyu cevaplamanız istenecektir. Açıklamanın devamını okumak için aşağıdaki DEVAM yazılı butona basın."
     static let itWelcomeButtonText = "DEVAM"
     static let itStartDescription = "Kelimeyi doğru bir şekilde tamamladıktan sonra karşınıza çıkacak soruyu cevaplarken lütfen sadece senaryonun içeriğinde yer alan bilgiyi göz önünde bulundurunuz. Evet cevabını vermek için ekrandaki EVET butonuna, Hayır cevabını vermek için ekrandaki HAYIR butonuna basınız. Cevap vermeden bir sonraki aşamaya geçemeyeceksiniz. Eğer cevabınızdan emin değilseniz, lütfen size en uygun gelen tahmini yapınız. Hazırsanız çalışmaya başlamak için aşağıdaki BAŞLAT yazılı butona basın."
     static let itStartButtonText = "BAŞLAT"
+    #if CLINIC1A
     static let itFinishDescription = "Çalışma bitti. Sonlandırmak için aşağıdaki BİTİR yazılı butona basın."
     static let itFinishButtonText = "BİTİR"
+    #else
+    static let itFinishDescription = "Çalışma bitti. Sonlandırmak ve diğer adıma geçmek için aşağıdaki BİTİR VE DİĞER ADIMA GEÇ yazılı butona basın."
+    static let itFinishButtonText = "BİTİR VE DİĞER ADIMA GEÇ"
+    #endif
     static let itYes = "EVET"
     static let itNo = "HAYIR"
     static let itCorrect = "DOĞRU"
@@ -84,14 +95,6 @@ struct AppStrings {
     static let itDemoModeFinishButtonText = "BİTİR"
     static let logoutButtonText = "Çıkış Yap"
     
-    //TODO: Future Work - Contributors
-    /*
-    // Contributors Strings
-    static let contributorsTitle = "Katkıda Bulunanlar"
-    static let contactButtonText = "İletişime Geç"
-    static let contributorsBackButtonText = "Ayarlar"
-     */
-    
     static var appPostfix: String {
 #if CLINIC1A
         "1-A"
@@ -99,4 +102,12 @@ struct AppStrings {
         "1-B"
 #endif
     }
+    
+    //TODO: Future Work - Contributors
+    /*
+    // Contributors Strings
+    static let contributorsTitle = "Katkıda Bulunanlar"
+    static let contactButtonText = "İletişime Geç"
+    static let contributorsBackButtonText = "Ayarlar"
+     */
 }
