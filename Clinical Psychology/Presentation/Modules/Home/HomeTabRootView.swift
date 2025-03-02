@@ -29,7 +29,11 @@ struct HomeTabRootView: View {
             
             Button {
                 // MARK: - Starting Test
+                #if CLINIC1A
                 self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
+                #elseif CLINIC1B
+                self.appState.homeNavigation.append(HomeNavDestination.interpretationTest)
+                #endif
             } label: {
                 Text(AppStrings.startTestButtonText)
             }
