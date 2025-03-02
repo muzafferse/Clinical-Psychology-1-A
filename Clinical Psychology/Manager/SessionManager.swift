@@ -16,6 +16,13 @@ extension Notification.Name {
 class SessionManager: ObservableObject {
     static let shared = SessionManager()
     
+    private var dbName: String {
+        #if CLINIC1A
+        return "1A"
+        #else
+        return "1B"
+        #endif
+    }
     var nickName: String = AppStrings.guestUser
     @Published var sessionData: SessionData
     private let db = Firestore.firestore()
@@ -43,7 +50,7 @@ class SessionManager: ObservableObject {
         }
     
     func saveSessionData() {
-        let userDocRef = db.collection("1A").document(nickName)
+        let userDocRef = db.collection(dbName).document(nickName)
         let sessionKey = "Oturum-\(sessionData.sessionNumber)"
         
         let cautionTestData = sessionData.cautionTestData.map { data in
@@ -111,7 +118,7 @@ extension SessionManager {
     }
     
     func determineNextSessionNumber(completion: @escaping (Int) -> Void) {
-        let userDocRef = db.collection("1A").document(nickName)
+        let userDocRef = db.collection(dbName).document(nickName)
         
         userDocRef.getDocument { document, error in
             if let error = error {
