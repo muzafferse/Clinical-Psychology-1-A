@@ -48,7 +48,7 @@ struct AppStrings {
     #if CLINIC1A
     static let ctFinishDescription = "Çalışma bitti. Sonlandırmak ve diğer adıma geçmek için aşağıdaki BİTİR VE DİĞER ADIMA GEÇ yazılı butona basın."
     static let ctFinishButtonText = "BİTİR VE DİĞER ADIMA GEÇ"
-    #else
+    #elseif CLINIC1B
     static let ctFinishDescription = "Çalışma bitti. Sonlandırmak için aşağıdaki BİTİR yazılı butona basın."
     static let ctFinishButtonText = "BİTİR"
     #endif
@@ -62,7 +62,7 @@ struct AppStrings {
     #if CLINIC1A
     static let itFinishDescription = "Çalışma bitti. Sonlandırmak için aşağıdaki BİTİR yazılı butona basın."
     static let itFinishButtonText = "BİTİR"
-    #else
+    #elseif CLINIC1B
     static let itFinishDescription = "Çalışma bitti. Sonlandırmak ve diğer adıma geçmek için aşağıdaki BİTİR VE DİĞER ADIMA GEÇ yazılı butona basın."
     static let itFinishButtonText = "BİTİR VE DİĞER ADIMA GEÇ"
     #endif
@@ -96,11 +96,11 @@ struct AppStrings {
     static let logoutButtonText = "Çıkış Yap"
     
     static var appPostfix: String {
-#if CLINIC1A
+    #if CLINIC1A
         "1-A"
-#else
+    #elseif CLINIC1B
         "1-B"
-#endif
+    #endif
     }
     
     //TODO: Future Work - Contributors

@@ -45,7 +45,7 @@ struct InterpretationTestView: View {
                     #if CLINIC1A
                     SessionManager.shared.saveSessionData()
                     appState.homeNavigation = .init()
-                    #else
+                    #elseif CLINIC1B
                     self.appState.homeNavigation.append(HomeNavDestination.cautionTest)
                     #endif
                 }

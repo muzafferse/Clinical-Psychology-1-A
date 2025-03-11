@@ -19,7 +19,7 @@ class SessionManager: ObservableObject {
     private var dbName: String {
         #if CLINIC1A
         return "1A"
-        #else
+        #elseif CLINIC1B
         return "1B"
         #endif
     }
@@ -148,7 +148,7 @@ extension SessionManager {
             "a. Dikkat Yanlılığı": caution,
             "b. Yorumlama Yanlılığı": interpretation
         ]
-        #else
+        #elseif CLINIC1B
         return [
             "a. Yorumlama Yanlılığı": interpretation,
             "b. Dikkat Yanlılığı": caution
