@@ -10,6 +10,14 @@ import Firebase
 public final class FirebaseGateway {
     /// Configures the Firebase SDK.
     public static func configure() {
-        FirebaseApp.configure()
+        #if CLINIC1A
+        let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
+        #elseif CLINIC1B
+        let filePath = Bundle.main.path(forResource: "GoogleService-Info_1B", ofType: "plist")
+        #endif
+        if let filePath = filePath,
+           let options = FirebaseOptions(contentsOfFile: filePath) {
+            FirebaseApp.configure(options: options)
+        }
     }
 }
