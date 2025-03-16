@@ -48,7 +48,7 @@ class CautionTestViewModel: ObservableObject {
 extension CautionTestViewModel {
     func initializeCurrentQuestionData() {
         currentQuestionData = CautionTestData(timeStamp: Date().toDateAndTime(),
-                                              imagePairNo: imagePairNumber(),
+                                              imagePairNo: getPairNumber(),
                                               neutralPhotoPosition: currentTrial.position.rawValue,
                                               ocdPhotoPosition: currentTrial.position.reversed.rawValue,
                                               arrowDirection: currentTrial.direction.rawValue,
@@ -68,7 +68,7 @@ extension CautionTestViewModel {
         }
     }
     
-    private func imagePairNumber() -> String {
+    private func getPairNumber() -> String {
         guard let numberItem = currentTrial.ocdImage.name.split(separator: "-").last else {
             return ""
         }
